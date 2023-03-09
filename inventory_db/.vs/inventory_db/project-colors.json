@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "748302ee-dcce-46db-a1c7-de3389ad29ee": {
+      "ProjectGuid": "748302ee-dcce-46db-a1c7-de3389ad29ee",
+      "DisplayName": "inventory_db",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
