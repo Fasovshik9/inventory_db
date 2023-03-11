@@ -34,9 +34,9 @@
             this.textBoxUserPassword = new System.Windows.Forms.TextBox();
             this.labelAuthorization = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.labelLoginString = new System.Windows.Forms.Label();
             this.labelPasswordString = new System.Windows.Forms.Label();
+            this.labelLoginString = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -95,7 +95,7 @@
             this.labelAuthorization.AutoSize = true;
             this.labelAuthorization.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAuthorization.ForeColor = System.Drawing.Color.White;
-            this.labelAuthorization.Location = new System.Drawing.Point(268, 9);
+            this.labelAuthorization.Location = new System.Drawing.Point(268, 8);
             this.labelAuthorization.Name = "labelAuthorization";
             this.labelAuthorization.Size = new System.Drawing.Size(240, 39);
             this.labelAuthorization.TabIndex = 4;
@@ -115,15 +115,16 @@
             this.panel1.Size = new System.Drawing.Size(303, 252);
             this.panel1.TabIndex = 5;
             // 
-            // panel2
+            // labelPasswordString
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel2.Controls.Add(this.labelAuthorization);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(784, 68);
-            this.panel2.TabIndex = 6;
+            this.labelPasswordString.AutoSize = true;
+            this.labelPasswordString.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPasswordString.ForeColor = System.Drawing.Color.White;
+            this.labelPasswordString.Location = new System.Drawing.Point(3, 85);
+            this.labelPasswordString.Name = "labelPasswordString";
+            this.labelPasswordString.Size = new System.Drawing.Size(105, 29);
+            this.labelPasswordString.TabIndex = 5;
+            this.labelPasswordString.Text = "Пароль";
             // 
             // labelLoginString
             // 
@@ -136,16 +137,15 @@
             this.labelLoginString.TabIndex = 4;
             this.labelLoginString.Text = "Логин";
             // 
-            // labelPasswordString
+            // panel2
             // 
-            this.labelPasswordString.AutoSize = true;
-            this.labelPasswordString.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPasswordString.ForeColor = System.Drawing.Color.White;
-            this.labelPasswordString.Location = new System.Drawing.Point(3, 85);
-            this.labelPasswordString.Name = "labelPasswordString";
-            this.labelPasswordString.Size = new System.Drawing.Size(105, 29);
-            this.labelPasswordString.TabIndex = 5;
-            this.labelPasswordString.Text = "Пароль";
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.labelAuthorization);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(784, 60);
+            this.panel2.TabIndex = 6;
             // 
             // AuthorizationForm
             // 

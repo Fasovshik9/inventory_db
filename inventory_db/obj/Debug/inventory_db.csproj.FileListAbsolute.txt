@@ -22,3 +22,6 @@ C:\Vadim\Study\git\inventory_db\inventory_db\bin\Debug\MySql.Data.xml
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.exe.config
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.AuthorizationForm.resources
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.csproj.CopyComplete
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormAccountManagement.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormAccountManagementAddNewUser.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormAccountManagementChangeUser.resources

@@ -16,5 +16,20 @@ namespace inventory_db
         {
             InitializeComponent();
         }
+
+        private void MenuItemAccountManagement_Click(object sender, EventArgs e)
+        {
+            FormAccountManagement FormAccountManagement = new FormAccountManagement();
+            FormAccountManagement.ShowDialog();
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //if (exitValue == true)
+            {
+                Environment.Exit(0);
+            }
+            this.Close();
+        }
     }
 }
