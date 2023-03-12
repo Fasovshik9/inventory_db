@@ -68,7 +68,7 @@ namespace inventory_db
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `it_staff` WHERE user_login_staff = @user_login_staff", sqlConnection);
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `authorization_staff` WHERE user_login_staff = @user_login_staff", sqlConnection);
             command.Parameters.Add("@user_login_staff", MySqlDbType.VarChar).Value = textBoxlAccountManagementUserLogin.Text;
 
             adapter.SelectCommand = command;
@@ -85,7 +85,7 @@ namespace inventory_db
             string userPass = textBoxAccountManagementUserPassword.Text;
             string userPrivilege = Convert.ToString(comboBoxAccountManagementUserPrivilege.Items.IndexOf(comboBoxAccountManagementUserPrivilege.Text));
 
-            string query = "INSERT INTO it_staff(`user_login_staff`, `full_name_staff`, `password_staff`, `id_privilege_staff`) " +
+            string query = "INSERT INTO authorization_staff(`user_login_staff`, `full_name_staff`, `password_staff`, `id_privilege_staff`) " +
                 "VALUES (@user_login_staff, @full_name_staff,@password_staff, @id_privilege_staff)";
             MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
 

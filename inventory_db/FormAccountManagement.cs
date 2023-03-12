@@ -49,8 +49,8 @@ namespace inventory_db
             {
                 sqlConnection.Open();
                 MySqlCommand sqlCommand = new MySqlCommand("SELECT user_login_staff, full_name_staff, privilege_staff " +
-                                                           "FROM it_staff JOIN privilege_level " +
-                                                           "ON it_staff.id_privilege_staff = privilege_level.id_privilege_staff", sqlConnection);
+                                                           "FROM authorization_staff JOIN privilege_level " +
+                                                           "ON authorization_staff.id_privilege_staff = privilege_level.id_privilege_staff", sqlConnection);
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
@@ -108,7 +108,7 @@ namespace inventory_db
                 DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Удаление пользователя", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    string query = "DELETE FROM `it_staff` WHERE `user_login_staff` = @user_login_staff";
+                    string query = "DELETE FROM `authorization_staff` WHERE `user_login_staff` = @user_login_staff";
                     MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
                     commandDatabase.Parameters.Add("@user_login_staff", MySqlDbType.VarChar).Value = userNameMouse;
 
@@ -195,6 +195,11 @@ namespace inventory_db
         {
             textBoxFilter.Text = "";
             RefreshlistViewAccountManagement();
+        }
+
+        private void buttonCencel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

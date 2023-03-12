@@ -25,3 +25,9 @@ C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.csproj.CopyC
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormAccountManagement.resources
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormAccountManagementAddNewUser.resources
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormAccountManagementChangeUser.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormLocation.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormMOL.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormAddNewMOL.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormChangeMOL.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormEquipment.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormNomenclatureArticles.resources

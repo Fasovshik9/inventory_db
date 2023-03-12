@@ -30,10 +30,13 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemLocation = new System.Windows.Forms.ToolStripMenuItem();
+            this.мОЛToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пользовательToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.администрированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAccountManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.типыОборудованяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,9 +55,27 @@
             // 
             // добавитьToolStripMenuItem
             // 
+            this.добавитьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemLocation,
+            this.мОЛToolStripMenuItem,
+            this.типыОборудованяToolStripMenuItem});
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
             this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.добавитьToolStripMenuItem.Text = "Добавить";
+            // 
+            // ToolStripMenuItemLocation
+            // 
+            this.ToolStripMenuItemLocation.Name = "ToolStripMenuItemLocation";
+            this.ToolStripMenuItemLocation.Size = new System.Drawing.Size(194, 22);
+            this.ToolStripMenuItemLocation.Text = "Место расположение";
+            this.ToolStripMenuItemLocation.Click += new System.EventHandler(this.ToolStripMenuItemLocation_Click);
+            // 
+            // мОЛToolStripMenuItem
+            // 
+            this.мОЛToolStripMenuItem.Name = "мОЛToolStripMenuItem";
+            this.мОЛToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.мОЛToolStripMenuItem.Text = "МОЛ";
+            this.мОЛToolStripMenuItem.Click += new System.EventHandler(this.мОЛToolStripMenuItem_Click);
             // 
             // пользовательToolStripMenuItem
             // 
@@ -83,6 +104,13 @@
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             // 
+            // типыОборудованяToolStripMenuItem
+            // 
+            this.типыОборудованяToolStripMenuItem.Name = "типыОборудованяToolStripMenuItem";
+            this.типыОборудованяToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.типыОборудованяToolStripMenuItem.Text = "Типы оборудованя";
+            this.типыОборудованяToolStripMenuItem.Click += new System.EventHandler(this.типыОборудованяToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,6 +118,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MainForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.menuStrip1.ResumeLayout(false);
@@ -107,6 +136,9 @@
         private System.Windows.Forms.ToolStripMenuItem администрированиеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuItemAccountManagement;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemLocation;
+        private System.Windows.Forms.ToolStripMenuItem мОЛToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem типыОборудованяToolStripMenuItem;
     }
 }
 

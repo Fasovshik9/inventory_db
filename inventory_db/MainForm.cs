@@ -31,5 +31,23 @@ namespace inventory_db
             }
             this.Close();
         }
+
+        private void ToolStripMenuItemLocation_Click(object sender, EventArgs e)
+        {
+            FormLocation FormLocation = new FormLocation();
+            FormLocation.ShowDialog();
+        }
+
+        private void мОЛToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMOL FormMOL = new FormMOL();
+            FormMOL.ShowDialog();
+        }
+
+        private void типыОборудованяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEquipment FormEquipment = new FormEquipment();
+            FormEquipment.ShowDialog();
+        }
     }
 }

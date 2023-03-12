@@ -1,0 +1,191 @@
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace inventory_db
+{
+    public partial class FormMOL : Form
+    {
+        public string fullNameMOLMouse;
+        public string fullDepartmentMOL;
+
+        private List<string[]> filteredList = null;
+        private List<string[]> rowsMOL = new List<string[]>();
+        MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+
+
+        public FormMOL()
+        {
+            InitializeComponent();
+            columnHeaderFullNameMOL.Width = 250;
+            columnHeaderMOLDepartment.Width = 150;
+
+            RefreshlistViewMOL();
+        }
+
+        private void RefreshlistViewMOL(List<string[]> list)
+        {
+            listViewMOL.Items.Clear();
+            foreach (string[] s in list)
+            {
+                listViewMOL.Items.Add(new ListViewItem(s));
+            }
+        }
+
+
+        private void RefreshlistViewMOL()
+        {
+            rowsMOL.Clear();
+            MySqlDataReader dataReader = null;
+            string[] row;
+            try
+            {
+                sqlConnection.Open();
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT MOL_full_name, MOL_department " +
+                                                           "FROM mol", sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    row = new string[]
+                    {
+                        Convert.ToString(dataReader["MOL_full_name"]),
+                        Convert.ToString(dataReader["MOL_department"])
+                    };
+                    rowsMOL.Add(row);
+                }
+                sqlConnection.Close();
+                dataReader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (dataReader != null && !dataReader.IsClosed)
+                {
+                    dataReader.Close();
+                }
+            }
+            listViewMOL.Items.Clear();
+            foreach (string[] s in rowsMOL)
+            {
+                listViewMOL.Items.Add(new ListViewItem(s));
+            }
+        }
+
+        private void buttonAddNewMOL_Click(object sender, EventArgs e)
+        {
+            FormAddNewMOL FormAddNewMOL = new FormAddNewMOL();
+            FormAddNewMOL.ShowDialog();
+        }
+
+        private void FormMOL_Activated(object sender, EventArgs e)
+        {
+            RefreshlistViewMOL();
+        }
+
+        private void buttonDeleteUser_Click(object sender, EventArgs e)
+        {
+            if (this.listViewMOL.SelectedItems.Count != 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить МОЛ'а?", "Удаление МОЛ'а", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    string query = "DELETE FROM `mol` WHERE `MOL_department` = @MOL_department";
+                    MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+                    commandDatabase.Parameters.Add("@MOL_department", MySqlDbType.VarChar).Value = fullNameMOLMouse;
+
+                    commandDatabase.CommandTimeout = 60;
+                    MySqlDataReader reader;
+                    try
+                    {
+                        sqlConnection.Open();
+                        reader = commandDatabase.ExecuteReader();
+                        // Succesfully deleted
+                        sqlConnection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    RefreshlistViewMOL();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберете МОЛ'а!", "Ошибка");
+            }
+        }
+
+        private void listViewMOL_MouseDown(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = listViewMOL.HitTest(e.X, e.Y);
+            ListViewItem item = info.Item;
+
+            if (item != null)
+            {
+                this.fullNameMOLMouse = item.SubItems[0].Text;
+                this.fullDepartmentMOL = item.SubItems[1].Text;
+    
+            }
+            else
+            {
+                this.listViewMOL.SelectedItems.Clear();
+            }
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBoxFilter_TextChanged(object sender, EventArgs e)
+        {
+
+            filteredList = rowsMOL.Where(x =>
+                (x[0].ToLower().Contains(textBoxFilter.Text.ToLower())) ||
+                (x[1].ToLower().Contains(textBoxFilter.Text.ToLower()))
+            ).ToList();
+            RefreshlistViewMOL(filteredList);
+        }
+
+        private void buttonEmptyFilter_Click(object sender, EventArgs e)
+        {
+            textBoxFilter.Text = "";
+            RefreshlistViewMOL();
+        }
+
+        private void buttonChangeMOL_Click(object sender, EventArgs e)
+        {
+            methodChangeMOL();
+        }
+
+
+        private void methodChangeMOL()
+        {
+            FormChangeMOL FormChangeMOL = new FormChangeMOL();
+            if (this.listViewMOL.SelectedItems.Count != 0)
+            {
+                FormChangeMOL.textBoxlChangeMOL.Text = fullNameMOLMouse;
+                FormChangeMOL.textBoxChangeDepartmentMOL.Text = fullDepartmentMOL;
+                FormChangeMOL.oldDepartmentMOL = fullDepartmentMOL;
+                FormChangeMOL.ShowDialog();
+                RefreshlistViewMOL();
+            }
+            else
+            {
+                MessageBox.Show("Выберете пользвателя!", "Ошибка");
+            }
+        }
+    }
+
+}

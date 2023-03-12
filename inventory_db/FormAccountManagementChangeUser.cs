@@ -17,6 +17,7 @@ namespace inventory_db
         const string phraseLogin = "Введите логин";
         const string phrasePass = "Введите пароль";
         const string phraseFullName = "Введите ФИО";
+        bool boolAccountManagementUserPassword = false;
 
 
         public FormAccountManagementChangeUser()
@@ -29,7 +30,7 @@ namespace inventory_db
 
         private void buttonUserLogin_Click(object sender, EventArgs e)
         {
-            if (textBoxlAccountManagementUserLogin.Text == phraseLogin || textBoxAccountManagementUserPassword.Text == phrasePass || textBoxAccountManagementUserFullName.Text == phraseFullName)
+            if (textBoxlAccountManagementUserLogin.Text == phraseLogin || (textBoxAccountManagementUserPassword.Text == phrasePass && boolAccountManagementUserPassword == true) || textBoxAccountManagementUserFullName.Text == phraseFullName)
             {
                 MessageBox.Show("Все поля должны быть заполенны !");
                 return;
@@ -38,13 +39,13 @@ namespace inventory_db
             {
                 //if (textBoxAccountManagementUserFullName.TextLength >= 5)
                 {
-                    if (textBoxAccountManagementUserPassword.TextLength >= 5) { }
-                    else
+                    if (textBoxAccountManagementUserPassword.TextLength <= 5 && boolAccountManagementUserPassword == true) 
                     {
                         MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!", "Ошибка");
                         zeroFildPass();
                         return;
                     }
+                    else {}
                 }
                 //else
                 //{
@@ -63,7 +64,7 @@ namespace inventory_db
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `it_staff` WHERE user_login_staff = @user_login_staff", sqlConnection);
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `authorization_staff` WHERE user_login_staff = @user_login_staff", sqlConnection);
             command.Parameters.Add("@user_login_staff", MySqlDbType.VarChar).Value = textBoxlAccountManagementUserLogin.Text;
 
             adapter.SelectCommand = command;
@@ -75,9 +76,18 @@ namespace inventory_db
             string userPrivilege = Convert.ToString(comboBoxAccountManagementUserPrivilege.Items.IndexOf(comboBoxAccountManagementUserPrivilege.Text));
 
             //MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["journal"].ConnectionString);
-            string query = "UPDATE `it_staff` " +
+            string query = "UPDATE `authorization_staff` " +
                 "SET `user_login_staff`=@user_login_staff,`full_name_staff`=@full_name_staff,`password_staff`=@password_staff,`id_privilege_staff`=@id_privilege_staff " +
                 "WHERE user_login_staff = @user_login_staff";
+
+            if (boolAccountManagementUserPassword == false)
+            {
+                query = "UPDATE `authorization_staff` " +
+                "SET `user_login_staff`=@user_login_staff,`full_name_staff`=@full_name_staff,`id_privilege_staff`=@id_privilege_staff " +
+                "WHERE user_login_staff = @user_login_staff";
+            }
+
+
             MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
             commandDatabase.Parameters.Add("@user_login_staff", MySqlDbType.VarChar).Value = userLogin;
             commandDatabase.Parameters.Add("@full_name_staff", MySqlDbType.VarChar).Value = userFullName;
@@ -95,7 +105,7 @@ namespace inventory_db
                     reader = commandDatabase.ExecuteReader();
                     // Succesfully updated
                     sqlConnection.Close();
-                    MessageBox.Show("Пароль изменен!", "Уведомление");
+                    MessageBox.Show("Данные пользователя изменены!", "Уведомление");
                     this.Close();
                 }
                 catch (Exception ex)
@@ -161,6 +171,14 @@ namespace inventory_db
                 textBoxAccountManagementUserPassword.ForeColor = Color.Black;
                 textBoxAccountManagementUserPassword.UseSystemPasswordChar = true;
             }
+        }
+
+        private void buttonChangePassword_Click(object sender, EventArgs e)
+        {
+            textBoxAccountManagementUserPassword.Visible = true;
+            labelAccountManagementUserPassword.Visible = true;
+            boolAccountManagementUserPassword = true;
+            buttonChangePassword.Visible = false;
         }
     }
 }

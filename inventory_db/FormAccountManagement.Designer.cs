@@ -40,6 +40,7 @@
             this.labellAccountManagementFilter = new System.Windows.Forms.Label();
             this.buttonEmptyFilter = new System.Windows.Forms.Button();
             this.textBoxFilter = new System.Windows.Forms.TextBox();
+            this.buttonCencel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +83,7 @@
             this.buttonAddNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonAddNewUser.ForeColor = System.Drawing.Color.White;
-            this.buttonAddNewUser.Location = new System.Drawing.Point(27, 433);
+            this.buttonAddNewUser.Location = new System.Drawing.Point(20, 433);
             this.buttonAddNewUser.Name = "buttonAddNewUser";
             this.buttonAddNewUser.Size = new System.Drawing.Size(132, 36);
             this.buttonAddNewUser.TabIndex = 1;
@@ -97,7 +98,7 @@
             this.buttonDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonDeleteUser.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteUser.Location = new System.Drawing.Point(422, 433);
+            this.buttonDeleteUser.Location = new System.Drawing.Point(450, 433);
             this.buttonDeleteUser.Name = "buttonDeleteUser";
             this.buttonDeleteUser.Size = new System.Drawing.Size(132, 36);
             this.buttonDeleteUser.TabIndex = 2;
@@ -112,7 +113,7 @@
             this.buttonChangeUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonChangeUser.ForeColor = System.Drawing.Color.White;
-            this.buttonChangeUser.Location = new System.Drawing.Point(225, 433);
+            this.buttonChangeUser.Location = new System.Drawing.Point(158, 433);
             this.buttonChangeUser.Name = "buttonChangeUser";
             this.buttonChangeUser.Size = new System.Drawing.Size(132, 36);
             this.buttonChangeUser.TabIndex = 3;
@@ -179,12 +180,28 @@
             this.textBoxFilter.TabIndex = 17;
             this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
+            // buttonCencel
+            // 
+            this.buttonCencel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCencel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonCencel.ForeColor = System.Drawing.Color.White;
+            this.buttonCencel.Location = new System.Drawing.Point(312, 433);
+            this.buttonCencel.Name = "buttonCencel";
+            this.buttonCencel.Size = new System.Drawing.Size(132, 36);
+            this.buttonCencel.TabIndex = 18;
+            this.buttonCencel.Text = "Отмена";
+            this.buttonCencel.UseVisualStyleBackColor = false;
+            this.buttonCencel.Click += new System.EventHandler(this.buttonCencel_Click);
+            // 
             // FormAccountManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(594, 481);
+            this.Controls.Add(this.buttonCencel);
             this.Controls.Add(this.textBoxFilter);
             this.Controls.Add(this.buttonEmptyFilter);
             this.Controls.Add(this.labellAccountManagementFilter);
@@ -220,5 +237,6 @@
         private System.Windows.Forms.Label labellAccountManagementFilter;
         private System.Windows.Forms.Button buttonEmptyFilter;
         private System.Windows.Forms.TextBox textBoxFilter;
+        private System.Windows.Forms.Button buttonCencel;
     }
 }

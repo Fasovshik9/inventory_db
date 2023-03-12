@@ -38,10 +38,10 @@
             this.comboBoxAccountManagementUserPrivilege = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.labelAccountManagementUserLogin = new System.Windows.Forms.Label();
-            this.buttonExitProgram = new System.Windows.Forms.Button();
+            this.buttonExitFronForm = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxAccountManagementUserPassword = new System.Windows.Forms.TextBox();
-            this.buttonUserLogin = new System.Windows.Forms.Button();
+            this.buttonAddNewUser = new System.Windows.Forms.Button();
             this.textBoxlAccountManagementUserLogin = new System.Windows.Forms.TextBox();
             this.textBoxAccountManagementUserFullName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -159,19 +159,19 @@
             this.labelAccountManagementUserLogin.TabIndex = 5;
             this.labelAccountManagementUserLogin.Text = "Логин";
             // 
-            // buttonExitProgram
+            // buttonExitFronForm
             // 
-            this.buttonExitProgram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExitProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.buttonExitProgram.ForeColor = System.Drawing.Color.White;
-            this.buttonExitProgram.Location = new System.Drawing.Point(320, 377);
-            this.buttonExitProgram.Name = "buttonExitProgram";
-            this.buttonExitProgram.Size = new System.Drawing.Size(135, 33);
-            this.buttonExitProgram.TabIndex = 12;
-            this.buttonExitProgram.Text = "Отмена";
-            this.buttonExitProgram.UseVisualStyleBackColor = false;
-            this.buttonExitProgram.Click += new System.EventHandler(this.buttonExitProgram_Click);
+            this.buttonExitFronForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonExitFronForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExitFronForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonExitFronForm.ForeColor = System.Drawing.Color.White;
+            this.buttonExitFronForm.Location = new System.Drawing.Point(320, 377);
+            this.buttonExitFronForm.Name = "buttonExitFronForm";
+            this.buttonExitFronForm.Size = new System.Drawing.Size(135, 33);
+            this.buttonExitFronForm.TabIndex = 12;
+            this.buttonExitFronForm.Text = "Отмена";
+            this.buttonExitFronForm.UseVisualStyleBackColor = false;
+            this.buttonExitFronForm.Click += new System.EventHandler(this.buttonExitProgram_Click);
             // 
             // label4
             // 
@@ -194,19 +194,19 @@
             this.textBoxAccountManagementUserPassword.Enter += new System.EventHandler(this.textBoxAccountManagementUserPassword_Enter);
             this.textBoxAccountManagementUserPassword.Leave += new System.EventHandler(this.textBoxAccountManagementUserPassword_Leave);
             // 
-            // buttonUserLogin
+            // buttonAddNewUser
             // 
-            this.buttonUserLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.buttonUserLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.buttonUserLogin.ForeColor = System.Drawing.Color.White;
-            this.buttonUserLogin.Location = new System.Drawing.Point(136, 376);
-            this.buttonUserLogin.Name = "buttonUserLogin";
-            this.buttonUserLogin.Size = new System.Drawing.Size(135, 34);
-            this.buttonUserLogin.TabIndex = 11;
-            this.buttonUserLogin.Text = "Добавить";
-            this.buttonUserLogin.UseVisualStyleBackColor = false;
-            this.buttonUserLogin.Click += new System.EventHandler(this.buttonUserLogin_Click);
+            this.buttonAddNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.buttonAddNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonAddNewUser.ForeColor = System.Drawing.Color.White;
+            this.buttonAddNewUser.Location = new System.Drawing.Point(136, 376);
+            this.buttonAddNewUser.Name = "buttonAddNewUser";
+            this.buttonAddNewUser.Size = new System.Drawing.Size(135, 34);
+            this.buttonAddNewUser.TabIndex = 11;
+            this.buttonAddNewUser.Text = "Добавить";
+            this.buttonAddNewUser.UseVisualStyleBackColor = false;
+            this.buttonAddNewUser.Click += new System.EventHandler(this.buttonUserLogin_Click);
             // 
             // textBoxlAccountManagementUserLogin
             // 
@@ -236,13 +236,13 @@
             this.ClientSize = new System.Drawing.Size(594, 481);
             this.Controls.Add(this.textBoxAccountManagementUserFullName);
             this.Controls.Add(this.textBoxlAccountManagementUserLogin);
-            this.Controls.Add(this.buttonUserLogin);
+            this.Controls.Add(this.buttonAddNewUser);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxAccountManagementUserPassword);
             this.Controls.Add(this.labelAccountManagementUserPassword);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelAccountManagementUserPrivilege);
-            this.Controls.Add(this.buttonExitProgram);
+            this.Controls.Add(this.buttonExitFronForm);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelAccountManagementUserLogin);
             this.Controls.Add(this.labelAccountManagementUserFullName);
@@ -272,10 +272,10 @@
         private System.Windows.Forms.ComboBox comboBoxAccountManagementUserPrivilege;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelAccountManagementUserLogin;
-        private System.Windows.Forms.Button buttonExitProgram;
+        private System.Windows.Forms.Button buttonExitFronForm;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxAccountManagementUserPassword;
-        private System.Windows.Forms.Button buttonUserLogin;
+        private System.Windows.Forms.Button buttonAddNewUser;
         private System.Windows.Forms.TextBox textBoxlAccountManagementUserLogin;
         private System.Windows.Forms.TextBox textBoxAccountManagementUserFullName;
     }
