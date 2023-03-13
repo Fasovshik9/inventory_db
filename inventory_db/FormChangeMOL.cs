@@ -65,8 +65,8 @@ namespace inventory_db
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `mol` WHERE MOL_department = @MOL_department", sqlConnection);
-            command.Parameters.Add("@MOL_department", MySqlDbType.VarChar).Value = textBoxChangeDepartmentMOL.Text;
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_mol` WHERE tb_mol_department = @tb_mol_department", sqlConnection);
+            command.Parameters.Add("@tb_mol_department", MySqlDbType.VarChar).Value = textBoxChangeDepartmentMOL.Text;
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
@@ -80,9 +80,9 @@ namespace inventory_db
 
 
             //MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["journal"].ConnectionString);
-            string query = "UPDATE `mol` " +
-                "SET `MOL_full_name`=@MOL_full_name,`MOL_department`=@MOL_department " +
-                "WHERE MOL_department = @MOL_old_department";
+            string query = "UPDATE `tb_mol` " +
+                "SET `col_mol_full_name`=@col_mol_full_name,`tb_mol_department`=@tb_mol_department " +
+                "WHERE tb_mol_department = @MOL_old_department";
 
             //if (boolAccountManagementUserPassword == false)
             //{
@@ -93,8 +93,8 @@ namespace inventory_db
 
 
             MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
-            commandDatabase.Parameters.Add("@MOL_full_name", MySqlDbType.VarChar).Value = textBoxlChangeMOL.Text;
-            commandDatabase.Parameters.Add("@MOL_department", MySqlDbType.VarChar).Value = textBoxChangeDepartmentMOL.Text;
+            commandDatabase.Parameters.Add("@col_mol_full_name", MySqlDbType.VarChar).Value = textBoxlChangeMOL.Text;
+            commandDatabase.Parameters.Add("@tb_mol_department", MySqlDbType.VarChar).Value = textBoxChangeDepartmentMOL.Text;
             commandDatabase.Parameters.Add("@MOL_old_department", MySqlDbType.VarChar).Value = oldDepartmentMOL;
 
             

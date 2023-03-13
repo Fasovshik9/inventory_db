@@ -12,47 +12,49 @@ using System.Windows.Forms;
 
 namespace inventory_db
 {
-    public partial class FormLocation : Form
+    public partial class FormEquipmentManufacturer : Form
     {
-        private List<string[]> filteredList = null;
-        private List<string[]> rowsLocation = new List<string[]>();
-        MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
-        
-        
-        const string phraseLocation = "Введите Название локации";
-        private string locationBuffName;
-        private string locationMameMouse;
 
-        public FormLocation()
+        private List<string[]> filteredList = null;
+        private List<string[]> rowsEquipmentManufacturer = new List<string[]>();
+        MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+
+
+        const string phraseEquipmentManufacturer = "Введите производителя оборудования";
+        private string EquipmentManufacturerBuffName;
+        private string EquipmentManufacturerMameMouse;
+
+
+
+        public FormEquipmentManufacturer()
         {
             InitializeComponent();
-            RefreshlistViewLocation();
-
-            zeroFildLocation();
-            columnLocationName.Width = 400;
+            RefreshlistViewEquipmentManufacturer();
+            zeroFildEquipmentManufacturer();
+            columnEquipmentManufacturer.Width = 400;
         }
 
-        private void buttonAddNewLocation_Click(object sender, EventArgs e)
+        private void buttonAddNewEquipmentManufacturer_Click(object sender, EventArgs e)
         {
-            if (textBoxAddNewLocation.Text == phraseLocation)
+            if (textBoxAddNewEquipmentManufacturer.Text == phraseEquipmentManufacturer)
             {
                 MessageBox.Show("Введите название локации!");
                 return;
             }
-            if (textBoxAddNewLocation.TextLength >= 50)
+            if (textBoxAddNewEquipmentManufacturer.TextLength >= 50)
             {
                 MessageBox.Show("Некоректное название локации!\nМаксимум 50!", "Ошибка");
-                zeroFildLocation();
+                zeroFildEquipmentManufacturer();
                 return;
             }
-            else {}
+            else { }
 
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_location` WHERE col_location_name = @col_location_name", sqlConnection);
-            command.Parameters.Add("@col_location_name", MySqlDbType.VarChar).Value = textBoxAddNewLocation.Text;
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_equipment_manufacturer` WHERE col_equipment_manufacturer_name = @col_equipment_manufacturer_name", sqlConnection);
+            command.Parameters.Add("@col_equipment_manufacturer_name", MySqlDbType.VarChar).Value = textBoxAddNewEquipmentManufacturer.Text;
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
@@ -63,13 +65,13 @@ namespace inventory_db
                 return;
             }
             /////////////////////////////////////////////////////////////////////////////
-            string locationName = textBoxAddNewLocation.Text;
+            string EquipmentManufacturerName = textBoxAddNewEquipmentManufacturer.Text;
 
-            string query = "INSERT INTO tb_location(`col_location_name`) " +
-                "VALUES (@col_location_name)";
+            string query = "INSERT INTO tb_equipment_manufacturer(`col_equipment_manufacturer_name`) " +
+                "VALUES (@col_equipment_manufacturer_name)";
             MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
 
-            commandDatabase.Parameters.Add("@col_location_name", MySqlDbType.VarChar).Value = locationName;
+            commandDatabase.Parameters.Add("@col_equipment_manufacturer_name", MySqlDbType.VarChar).Value = EquipmentManufacturerName;
 
             commandDatabase.CommandTimeout = 60;
             //if (textBoxlAccountManagementUserLogin.TextLength <= 12 && textBoxlAccountManagementUserLogin.TextLength >= 5)
@@ -82,7 +84,7 @@ namespace inventory_db
                         MySqlDataReader myReader = commandDatabase.ExecuteReader();
                         MessageBox.Show("Локация успешно добавлена!", "Уведомление");
                         sqlConnection.Close();
-                        zeroFildLocation();
+                        zeroFildEquipmentManufacturer();
                     }
                     catch (Exception ex)
                     {
@@ -98,36 +100,37 @@ namespace inventory_db
         private void buttonEmptyFilter_Click(object sender, EventArgs e)
         {
             textBoxFilter.Text = "";
-            RefreshlistViewLocation();
+            RefreshlistViewEquipmentManufacturer();
         }
 
-        private void RefreshlistViewLocation(List<string[]> list)
+
+        private void RefreshlistViewEquipmentManufacturer(List<string[]> list)
         {
-            listViewLocation.Items.Clear();
+            listViewEquipmentManufacturer.Items.Clear();
             foreach (string[] s in list)
             {
-                listViewLocation.Items.Add(new ListViewItem(s));
+                listViewEquipmentManufacturer.Items.Add(new ListViewItem(s));
             }
         }
 
-        private void RefreshlistViewLocation()
+        private void RefreshlistViewEquipmentManufacturer()
         {
-            rowsLocation.Clear();
+            rowsEquipmentManufacturer.Clear();
             MySqlDataReader dataReader = null;
             string[] row;
             try
             {
                 sqlConnection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand("SELECT col_location_name " +
-                                                           "FROM tb_location ", sqlConnection);
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT col_equipment_manufacturer_name " +
+                                                           "FROM tb_equipment_manufacturer ", sqlConnection);
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
                     row = new string[]
                     {
-                        Convert.ToString(dataReader["col_location_name"]),
+                        Convert.ToString(dataReader["col_equipment_manufacturer_name"]),
                     };
-                    rowsLocation.Add(row);
+                    rowsEquipmentManufacturer.Add(row);
                 }
                 sqlConnection.Close();
                 dataReader.Close();
@@ -143,38 +146,33 @@ namespace inventory_db
                     dataReader.Close();
                 }
             }
-            listViewLocation.Items.Clear();
-            foreach (string[] s in rowsLocation)
+            listViewEquipmentManufacturer.Items.Clear();
+            foreach (string[] s in rowsEquipmentManufacturer)
             {
-                listViewLocation.Items.Add(new ListViewItem(s));
+                listViewEquipmentManufacturer.Items.Add(new ListViewItem(s));
             }
         }
 
-        private void buttonCencel_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void FormLocation_Load(object sender, EventArgs e)
+        private void FormEquipmentManufacturer_Activated(object sender, EventArgs e)
         {
-            RefreshlistViewLocation();
+            RefreshlistViewEquipmentManufacturer();
         }
 
-        private void FormLocation_Activated(object sender, EventArgs e)
+        private void buttonDeleteEquipmentManufacturer_Click(object sender, EventArgs e)
         {
-            RefreshlistViewLocation();
-        }
-
-        private void buttonDeleteUser_Click(object sender, EventArgs e)
-        {
-            if (this.listViewLocation.SelectedItems.Count != 0)
+            if (this.listViewEquipmentManufacturer.SelectedItems.Count != 0)
             {
                 DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить Локацию?", "Удаление локации", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    string query = "DELETE FROM `tb_location` WHERE `col_location_name` = @col_location_name";
+                    string query = "DELETE FROM `tb_equipment_manufacturer` WHERE `col_equipment_manufacturer_name` = @col_equipment_manufacturer_name";
                     MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
-                    commandDatabase.Parameters.Add("@col_location_name", MySqlDbType.VarChar).Value = locationMameMouse;
+                    commandDatabase.Parameters.Add("@col_equipment_manufacturer_name", MySqlDbType.VarChar).Value = EquipmentManufacturerMameMouse;
 
                     commandDatabase.CommandTimeout = 60;
                     MySqlDataReader reader;
@@ -189,7 +187,7 @@ namespace inventory_db
                     {
                         MessageBox.Show(ex.Message);
                     }
-                    RefreshlistViewLocation();
+                    RefreshlistViewEquipmentManufacturer();
                 }
             }
             else
@@ -198,73 +196,59 @@ namespace inventory_db
             }
         }
 
-        private void listViewAccountManagement_MouseDown(object sender, MouseEventArgs e)
+        private void listViewEquipmentManufacturer_MouseDown(object sender, MouseEventArgs e)
         {
-            ListViewHitTestInfo info = listViewLocation.HitTest(e.X, e.Y);
+            ListViewHitTestInfo info = listViewEquipmentManufacturer.HitTest(e.X, e.Y);
             ListViewItem item = info.Item;
 
             if (item != null)
             {
-                this.locationMameMouse = item.SubItems[0].Text;
+                this.EquipmentManufacturerMameMouse = item.SubItems[0].Text;
             }
             else
             {
-                this.listViewLocation.SelectedItems.Clear();
+                this.listViewEquipmentManufacturer.SelectedItems.Clear();
             }
-        }
-
-        private void textBoxAddNewLocation_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void textBoxFilter_TextChanged(object sender, EventArgs e)
         {
-            filteredList = rowsLocation.Where(x =>
+            filteredList = rowsEquipmentManufacturer.Where(x =>
                 (x[0].ToLower().Contains(textBoxFilter.Text.ToLower()))
                 ).ToList();
-            RefreshlistViewLocation(filteredList);
+            RefreshlistViewEquipmentManufacturer(filteredList);
         }
 
-        private void textBoxAddNewLocation_Enter(object sender, EventArgs e)
+        private void textBoxAddNewEquipmentManufacturer_DragEnter(object sender, DragEventArgs e)
         {
-            if (textBoxAddNewLocation.Text == phraseLocation)
+
+        }
+
+        private void textBoxAddNewEquipmentManufacturer_Leave(object sender, EventArgs e)
+        {
+            if (textBoxAddNewEquipmentManufacturer.Text == "")
             {
-                textBoxAddNewLocation.Text = "";
-                textBoxAddNewLocation.ForeColor = Color.Black;
+                zeroFildEquipmentManufacturer();
             }
         }
 
-        private void textBoxAddNewLocation_Leave(object sender, EventArgs e)
+        private void zeroFildEquipmentManufacturer()
         {
-            if (textBoxAddNewLocation.Text == "")
-            {
-                zeroFildLocation();
-            }
-        }
-        private void zeroFildLocation()
-        {
-            textBoxAddNewLocation.Text = phraseLocation;
-            textBoxAddNewLocation.ForeColor = Color.Gray;
+            textBoxAddNewEquipmentManufacturer.Text = phraseEquipmentManufacturer;
+            textBoxAddNewEquipmentManufacturer.ForeColor = Color.Gray;
         }
 
-        private void buttonChangeLocation_Click(object sender, EventArgs e)
+        private void buttonChangeEquipmentManufacturer_Click(object sender, EventArgs e)
         {
-            methodChangeLocation();
-        }
-
-        private void methodChangeLocation()
-        {
-            
-            if (buttonChangeLocation.Text == "Изменить")
+            if (buttonChangeEquipmentManufacturer.Text == "Изменить")
             {
-                if (this.listViewLocation.SelectedItems.Count != 0)
+                if (this.listViewEquipmentManufacturer.SelectedItems.Count != 0)
                 {
-                    textBoxChangeLocation.Text = locationMameMouse;
-                    buttonChangeLocation.Text = "Применить";
-                    textBoxChangeLocation.Visible = true;
-                    locationBuffName = locationMameMouse;
-                    RefreshlistViewLocation();
+                    textBoxChangeEquipmentManufacturer.Text = EquipmentManufacturerMameMouse;
+                    buttonChangeEquipmentManufacturer.Text = "Применить";
+                    textBoxChangeEquipmentManufacturer.Visible = true;
+                    EquipmentManufacturerBuffName = EquipmentManufacturerMameMouse;
+                    RefreshlistViewEquipmentManufacturer();
                 }
                 else
                 {
@@ -278,17 +262,17 @@ namespace inventory_db
                 MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
                 //DataTable table = new DataTable();
                 //MySqlDataAdapter adapter = new MySqlDataAdapter();
-                //MySqlCommand command = new MySqlCommand("SELECT * FROM `location` WHERE col_location_name = @col_location_name", sqlConnection);
-                //command.Parameters.Add("@col_location_name", MySqlDbType.VarChar).Value = textBoxChangeLocation.Text;
+                //MySqlCommand command = new MySqlCommand("SELECT * FROM `EquipmentManufacturer` WHERE col_equipment_manufacturer_name = @col_equipment_manufacturer_name", sqlConnection);
+                //command.Parameters.Add("@col_equipment_manufacturer_name", MySqlDbType.VarChar).Value = textBoxChangeEquipmentManufacturer.Text;
 
                 //adapter.SelectCommand = command;
                 //adapter.Fill(table);
 
-                
+
                 DataTable table = new DataTable();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_location` WHERE col_location_name = @col_location_name", sqlConnection);
-                command.Parameters.Add("@col_location_name", MySqlDbType.VarChar).Value = textBoxChangeLocation.Text;
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_equipment_manufacturer` WHERE col_equipment_manufacturer_name = @col_equipment_manufacturer_name", sqlConnection);
+                command.Parameters.Add("@col_equipment_manufacturer_name", MySqlDbType.VarChar).Value = textBoxChangeEquipmentManufacturer.Text;
 
                 adapter.SelectCommand = command;
                 adapter.Fill(table);
@@ -301,16 +285,16 @@ namespace inventory_db
 
 
                 /////////////////////////////////////////////////////////////////////////////
-                string location = textBoxChangeLocation.Text;
+                string EquipmentManufacturer = textBoxChangeEquipmentManufacturer.Text;
 
                 //MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["journal"].ConnectionString);
-                string query = "UPDATE `tb_location` " +
-                    "SET `col_location_name`=@col_location_name " +
-                    "WHERE col_location_name = @location_old_name";
+                string query = "UPDATE `tb_equipment_manufacturer` " +
+                    "SET `col_equipment_manufacturer_name`=@col_equipment_manufacturer_name " +
+                    "WHERE col_equipment_manufacturer_name = @EquipmentManufacturer_old_name";
 
                 MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
-                commandDatabase.Parameters.Add("@col_location_name", MySqlDbType.VarChar).Value = location;
-                commandDatabase.Parameters.Add("@location_old_name", MySqlDbType.VarChar).Value = locationBuffName;
+                commandDatabase.Parameters.Add("@col_equipment_manufacturer_name", MySqlDbType.VarChar).Value = EquipmentManufacturer;
+                commandDatabase.Parameters.Add("@EquipmentManufacturer_old_name", MySqlDbType.VarChar).Value = EquipmentManufacturerBuffName;
 
                 commandDatabase.CommandTimeout = 60;
                 MySqlDataReader reader;
@@ -324,9 +308,9 @@ namespace inventory_db
                         // Succesfully updated
                         sqlConnection.Close();
                         MessageBox.Show("Локация изменена!", "Уведомление");
-                        buttonChangeLocation.Text = "Изменить";
-                        textBoxChangeLocation.Visible = false;
-                        RefreshlistViewLocation();
+                        buttonChangeEquipmentManufacturer.Text = "Изменить";
+                        textBoxChangeEquipmentManufacturer.Visible = false;
+                        RefreshlistViewEquipmentManufacturer();
                     }
                     catch (Exception ex)
                     {
@@ -336,39 +320,22 @@ namespace inventory_db
                 }
                 //else MessageBox.Show("Пароль пользователя слишком короткий!\nMинимум 5 знаков!", "Ошибка");
             }
-
         }
 
-        private void listViewLocation_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void buttonCencel_Click(object sender, EventArgs e)
         {
-            //methodChangeLocation();
+            zeroFildEquipmentManufacturer();
+            buttonChangeEquipmentManufacturer.Text = "Изменить";
+            textBoxChangeEquipmentManufacturer.Visible=false;    
         }
 
-        private void buttonCensel_Click(object sender, EventArgs e)
+        private void textBoxAddNewEquipmentManufacturer_Enter(object sender, EventArgs e)
         {
-            zeroFildLocation();
-            buttonChangeLocation.Text = "Изменить";
-            textBoxChangeLocation.Visible=false;    
-        }
-
-        private void listViewLocation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labelAccountManagementAddNewUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxChangeLocation_TextChanged(object sender, EventArgs e)
-        {
-
+            if (textBoxAddNewEquipmentManufacturer.Text == phraseEquipmentManufacturer)
+            {
+                textBoxAddNewEquipmentManufacturer.Text = "";
+                textBoxAddNewEquipmentManufacturer.ForeColor = Color.Black;
+            }
         }
     }
 }

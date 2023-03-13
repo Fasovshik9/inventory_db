@@ -48,17 +48,17 @@ namespace inventory_db
             try
             {
                 sqlConnection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand("SELECT user_login_staff, full_name_staff, privilege_staff " +
-                                                           "FROM authorization_staff JOIN privilege_level " +
-                                                           "ON authorization_staff.id_privilege_staff = privilege_level.id_privilege_staff", sqlConnection);
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT login_authorization_staff, col_full_name_staff, col_privilege_staff_name " +
+                                                           "FROM tb_authorization_staff JOIN tb_privilege_level_staff " +
+                                                           "ON tb_authorization_staff.id_privilege_level_staff = tb_privilege_level_staff.id_privilege_level_staff", sqlConnection);
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
                     row = new string[]
                     {
-                        Convert.ToString(dataReader["user_login_staff"]),
-                        Convert.ToString(dataReader["full_name_staff"]),
-                        Convert.ToString(dataReader["privilege_staff"])
+                        Convert.ToString(dataReader["login_authorization_staff"]),
+                        Convert.ToString(dataReader["col_full_name_staff"]),
+                        Convert.ToString(dataReader["col_privilege_staff_name"])
                     };
                     rowsUserAccountManagement.Add(row);
                 }
@@ -108,9 +108,9 @@ namespace inventory_db
                 DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Удаление пользователя", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    string query = "DELETE FROM `authorization_staff` WHERE `user_login_staff` = @user_login_staff";
+                    string query = "DELETE FROM `tb_authorization_staff` WHERE `login_authorization_staff` = @login_authorization_staff";
                     MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
-                    commandDatabase.Parameters.Add("@user_login_staff", MySqlDbType.VarChar).Value = userNameMouse;
+                    commandDatabase.Parameters.Add("@login_authorization_staff", MySqlDbType.VarChar).Value = userNameMouse;
 
                     commandDatabase.CommandTimeout = 60;
                     MySqlDataReader reader;

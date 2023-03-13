@@ -64,8 +64,8 @@ namespace inventory_db
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `authorization_staff` WHERE user_login_staff = @user_login_staff", sqlConnection);
-            command.Parameters.Add("@user_login_staff", MySqlDbType.VarChar).Value = textBoxlAccountManagementUserLogin.Text;
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_authorization_staff` WHERE login_authorization_staff = @login_authorization_staff", sqlConnection);
+            command.Parameters.Add("@login_authorization_staff", MySqlDbType.VarChar).Value = textBoxlAccountManagementUserLogin.Text;
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
@@ -76,23 +76,23 @@ namespace inventory_db
             string userPrivilege = Convert.ToString(comboBoxAccountManagementUserPrivilege.Items.IndexOf(comboBoxAccountManagementUserPrivilege.Text));
 
             //MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["journal"].ConnectionString);
-            string query = "UPDATE `authorization_staff` " +
-                "SET `user_login_staff`=@user_login_staff,`full_name_staff`=@full_name_staff,`password_staff`=@password_staff,`id_privilege_staff`=@id_privilege_staff " +
-                "WHERE user_login_staff = @user_login_staff";
+            string query = "UPDATE `tb_authorization_staff` " +
+                "SET `login_authorization_staff`=@login_authorization_staff,`col_full_name_staff`=@col_full_name_staff,`col_password_staff`=@col_password_staff,`id_privilege_level_staff`=@id_privilege_level_staff " +
+                "WHERE login_authorization_staff = @login_authorization_staff";
 
             if (boolAccountManagementUserPassword == false)
             {
-                query = "UPDATE `authorization_staff` " +
-                "SET `user_login_staff`=@user_login_staff,`full_name_staff`=@full_name_staff,`id_privilege_staff`=@id_privilege_staff " +
-                "WHERE user_login_staff = @user_login_staff";
+                query = "UPDATE `tb_authorization_staff` " +
+                "SET `login_authorization_staff`=@login_authorization_staff,`col_full_name_staff`=@col_full_name_staff,`id_privilege_level_staff`=@id_privilege_level_staff " +
+                "WHERE login_authorization_staff = @login_authorization_staff";
             }
 
 
             MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
-            commandDatabase.Parameters.Add("@user_login_staff", MySqlDbType.VarChar).Value = userLogin;
-            commandDatabase.Parameters.Add("@full_name_staff", MySqlDbType.VarChar).Value = userFullName;
-            commandDatabase.Parameters.Add("@password_staff", MySqlDbType.VarChar).Value = userPass;
-            commandDatabase.Parameters.Add("@id_privilege_staff", MySqlDbType.VarChar).Value = userPrivilege;
+            commandDatabase.Parameters.Add("@login_authorization_staff", MySqlDbType.VarChar).Value = userLogin;
+            commandDatabase.Parameters.Add("@col_full_name_staff", MySqlDbType.VarChar).Value = userFullName;
+            commandDatabase.Parameters.Add("@col_password_staff", MySqlDbType.VarChar).Value = userPass;
+            commandDatabase.Parameters.Add("@id_privilege_level_staff", MySqlDbType.VarChar).Value = userPrivilege;
 
             commandDatabase.CommandTimeout = 60;
             MySqlDataReader reader;

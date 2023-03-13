@@ -75,6 +75,12 @@
     <Compile Include="FormAccountManagementChangeUser.Designer.cs">
       <DependentUpon>FormAccountManagementChangeUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddNewEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddNewEquipment.Designer.cs">
+      <DependentUpon>FormAddNewEquipment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddNewMOL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,18 @@
     <Compile Include="FormEquipment.Designer.cs">
       <DependentUpon>FormEquipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEquipmentManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEquipmentManufacturer.Designer.cs">
+      <DependentUpon>FormEquipmentManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEquipmentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEquipmentType.Designer.cs">
+      <DependentUpon>FormEquipmentType.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLocation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +122,6 @@
     </Compile>
     <Compile Include="FormMOL.Designer.cs">
       <DependentUpon>FormMOL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormNomenclatureArticles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNomenclatureArticles.Designer.cs">
-      <DependentUpon>FormNomenclatureArticles.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -131,6 +143,9 @@
     <EmbeddedResource Include="FormAccountManagementChangeUser.resx">
       <DependentUpon>FormAccountManagementChangeUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddNewEquipment.resx">
+      <DependentUpon>FormAddNewEquipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddNewMOL.resx">
       <DependentUpon>FormAddNewMOL.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,14 +155,17 @@
     <EmbeddedResource Include="FormEquipment.resx">
       <DependentUpon>FormEquipment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEquipmentManufacturer.resx">
+      <DependentUpon>FormEquipmentManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEquipmentType.resx">
+      <DependentUpon>FormEquipmentType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLocation.resx">
       <DependentUpon>FormLocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMOL.resx">
       <DependentUpon>FormMOL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormNomenclatureArticles.resx">
-      <DependentUpon>FormNomenclatureArticles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -74,6 +74,7 @@
             this.listViewLocation.TabIndex = 3;
             this.listViewLocation.UseCompatibleStateImageBehavior = false;
             this.listViewLocation.View = System.Windows.Forms.View.Details;
+            this.listViewLocation.SelectedIndexChanged += new System.EventHandler(this.listViewLocation_SelectedIndexChanged);
             this.listViewLocation.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewLocation_MouseDoubleClick);
             this.listViewLocation.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewAccountManagement_MouseDown);
             // 
@@ -127,6 +128,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 60);
             this.panel1.TabIndex = 21;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // labelAccountManagementAddNewUser
             // 
@@ -139,6 +141,7 @@
             this.labelAccountManagementAddNewUser.Size = new System.Drawing.Size(165, 39);
             this.labelAccountManagementAddNewUser.TabIndex = 10;
             this.labelAccountManagementAddNewUser.Text = "Локации";
+            this.labelAccountManagementAddNewUser.Click += new System.EventHandler(this.labelAccountManagementAddNewUser_Click);
             // 
             // buttonDeleteUser
             // 
@@ -179,6 +182,7 @@
             this.textBoxChangeLocation.Size = new System.Drawing.Size(342, 32);
             this.textBoxChangeLocation.TabIndex = 24;
             this.textBoxChangeLocation.Visible = false;
+            this.textBoxChangeLocation.TextChanged += new System.EventHandler(this.textBoxChangeLocation_TextChanged);
             // 
             // buttonChangeLocation
             // 

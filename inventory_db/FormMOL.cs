@@ -49,15 +49,15 @@ namespace inventory_db
             try
             {
                 sqlConnection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand("SELECT MOL_full_name, MOL_department " +
-                                                           "FROM mol", sqlConnection);
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT col_mol_full_name, tb_mol_department " +
+                                                           "FROM tb_mol", sqlConnection);
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
                     row = new string[]
                     {
-                        Convert.ToString(dataReader["MOL_full_name"]),
-                        Convert.ToString(dataReader["MOL_department"])
+                        Convert.ToString(dataReader["col_mol_full_name"]),
+                        Convert.ToString(dataReader["tb_mol_department"])
                     };
                     rowsMOL.Add(row);
                 }
@@ -100,9 +100,9 @@ namespace inventory_db
                 DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить МОЛ'а?", "Удаление МОЛ'а", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    string query = "DELETE FROM `mol` WHERE `MOL_department` = @MOL_department";
+                    string query = "DELETE FROM `tb_mol` WHERE `tb_mol_department` = @tb_mol_department";
                     MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
-                    commandDatabase.Parameters.Add("@MOL_department", MySqlDbType.VarChar).Value = fullNameMOLMouse;
+                    commandDatabase.Parameters.Add("@tb_mol_department", MySqlDbType.VarChar).Value = fullDepartmentMOL;
 
                     commandDatabase.CommandTimeout = 60;
                     MySqlDataReader reader;

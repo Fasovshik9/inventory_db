@@ -46,6 +46,18 @@ namespace inventory_db
 
         private void типыОборудованяToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormEquipmentType FormEquipment = new FormEquipmentType();
+            FormEquipment.ShowDialog();
+        }
+
+        private void производительОборудованияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEquipmentManufacturer FormEquipmentManufacturer = new FormEquipmentManufacturer();
+            FormEquipmentManufacturer.ShowDialog();
+        }
+
+        private void оборудованиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             FormEquipment FormEquipment = new FormEquipment();
             FormEquipment.ShowDialog();
         }

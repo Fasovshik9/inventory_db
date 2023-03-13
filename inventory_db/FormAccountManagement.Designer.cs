@@ -129,9 +129,9 @@
             this.labelAccountManagementAddNewUser.ForeColor = System.Drawing.Color.White;
             this.labelAccountManagementAddNewUser.Location = new System.Drawing.Point(5, 9);
             this.labelAccountManagementAddNewUser.Name = "labelAccountManagementAddNewUser";
-            this.labelAccountManagementAddNewUser.Size = new System.Drawing.Size(570, 39);
+            this.labelAccountManagementAddNewUser.Size = new System.Drawing.Size(560, 39);
             this.labelAccountManagementAddNewUser.TabIndex = 10;
-            this.labelAccountManagementAddNewUser.Text = "Управление учеными записфми";
+            this.labelAccountManagementAddNewUser.Text = "Управление учеными записями";
             // 
             // panel1
             // 

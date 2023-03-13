@@ -38,11 +38,11 @@ namespace inventory_db
                 MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
                 DataTable table = new DataTable();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM `authorization_staff` " +
-                    "                                    WHERE `user_login_staff` = @user_login_staff AND `password_staff` = @password_staff", sqlConnection);
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_authorization_staff` " +
+                    "                                    WHERE `login_authorization_staff` = @login_authorization_staff AND `col_password_staff` = @col_password_staff", sqlConnection);
 
-                command.Parameters.Add("@user_login_staff", MySqlDbType.VarChar).Value = loginUser;
-                command.Parameters.Add("@password_staff", MySqlDbType.VarChar).Value = passUser;
+                command.Parameters.Add("@login_authorization_staff", MySqlDbType.VarChar).Value = loginUser;
+                command.Parameters.Add("@col_password_staff", MySqlDbType.VarChar).Value = passUser;
 
                 adapter.SelectCommand = command;
                 adapter.Fill(table);
