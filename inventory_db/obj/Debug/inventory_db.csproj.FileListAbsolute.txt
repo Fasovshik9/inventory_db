@@ -33,3 +33,4 @@ C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormEquipmen
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormEquipmentManufacturer.resources
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormEquipment.resources
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormAddNewEquipment.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormEquipmentModel.resources
