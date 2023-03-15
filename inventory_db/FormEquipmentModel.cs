@@ -19,8 +19,9 @@ namespace inventory_db
         private List<string[]> rowsEquipmentModel = new List<string[]>();
         MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
 
-        private string rowsEquipmentModelBuffName;
-        private string rowsEquipmentModelMameMouse;
+        private string rowsEquipmentModelChange;
+        private string rowsEquipmentManufacturerMouse;
+        private string rowsEquipmentTypeMouse;
 
 
 
@@ -32,7 +33,8 @@ namespace inventory_db
 
         private void buttonAddNewEquipmentModel_Click(object sender, EventArgs e)
         {
-
+            FormEquipmentModelAddNew FormEquipmentModelAddNew = new FormEquipmentModelAddNew();
+            FormEquipmentModelAddNew.ShowDialog();
         }
 
         private void RefreshlistViewEquipmentModel(List<string[]> list)
@@ -63,8 +65,8 @@ namespace inventory_db
                 {
                     row = new string[]
                     {
-                        Convert.ToString(dataReader["equipment_model_name"]),
                         Convert.ToString(dataReader["col_equipment_manufacturer_name"]),
+                        Convert.ToString(dataReader["equipment_model_name"]),
                         Convert.ToString(dataReader["col_type_equipment_name"])
                     };
                     rowsEquipmentModel.Add(row);
@@ -90,6 +92,90 @@ namespace inventory_db
             }
         }
 
+        private void FormEquipmentModel_Activated(object sender, EventArgs e)
+        {
+            RefreshlistViewEquipmentModel();
+        }
 
+        private void buttonDeleteEquipmentModel_Click(object sender, EventArgs e)
+        {
+            if (this.listViewEquipmentModel.SelectedItems.Count != 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить модель?", "Удаление пользователя", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    string query = "DELETE FROM `tb_equipment_model` WHERE `equipment_model_name` = @equipment_model_name";
+                    MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+                    commandDatabase.Parameters.Add("@equipment_model_name", MySqlDbType.VarChar).Value = rowsEquipmentModelChange;
+
+                    commandDatabase.CommandTimeout = 60;
+                    MySqlDataReader reader;
+                    try
+                    {
+                        sqlConnection.Open();
+                        reader = commandDatabase.ExecuteReader();
+                        // Succesfully deleted
+                        sqlConnection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    RefreshlistViewEquipmentModel();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберете модель!", "Ошибка");
+            }
+        }
+
+        private void listViewEquipmentModel_MouseDown(object sender, MouseEventArgs e)
+        {
+            {
+                ListViewHitTestInfo info = listViewEquipmentModel.HitTest(e.X, e.Y);
+                ListViewItem item = info.Item;
+
+                if (item != null)
+                {
+                    this.rowsEquipmentManufacturerMouse = item.SubItems[0].Text;
+                    this.rowsEquipmentModelChange = item.SubItems[1].Text;
+                    this.rowsEquipmentTypeMouse = item.SubItems[2].Text;
+                }
+                else
+                {
+                    this.listViewEquipmentModel.SelectedItems.Clear();
+                }
+            }
+        }
+
+        private void buttonCencel_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void buttonChangeEquipmentModel_Click(object sender, EventArgs e)
+        {
+
+            FormEquipmentModelChange FormEquipmentModelChange = new FormEquipmentModelChange();
+
+            if (this.listViewEquipmentModel.SelectedItems.Count != 0)
+            {
+                FormEquipmentModelChange.textBoxEquipmentModelChange.Text = rowsEquipmentModelChange;
+                FormEquipmentModelChange.EquipmentManufacturerBuff = rowsEquipmentManufacturerMouse;
+                FormEquipmentModelChange.EquipmentTypeBuff = rowsEquipmentTypeMouse;
+                FormEquipmentModelChange.ShowDialog();
+                RefreshlistViewEquipmentModel();
+            }
+            else
+            {
+                MessageBox.Show("Выберете модель!", "Ошибка");
+            }
+        }
+
+        private void FormEquipmentModel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
