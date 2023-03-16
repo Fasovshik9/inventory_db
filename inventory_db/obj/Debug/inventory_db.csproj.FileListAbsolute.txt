@@ -36,3 +36,5 @@ C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormAddNewEq
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormEquipmentModel.resources
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormEquipmentModelAddNew.resources
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormEquipmentModelChange.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormItamNumber.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.ItamNumberAddNew.resources

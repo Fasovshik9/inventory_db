@@ -161,7 +161,7 @@ namespace inventory_db
 
             if (this.listViewEquipmentModel.SelectedItems.Count != 0)
             {
-                FormEquipmentModelChange.textBoxEquipmentModelChange.Text = rowsEquipmentModelChange;
+                FormEquipmentModelChange.EquipmentModelBuff = rowsEquipmentModelChange;
                 FormEquipmentModelChange.EquipmentManufacturerBuff = rowsEquipmentManufacturerMouse;
                 FormEquipmentModelChange.EquipmentTypeBuff = rowsEquipmentTypeMouse;
                 FormEquipmentModelChange.ShowDialog();

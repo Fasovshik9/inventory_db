@@ -93,7 +93,7 @@
             // textBoxEquipmentModelAddNew
             // 
             this.textBoxEquipmentModelAddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxEquipmentModelAddNew.Location = new System.Drawing.Point(181, 104);
+            this.textBoxEquipmentModelAddNew.Location = new System.Drawing.Point(181, 178);
             this.textBoxEquipmentModelAddNew.Name = "textBoxEquipmentModelAddNew";
             this.textBoxEquipmentModelAddNew.Size = new System.Drawing.Size(395, 32);
             this.textBoxEquipmentModelAddNew.TabIndex = 44;
@@ -105,7 +105,7 @@
             this.labellAccountManagementFilter.AutoSize = true;
             this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
-            this.labellAccountManagementFilter.Location = new System.Drawing.Point(88, 112);
+            this.labellAccountManagementFilter.Location = new System.Drawing.Point(88, 186);
             this.labellAccountManagementFilter.Name = "labellAccountManagementFilter";
             this.labellAccountManagementFilter.Size = new System.Drawing.Size(87, 24);
             this.labellAccountManagementFilter.TabIndex = 42;
@@ -116,7 +116,7 @@
             this.comboBoxEquipmentManufacturer.DisplayMember = "1";
             this.comboBoxEquipmentManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxEquipmentManufacturer.FormattingEnabled = true;
-            this.comboBoxEquipmentManufacturer.Location = new System.Drawing.Point(181, 185);
+            this.comboBoxEquipmentManufacturer.Location = new System.Drawing.Point(181, 96);
             this.comboBoxEquipmentManufacturer.Name = "comboBoxEquipmentManufacturer";
             this.comboBoxEquipmentManufacturer.Size = new System.Drawing.Size(395, 32);
             this.comboBoxEquipmentManufacturer.TabIndex = 46;
@@ -128,7 +128,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 193);
+            this.label1.Location = new System.Drawing.Point(12, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 24);
             this.label1.TabIndex = 47;

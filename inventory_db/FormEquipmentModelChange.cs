@@ -20,6 +20,7 @@ namespace inventory_db
         public string EquipmentModelBuff;
         public string EquipmentManufacturerBuff;
         public string EquipmentTypeBuff;
+        const string phraseEquipmentModelChange = "Введите модель";
 
 
         public FormEquipmentModelChange()
@@ -27,8 +28,6 @@ namespace inventory_db
             InitializeComponent();
             FillComboBoxEquipmentManufacturer();
             FillComboBoxEquipmentType();
-
-
         }
 
         private void buttonCencel_Click(object sender, EventArgs e)
@@ -38,7 +37,69 @@ namespace inventory_db
 
         private void buttonAEquipmentModelChange_Click(object sender, EventArgs e)
         {
-            
+            if (comboBoxEquipmentManufacturer.Text == "" || comboBoxEquipmentType.Text == "" || textBoxEquipmentModelChange.Text == phraseEquipmentModelChange)
+            {
+                MessageBox.Show("Все поля должны быть заполенны !");
+                return;
+            }
+            if (textBoxEquipmentModelChange.TextLength >= 20 && textBoxEquipmentModelChange.TextLength <= 1)
+            {
+                MessageBox.Show("Некоректное навазние можели!\nМинимум 5 знаков и максимум 20!", "Ошибка");
+                return;
+            }
+
+            ///////////////////////////////////////////////////////////////////////////// check new user to reapit
+            MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+            if (textBoxEquipmentModelChange.Text != EquipmentModelBuff)
+            { 
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_equipment_model` WHERE equipment_model_name = @equipment_model_name", sqlConnection);
+                command.Parameters.Add("@equipment_model_name", MySqlDbType.VarChar).Value = textBoxEquipmentModelChange.Text;
+
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+
+                if (table.Rows.Count > 0)
+                {
+                    MessageBox.Show("Такая модель уже существует!\nИзменить название модели!", "Ошибка");
+                    return;
+                }
+            }
+
+            /////////////////////////////////////////////////////////////////////////////
+            //MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["journal"].ConnectionString);
+            string query = "UPDATE `tb_equipment_model` " +
+                "SET `equipment_model_name`=@equipment_model_name,`id_equipment_manufacturer`=@id_equipment_manufacturer,`id_type_equipment`=@id_type_equipment " +
+                "WHERE equipment_model_name = @equipment_old_model_name";
+
+            MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+            commandDatabase.Parameters.Add("@id_equipment_manufacturer", MySqlDbType.VarChar).Value = comboBoxEquipmentManufacturer.SelectedValue.ToString();
+            commandDatabase.Parameters.Add("@equipment_model_name", MySqlDbType.VarChar).Value = textBoxEquipmentModelChange.Text;
+            commandDatabase.Parameters.Add("@equipment_old_model_name", MySqlDbType.VarChar).Value = EquipmentModelBuff;
+            commandDatabase.Parameters.Add("@id_type_equipment", MySqlDbType.VarChar).Value = comboBoxEquipmentType.SelectedValue.ToString();
+
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+
+            //if (textBoxAccountManagementUserPassword.TextLength >= 5)
+            {
+                try
+                {
+                    sqlConnection.Open();
+                    reader = commandDatabase.ExecuteReader();
+                    // Succesfully updated
+                    sqlConnection.Close();
+                    MessageBox.Show("Модель изменена!", "Уведомление");
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    // Ops, maybe the id doesn't exists ?
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            //else MessageBox.Show("Пароль пользователя слишком короткий!\nMинимум 5 знаков!", "Ошибка");
         }
 
         private void comboBoxEquipmentManufacturer_KeyPress(object sender, KeyPressEventArgs e)
@@ -136,6 +197,7 @@ namespace inventory_db
         {
             comboBoxEquipmentManufacturer.Text = EquipmentManufacturerBuff;
             comboBoxEquipmentType.Text = EquipmentTypeBuff;
+            textBoxEquipmentModelChange.Text = EquipmentModelBuff;
         }
     }
 }

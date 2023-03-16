@@ -58,8 +58,14 @@ namespace inventory_db
 
         private void оборудованиеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormEquipment FormEquipment = new FormEquipment();
-            FormEquipment.ShowDialog();
+            FormEquipmentModel FormEquipmentModel = new FormEquipmentModel();
+            FormEquipmentModel.ShowDialog();
+        }
+
+        private void модельОборудованияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormItamNumber FormItamNumber = new FormItamNumber();
+            FormItamNumber.ShowDialog();
         }
     }
 }
