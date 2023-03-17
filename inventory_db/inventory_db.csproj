@@ -135,6 +135,12 @@
     <Compile Include="FormItamNumber.Designer.cs">
       <DependentUpon>FormItamNumber.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormItamNumberChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormItamNumberChange.Designer.cs">
+      <DependentUpon>FormItamNumberChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLocation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,11 +153,11 @@
     <Compile Include="FormMOL.Designer.cs">
       <DependentUpon>FormMOL.cs</DependentUpon>
     </Compile>
-    <Compile Include="ItamNumberAddNew.cs">
+    <Compile Include="FormItamNumberAddNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ItamNumberAddNew.Designer.cs">
-      <DependentUpon>ItamNumberAddNew.cs</DependentUpon>
+    <Compile Include="FormItamNumberAddNew.Designer.cs">
+      <DependentUpon>FormItamNumberAddNew.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -203,14 +209,17 @@
     <EmbeddedResource Include="FormItamNumber.resx">
       <DependentUpon>FormItamNumber.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormItamNumberChange.resx">
+      <DependentUpon>FormItamNumberChange.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLocation.resx">
       <DependentUpon>FormLocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMOL.resx">
       <DependentUpon>FormMOL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ItamNumberAddNew.resx">
-      <DependentUpon>ItamNumberAddNew.cs</DependentUpon>
+    <EmbeddedResource Include="FormItamNumberAddNew.resx">
+      <DependentUpon>FormItamNumberAddNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.listViewItamNumber = new System.Windows.Forms.ListView();
+            this.columnHeaderItamNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderEquipmentManufacturerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeadeEquipmentModel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderTypeEquipment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,7 +42,6 @@
             this.textBoxFilter = new System.Windows.Forms.TextBox();
             this.buttonEmptyFilter = new System.Windows.Forms.Button();
             this.labellAccountManagementFilter = new System.Windows.Forms.Label();
-            this.columnHeaderItamNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +62,12 @@
             this.listViewItamNumber.TabIndex = 37;
             this.listViewItamNumber.UseCompatibleStateImageBehavior = false;
             this.listViewItamNumber.View = System.Windows.Forms.View.Details;
+            this.listViewItamNumber.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewItamNumber_MouseDown);
+            // 
+            // columnHeaderItamNumber
+            // 
+            this.columnHeaderItamNumber.Text = "Номенклатурный артикуль";
+            this.columnHeaderItamNumber.Width = 221;
             // 
             // columnHeaderEquipmentManufacturerName
             // 
@@ -112,6 +118,7 @@
             this.buttonChangeItamNumber.TabIndex = 40;
             this.buttonChangeItamNumber.Text = "Изменить";
             this.buttonChangeItamNumber.UseVisualStyleBackColor = false;
+            this.buttonChangeItamNumber.Click += new System.EventHandler(this.buttonChangeItamNumber_Click);
             // 
             // buttonDeleteItamNumber
             // 
@@ -184,11 +191,6 @@
             this.labellAccountManagementFilter.Size = new System.Drawing.Size(85, 24);
             this.labellAccountManagementFilter.TabIndex = 42;
             this.labellAccountManagementFilter.Text = "Фильтр";
-            // 
-            // columnHeaderItamNumber
-            // 
-            this.columnHeaderItamNumber.Text = "Номенклатурный артикуль";
-            this.columnHeaderItamNumber.Width = 221;
             // 
             // FormItamNumber
             // 

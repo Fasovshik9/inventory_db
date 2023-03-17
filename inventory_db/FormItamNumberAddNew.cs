@@ -12,15 +12,17 @@ using System.Windows.Forms;
 
 namespace inventory_db
 {
-    public partial class ItamNumberAddNew : Form
+    public partial class FormItamNumberAddNew : Form
     {
 
         private List<string[]> filteredList = null;
         private List<string[]> rowsItamNumber = new List<string[]>();
         MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
 
+        const string phraseFullItamNumber = "Номенклатурный артикуль";
 
-        public ItamNumberAddNew()
+
+        public FormItamNumberAddNew()
         {
             InitializeComponent();
             FillComboBoxEquipmentManufacturer();
@@ -30,7 +32,71 @@ namespace inventory_db
 
         private void buttonAddNewItamNumber_Click(object sender, EventArgs e)
         {
+            if (textBoxItamNumber.Text == phraseFullItamNumber || comboBoxModel.Text == "" || comboBoxEquipmentType.Text == "" || comboBoxEquipmentManufacturer.Text == "")
+            {
+                MessageBox.Show("Все поля должны быть заполенны !");
+                return;
+            }
+            if (textBoxItamNumber.TextLength <= 1 && textBoxItamNumber.TextLength >= 20)
+            {
 
+                MessageBox.Show("Номенклатурный артикуль слишком короткий!\nМинимум 5 знаков!", "Ошибка");
+                //zeroFildPass();
+                return;
+            }
+
+            ///////////////////////////////////////////////////////////////////////////// check new user to reapit
+            MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand("SELECT tb_itam_number.item_number, tb_equipment_model.equipment_model_name " +
+                                                    "FROM tb_itam_number  " +
+                                                    "JOIN tb_equipment_model " +
+                                                    "ON tb_itam_number.equipment_model_name = tb_equipment_model.equipment_model_name " +
+                                                    "WHERE tb_itam_number.item_number = @item_number and tb_equipment_model.equipment_model_name = @equipment_model_name", sqlConnection);
+
+            command.Parameters.Add("@item_number", MySqlDbType.VarChar).Value = textBoxItamNumber.Text;
+            command.Parameters.Add("@equipment_model_name", MySqlDbType.VarChar).Value = comboBoxModel.SelectedValue.ToString();
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Номенклатурный артикуль с такой моделью уже существует!\nИзменить название модели!", "Ошибка");
+                return;
+            }
+            /////////////////////////////////////////////////////////////////////////////
+            string query = "INSERT INTO tb_itam_number(`item_number`, `equipment_model_name`) " +
+                           "VALUES (@item_number, @equipment_model_name)";
+            MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+
+            commandDatabase.Parameters.Add("@item_number", MySqlDbType.VarChar).Value = textBoxItamNumber.Text;
+            commandDatabase.Parameters.Add("@equipment_model_name", MySqlDbType.VarChar).Value = comboBoxModel.SelectedValue.ToString();
+
+
+            commandDatabase.CommandTimeout = 60;
+            //if (textBoxlAccountManagementUserLogin.TextLength <= 12 && textBoxlAccountManagementUserLogin.TextLength >= 5)
+            {
+                //if (textBoxAccountManagementUserPassword.TextLength >= 5)
+                {
+                    try
+                    {
+                        sqlConnection.Open();
+                        MySqlDataReader myReader = commandDatabase.ExecuteReader();
+                        MessageBox.Show("Номенклатурный артикуль успешно добавлен!", "Уведомление");
+                        sqlConnection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        // Show any error message.
+                        MessageBox.Show(ex.Message);
+                    }
+                    this.Close();
+                }
+                //else MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!", "Ошибка");
+            }
+            //else MessageBox.Show("Некоректное имя пользователя!\nМинимум 5 знаков и максимум 12!", "Ошибка");
         }
 
         private void FillComboBoxEquipmentManufacturer()
@@ -169,8 +235,11 @@ namespace inventory_db
                     dataReader.Close();
                 }
             }
-            comboBoxEquipmentManufacturer.Text = rowsItamNumber[0][0].ToString();
-            comboBoxEquipmentType.Text = rowsItamNumber[0][1].ToString();
+            if (comboBoxModel.Text != "")
+            {
+                comboBoxEquipmentManufacturer.Text = rowsItamNumber[0][0].ToString();
+                comboBoxEquipmentType.Text = rowsItamNumber[0][1].ToString();
+            }
         }
 
 
@@ -216,8 +285,22 @@ namespace inventory_db
                     dataReader.Close();
                 }
             }
-            comboBoxEquipmentManufacturer.Text = rowsItamNumber[0][0].ToString();
-            comboBoxEquipmentType.Text = rowsItamNumber[0][1].ToString();
+            if (comboBoxModel.Text == "")
+            {
+                comboBoxEquipmentManufacturer.Text = rowsItamNumber[0][0].ToString();
+                comboBoxEquipmentType.Text = rowsItamNumber[0][1].ToString();
+            }
+
+        }
+
+        private void comboBoxModel_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            FillComboBoxes();
+        }
+
+        private void comboBoxModel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillComboBoxes();
         }
     }
 }

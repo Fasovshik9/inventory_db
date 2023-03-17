@@ -35,11 +35,22 @@
             this.типыОборудованяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.производительОборудованияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оборудованиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.модельОборудованияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пользовательToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.администрированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAccountManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.модельОборудованияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listViewMain = new System.Windows.Forms.ListView();
+            this.columnHeaderInvent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderLocation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMOLFullName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDepatnment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderItamNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderManufacturer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderModel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderUser = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +63,7 @@
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1158, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -104,6 +115,13 @@
             this.оборудованиеToolStripMenuItem.Text = "Модель";
             this.оборудованиеToolStripMenuItem.Click += new System.EventHandler(this.оборудованиеToolStripMenuItem_Click);
             // 
+            // модельОборудованияToolStripMenuItem
+            // 
+            this.модельОборудованияToolStripMenuItem.Name = "модельОборудованияToolStripMenuItem";
+            this.модельОборудованияToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.модельОборудованияToolStripMenuItem.Text = "Номенклатурный артикуль";
+            this.модельОборудованияToolStripMenuItem.Click += new System.EventHandler(this.модельОборудованияToolStripMenuItem_Click);
+            // 
             // пользовательToolStripMenuItem
             // 
             this.пользовательToolStripMenuItem.Name = "пользовательToolStripMenuItem";
@@ -131,22 +149,90 @@
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             // 
-            // модельОборудованияToolStripMenuItem
+            // listViewMain
             // 
-            this.модельОборудованияToolStripMenuItem.Name = "модельОборудованияToolStripMenuItem";
-            this.модельОборудованияToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.модельОборудованияToolStripMenuItem.Text = "Номенклатурный артикуль";
-            this.модельОборудованияToolStripMenuItem.Click += new System.EventHandler(this.модельОборудованияToolStripMenuItem_Click);
+            this.listViewMain.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderInvent,
+            this.columnHeaderLocation,
+            this.columnHeaderDate,
+            this.columnHeaderMOLFullName,
+            this.columnHeaderDepatnment,
+            this.columnHeaderItamNumber,
+            this.columnHeaderManufacturer,
+            this.columnHeaderModel,
+            this.columnHeaderType,
+            this.columnHeaderUser});
+            this.listViewMain.FullRowSelect = true;
+            this.listViewMain.GridLines = true;
+            this.listViewMain.HideSelection = false;
+            this.listViewMain.Location = new System.Drawing.Point(12, 63);
+            this.listViewMain.Name = "listViewMain";
+            this.listViewMain.Size = new System.Drawing.Size(1137, 438);
+            this.listViewMain.TabIndex = 1;
+            this.listViewMain.UseCompatibleStateImageBehavior = false;
+            this.listViewMain.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderInvent
+            // 
+            this.columnHeaderInvent.Text = "Инвентарный номер";
+            this.columnHeaderInvent.Width = 118;
+            // 
+            // columnHeaderLocation
+            // 
+            this.columnHeaderLocation.Text = "Локация";
+            this.columnHeaderLocation.Width = 97;
+            // 
+            // columnHeaderDate
+            // 
+            this.columnHeaderDate.Text = "Дата";
+            this.columnHeaderDate.Width = 82;
+            // 
+            // columnHeaderMOLFullName
+            // 
+            this.columnHeaderMOLFullName.Text = "МОЛ";
+            this.columnHeaderMOLFullName.Width = 76;
+            // 
+            // columnHeaderDepatnment
+            // 
+            this.columnHeaderDepatnment.Text = "Отдел";
+            this.columnHeaderDepatnment.Width = 97;
+            // 
+            // columnHeaderItamNumber
+            // 
+            this.columnHeaderItamNumber.Text = "Номен. Артикуль";
+            this.columnHeaderItamNumber.Width = 116;
+            // 
+            // columnHeaderManufacturer
+            // 
+            this.columnHeaderManufacturer.Text = "Производитель";
+            this.columnHeaderManufacturer.Width = 135;
+            // 
+            // columnHeaderModel
+            // 
+            this.columnHeaderModel.Text = "Модель";
+            this.columnHeaderModel.Width = 125;
+            // 
+            // columnHeaderType
+            // 
+            this.columnHeaderType.Text = "Тип";
+            this.columnHeaderType.Width = 100;
+            // 
+            // columnHeaderUser
+            // 
+            this.columnHeaderUser.Text = "Сотрудник ИТ";
+            this.columnHeaderUser.Width = 100;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1158, 545);
+            this.Controls.Add(this.listViewMain);
             this.Controls.Add(this.menuStrip1);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MainForm";
+            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -169,6 +255,17 @@
         private System.Windows.Forms.ToolStripMenuItem производительОборудованияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оборудованиеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem модельОборудованияToolStripMenuItem;
+        private System.Windows.Forms.ListView listViewMain;
+        private System.Windows.Forms.ColumnHeader columnHeaderInvent;
+        private System.Windows.Forms.ColumnHeader columnHeaderLocation;
+        private System.Windows.Forms.ColumnHeader columnHeaderDate;
+        private System.Windows.Forms.ColumnHeader columnHeaderMOLFullName;
+        private System.Windows.Forms.ColumnHeader columnHeaderDepatnment;
+        private System.Windows.Forms.ColumnHeader columnHeaderItamNumber;
+        private System.Windows.Forms.ColumnHeader columnHeaderManufacturer;
+        private System.Windows.Forms.ColumnHeader columnHeaderModel;
+        private System.Windows.Forms.ColumnHeader columnHeaderType;
+        private System.Windows.Forms.ColumnHeader columnHeaderUser;
     }
 }
 

@@ -16,7 +16,7 @@ namespace inventory_db
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormItamNumber());
+            Application.Run(new MainForm());
         }
     }
 }

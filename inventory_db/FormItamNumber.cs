@@ -19,8 +19,11 @@ namespace inventory_db
         private List<string[]> rowsEquipmentModel = new List<string[]>();
         MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
 
-        private string rowsEquipmentModelChange;
+       
+
+        private string rowsItamNumberMouse;
         private string rowsEquipmentManufacturerMouse;
+        private string rowsEquipmentModelMouse;
         private string rowsEquipmentTypeMouse;
 
         public FormItamNumber()
@@ -31,7 +34,7 @@ namespace inventory_db
 
         private void buttonAddNewItamNumber_Click(object sender, EventArgs e)
         {
-            ItamNumberAddNew ItamNumberAddNew = new ItamNumberAddNew();
+            FormItamNumberAddNew ItamNumberAddNew = new FormItamNumberAddNew();
             ItamNumberAddNew.ShowDialog();
         }
 
@@ -45,9 +48,9 @@ namespace inventory_db
             //try
             {
                 sqlConnection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand("SELECT tb_equipment.item_number, tb_equipment.equipment_model_name, tb_equipment_manufacturer.col_equipment_manufacturer_name, tb_type_equipment.col_type_equipment_name " +
-                                                            "FROM tb_equipment JOIN tb_equipment_model " +
-                                                            "ON tb_equipment.equipment_model_name = tb_equipment_model.equipment_model_name " +
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT tb_itam_number.item_number, tb_itam_number.equipment_model_name, tb_equipment_manufacturer.col_equipment_manufacturer_name, tb_type_equipment.col_type_equipment_name " +
+                                                            "FROM tb_itam_number JOIN tb_equipment_model " +
+                                                            "ON tb_itam_number.equipment_model_name = tb_equipment_model.equipment_model_name " +
                                                             "JOIN tb_equipment_manufacturer " +
                                                             "ON tb_equipment_model.id_equipment_manufacturer = tb_equipment_manufacturer.id_equipment_manufacturer " +
                                                             "JOIN tb_type_equipment " +
@@ -88,6 +91,45 @@ namespace inventory_db
         private void FormItamNumber_Activated(object sender, EventArgs e)
         {
             RefreshlistViewEquipmentModel();
+        }
+
+        private void buttonChangeItamNumber_Click(object sender, EventArgs e)
+        {
+            FormItamNumberChange FormItamNumberChange = new FormItamNumberChange();
+
+            if (this.listViewItamNumber.SelectedItems.Count != 0)
+            {
+                FormItamNumberChange.rowsItamNumberMouseBuff = rowsItamNumberMouse;
+                FormItamNumberChange.rowsEquipmentManufacturerMouseBuff = rowsEquipmentManufacturerMouse;
+                FormItamNumberChange.rowsEquipmentModelMouseBuff = rowsEquipmentModelMouse;
+                FormItamNumberChange.rowsEquipmentTypeMouseBuff = rowsEquipmentTypeMouse;
+                FormItamNumberChange.ShowDialog();
+                RefreshlistViewEquipmentModel();
+            }
+            else
+            {
+                MessageBox.Show("Выберете строку!", "Ошибка");
+            }
+        }
+
+        private void listViewItamNumber_MouseDown(object sender, MouseEventArgs e)
+        {
+            {
+                ListViewHitTestInfo info = listViewItamNumber.HitTest(e.X, e.Y);
+                ListViewItem item = info.Item;
+
+                if (item != null)
+                {
+                    this.rowsItamNumberMouse = item.SubItems[0].Text;
+                    this.rowsEquipmentManufacturerMouse = item.SubItems[1].Text;
+                    this.rowsEquipmentModelMouse = item.SubItems[2].Text;
+                    this.rowsEquipmentTypeMouse = item.SubItems[3].Text;
+                }
+                else
+                {
+                    this.listViewItamNumber.SelectedItems.Clear();
+                }
+            }
         }
     }
 }
