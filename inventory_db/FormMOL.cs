@@ -183,7 +183,7 @@ namespace inventory_db
             }
             else
             {
-                MessageBox.Show("Выберете пользвателя!", "Ошибка");
+                MessageBox.Show("Выберете строку!", "Ошибка");
             }
         }
     }

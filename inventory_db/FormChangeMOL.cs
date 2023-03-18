@@ -15,8 +15,9 @@ namespace inventory_db
     public partial class FormChangeMOL : Form
     {
 
-        const string phraseFullNameMOL = "Введите ФИО МОЛ'a";
-        const string phraseDepartmentMOL = "Введите отдела МОЛ'a";
+
+        const string phraseFullNameMOL = "Введите ФИО МОЛ'а";
+        const string phraseDepatmentMOLL = "Введите подразделение МОЛ'а";
         public string oldDepartmentMOL;
 
         public FormChangeMOL()
@@ -31,34 +32,28 @@ namespace inventory_db
 
         private void buttonChangeMOL_Click(object sender, EventArgs e)
         {
-            if (textBoxlChangeMOL.Text == phraseFullNameMOL || textBoxChangeDepartmentMOL.Text == phraseDepartmentMOL)
+            if (textBoxlChangeMOL.Text == phraseFullNameMOL || textBoxChangeDepartmentMOL.Text == phraseDepatmentMOLL)
             {
                 MessageBox.Show("Все поля должны быть заполенны !");
                 return;
             }
             if (textBoxlChangeMOL.TextLength <= 20 && textBoxlChangeMOL.TextLength >= 1)
             {
-                //if (textBoxAccountManagementUserFullName.TextLength >= 5)
+                if (textBoxChangeDepartmentMOL.TextLength >= 20)
                 {
-                    if (textBoxChangeDepartmentMOL.TextLength <= 1)
-                    {
-                        MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!", "Ошибка");
-                        //zeroFildPass();
-                        return;
-                    }
-                    else { }
+                    MessageBox.Show("Название отдела слишком длинное!\nМаксимум 20 знаков!", "Ошибка");
+                    zeroDepartmentMOL();
+                    return;
                 }
-                //else
-                //{
-                //    MessageBox.Show("!\nМинимум 5 знаков!", "Ошибка");
-                //    zeroFildPass();
-                //    return;
-                //}
+                else
+                {
+
+                }
             }
             else
             {
-                MessageBox.Show("Некоректное имя пользователя!\nМинимум 5 знаков и максимум 20!", "Ошибка");
-                //zeroFildPass();
+                MessageBox.Show("Некоректное имя МОЛ'а!\nМаксимум 20 знаков!", "Ошибка");
+                zeroFullNameMOL();
                 return;
             }
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
@@ -119,6 +114,52 @@ namespace inventory_db
                     // Ops, maybe the id doesn't exists ?
                     MessageBox.Show(ex.Message);
                 }
+            }
+
+        }
+
+        private void zeroFullNameMOL()
+        {
+            textBoxlChangeMOL.Text = phraseFullNameMOL;
+            textBoxlChangeMOL.ForeColor = Color.Gray;
+        }
+        private void zeroDepartmentMOL()
+        {
+            textBoxChangeDepartmentMOL.Text = phraseDepatmentMOLL;
+            textBoxChangeDepartmentMOL.ForeColor = Color.Gray;
+        }
+
+        private void textBoxlChangeMOL_Enter(object sender, EventArgs e)
+        {
+            if (textBoxlChangeMOL.Text == phraseFullNameMOL)
+            {
+                textBoxlChangeMOL.Text = "";
+                textBoxlChangeMOL.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxChangeDepartmentMOL_Enter(object sender, EventArgs e)
+        {
+            if (textBoxChangeDepartmentMOL.Text == phraseDepatmentMOLL)
+            {
+                textBoxChangeDepartmentMOL.Text = "";
+                textBoxChangeDepartmentMOL.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxlChangeMOL_Leave(object sender, EventArgs e)
+        {
+            if (textBoxlChangeMOL.Text == "")
+            {
+                zeroFullNameMOL();
+            }
+        }
+
+        private void textBoxChangeDepartmentMOL_Leave(object sender, EventArgs e)
+        {
+            if (textBoxChangeDepartmentMOL.Text == "")
+            {
+                zeroDepartmentMOL();
             }
         }
     }

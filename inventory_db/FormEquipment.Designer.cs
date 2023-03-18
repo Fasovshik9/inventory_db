@@ -152,7 +152,7 @@
             this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxFilter.Location = new System.Drawing.Point(98, 78);
             this.textBoxFilter.Name = "textBoxFilter";
-            this.textBoxFilter.Size = new System.Drawing.Size(265, 32);
+            this.textBoxFilter.Size = new System.Drawing.Size(332, 32);
             this.textBoxFilter.TabIndex = 26;
             // 
             // buttonEmptyFilter
@@ -162,7 +162,7 @@
             this.buttonEmptyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEmptyFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmptyFilter.ForeColor = System.Drawing.Color.White;
-            this.buttonEmptyFilter.Location = new System.Drawing.Point(369, 76);
+            this.buttonEmptyFilter.Location = new System.Drawing.Point(436, 76);
             this.buttonEmptyFilter.Name = "buttonEmptyFilter";
             this.buttonEmptyFilter.Size = new System.Drawing.Size(208, 36);
             this.buttonEmptyFilter.TabIndex = 25;
@@ -207,6 +207,7 @@
             this.Controls.Add(this.labellAccountManagementFilter);
             this.Controls.Add(this.panel1);
             this.Name = "FormEquipment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEquipment";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -195,6 +195,7 @@
             this.Controls.Add(this.buttonCencel);
             this.Controls.Add(this.labellAccountManagementFilter);
             this.Name = "FormItamNumberAddNew";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItamNumberAddNew";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

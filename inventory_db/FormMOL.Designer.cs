@@ -32,13 +32,13 @@
             this.labelMOL = new System.Windows.Forms.Label();
             this.listViewMOL = new System.Windows.Forms.ListView();
             this.columnHeaderFullNameMOL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMOLDepartment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAddNewMOL = new System.Windows.Forms.Button();
             this.buttonEmptyFilter = new System.Windows.Forms.Button();
             this.textBoxFilter = new System.Windows.Forms.TextBox();
             this.buttonChangeMOL = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonDeleteUser = new System.Windows.Forms.Button();
-            this.columnHeaderMOLDepartment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +85,11 @@
             // columnHeaderFullNameMOL
             // 
             this.columnHeaderFullNameMOL.Text = "ФИО МОЛ\'а";
+            // 
+            // columnHeaderMOLDepartment
+            // 
+            this.columnHeaderMOLDepartment.Text = "Подразделение";
+            this.columnHeaderMOLDepartment.Width = 178;
             // 
             // buttonAddNewMOL
             // 
@@ -171,11 +176,6 @@
             this.buttonDeleteUser.UseVisualStyleBackColor = false;
             this.buttonDeleteUser.Click += new System.EventHandler(this.buttonDeleteUser_Click);
             // 
-            // columnHeaderMOLDepartment
-            // 
-            this.columnHeaderMOLDepartment.Text = "Подразделение";
-            this.columnHeaderMOLDepartment.Width = 178;
-            // 
             // FormMOL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +191,7 @@
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonDeleteUser);
             this.Name = "FormMOL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMOL";
             this.Activated += new System.EventHandler(this.FormMOL_Activated);
             this.panel1.ResumeLayout(false);

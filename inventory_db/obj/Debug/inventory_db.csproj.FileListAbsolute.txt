@@ -41,3 +41,4 @@ C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormItamNumb
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormItamNumberAddNew.resources
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormMainAddNew.resources
 C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormMainChange.resources
+C:\Vadim\Study\git\inventory_db\inventory_db\obj\Debug\inventory_db.FormChangeUserPaswword.resources

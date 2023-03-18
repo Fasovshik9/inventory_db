@@ -164,10 +164,11 @@
             // textBoxFilter
             // 
             this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxFilter.Location = new System.Drawing.Point(316, 103);
+            this.textBoxFilter.Location = new System.Drawing.Point(212, 105);
             this.textBoxFilter.Name = "textBoxFilter";
-            this.textBoxFilter.Size = new System.Drawing.Size(265, 32);
+            this.textBoxFilter.Size = new System.Drawing.Size(288, 32);
             this.textBoxFilter.TabIndex = 44;
+            this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
             // buttonEmptyFilter
             // 
@@ -175,19 +176,20 @@
             this.buttonEmptyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEmptyFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmptyFilter.ForeColor = System.Drawing.Color.White;
-            this.buttonEmptyFilter.Location = new System.Drawing.Point(587, 101);
+            this.buttonEmptyFilter.Location = new System.Drawing.Point(506, 103);
             this.buttonEmptyFilter.Name = "buttonEmptyFilter";
             this.buttonEmptyFilter.Size = new System.Drawing.Size(208, 36);
             this.buttonEmptyFilter.TabIndex = 43;
             this.buttonEmptyFilter.Text = "Отчистить фильтр";
             this.buttonEmptyFilter.UseVisualStyleBackColor = false;
+            this.buttonEmptyFilter.Click += new System.EventHandler(this.buttonEmptyFilter_Click);
             // 
             // labellAccountManagementFilter
             // 
             this.labellAccountManagementFilter.AutoSize = true;
             this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
-            this.labellAccountManagementFilter.Location = new System.Drawing.Point(225, 107);
+            this.labellAccountManagementFilter.Location = new System.Drawing.Point(121, 109);
             this.labellAccountManagementFilter.Name = "labellAccountManagementFilter";
             this.labellAccountManagementFilter.Size = new System.Drawing.Size(85, 24);
             this.labellAccountManagementFilter.TabIndex = 42;
@@ -209,6 +211,7 @@
             this.Controls.Add(this.buttonEmptyFilter);
             this.Controls.Add(this.labellAccountManagementFilter);
             this.Name = "FormItamNumber";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormItamNumber";
             this.Activated += new System.EventHandler(this.FormItamNumber_Activated);
             this.panel1.ResumeLayout(false);

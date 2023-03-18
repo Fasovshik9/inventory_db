@@ -162,6 +162,7 @@
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(265, 32);
             this.textBoxFilter.TabIndex = 35;
+            this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
             // buttonEmptyFilter
             // 
@@ -175,6 +176,7 @@
             this.buttonEmptyFilter.TabIndex = 34;
             this.buttonEmptyFilter.Text = "Отчистить фильтр";
             this.buttonEmptyFilter.UseVisualStyleBackColor = false;
+            this.buttonEmptyFilter.Click += new System.EventHandler(this.buttonEmptyFilter_Click);
             // 
             // labellAccountManagementFilter
             // 
@@ -203,6 +205,7 @@
             this.Controls.Add(this.buttonEmptyFilter);
             this.Controls.Add(this.labellAccountManagementFilter);
             this.Name = "FormEquipmentModel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEquipmentModel";
             this.Activated += new System.EventHandler(this.FormEquipmentModel_Activated);
             this.Load += new System.EventHandler(this.FormEquipmentModel_Load);

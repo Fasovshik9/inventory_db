@@ -41,7 +41,7 @@ namespace inventory_db
             if (textBoxEquipmentModelAddNew.TextLength <= 1 && textBoxEquipmentModelAddNew.TextLength >= 20)
             {
 
-                MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!", "Ошибка");
+                MessageBox.Show("Название модели слишком длинное!\nМаксимум 20 знаков!", "Ошибка");
                 //zeroFildPass();
                 return;
             }

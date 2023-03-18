@@ -93,6 +93,12 @@
     <Compile Include="FormChangeMOL.Designer.cs">
       <DependentUpon>FormChangeMOL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChangeUserPaswword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangeUserPaswword.Designer.cs">
+      <DependentUpon>FormChangeUserPaswword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEquipment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChangeMOL.resx">
       <DependentUpon>FormChangeMOL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangeUserPaswword.resx">
+      <DependentUpon>FormChangeUserPaswword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEquipment.resx">
       <DependentUpon>FormEquipment.cs</DependentUpon>

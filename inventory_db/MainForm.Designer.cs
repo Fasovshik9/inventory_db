@@ -37,6 +37,7 @@
             this.оборудованиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.модельОборудованияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пользовательToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.изменитьПарольToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.администрированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAccountManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +64,7 @@
             this.dateTimePickerFinish = new System.Windows.Forms.DateTimePicker();
             this.labelDateStart = new System.Windows.Forms.Label();
             this.labelDateFinish = new System.Windows.Forms.Label();
+            this.textBoxFilterAll = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,9 +138,18 @@
             // 
             // пользовательToolStripMenuItem
             // 
+            this.пользовательToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.изменитьПарольToolStripMenuItem});
             this.пользовательToolStripMenuItem.Name = "пользовательToolStripMenuItem";
             this.пользовательToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.пользовательToolStripMenuItem.Text = "Пользователь";
+            // 
+            // изменитьПарольToolStripMenuItem
+            // 
+            this.изменитьПарольToolStripMenuItem.Name = "изменитьПарольToolStripMenuItem";
+            this.изменитьПарольToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.изменитьПарольToolStripMenuItem.Text = "Изменить пароль";
+            this.изменитьПарольToolStripMenuItem.Click += new System.EventHandler(this.изменитьПарольToolStripMenuItem_Click);
             // 
             // администрированиеToolStripMenuItem
             // 
@@ -316,7 +327,8 @@
             "По производителю",
             "По модели",
             "По типу",
-            "По сотруднику ИТ"});
+            "По сотруднику ИТ",
+            "По всем полям"});
             this.comboBoxFilter.Location = new System.Drawing.Point(400, 59);
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(304, 33);
@@ -392,12 +404,23 @@
             this.labelDateFinish.Text = "до";
             this.labelDateFinish.Visible = false;
             // 
+            // textBoxFilterAll
+            // 
+            this.textBoxFilterAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.textBoxFilterAll.Location = new System.Drawing.Point(105, 59);
+            this.textBoxFilterAll.Name = "textBoxFilterAll";
+            this.textBoxFilterAll.Size = new System.Drawing.Size(275, 32);
+            this.textBoxFilterAll.TabIndex = 123;
+            this.textBoxFilterAll.Visible = false;
+            this.textBoxFilterAll.TextChanged += new System.EventHandler(this.textBoxFilterAll_TextChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1158, 627);
+            this.Controls.Add(this.textBoxFilterAll);
             this.Controls.Add(this.labelDateFinish);
             this.Controls.Add(this.labelDateStart);
             this.Controls.Add(this.dateTimePickerFinish);
@@ -461,6 +484,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerFinish;
         private System.Windows.Forms.Label labelDateStart;
         private System.Windows.Forms.Label labelDateFinish;
+        private System.Windows.Forms.ToolStripMenuItem изменитьПарольToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBoxFilterAll;
     }
 }
 

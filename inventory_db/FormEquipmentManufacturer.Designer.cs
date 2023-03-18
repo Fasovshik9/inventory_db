@@ -228,6 +228,7 @@
             this.Controls.Add(this.buttonDeleteEquipmentManufacturer);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Name = "FormEquipmentManufacturer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEquipmentManufacturer";
             this.Activated += new System.EventHandler(this.FormEquipmentManufacturer_Activated);
             this.panel1.ResumeLayout(false);

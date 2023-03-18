@@ -169,6 +169,7 @@
             this.Controls.Add(this.textBoxEquipmentModelChange);
             this.Controls.Add(this.labellAccountManagementFilter);
             this.Name = "FormEquipmentModelChange";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEquipmentModelChange";
             this.Activated += new System.EventHandler(this.FormEquipmentModelChange_Activated);
             this.Load += new System.EventHandler(this.FormEquipmentModelChange_Load);

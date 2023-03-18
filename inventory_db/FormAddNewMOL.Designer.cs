@@ -144,6 +144,7 @@
             this.Controls.Add(this.labelFullNameMOL);
             this.Controls.Add(this.label2);
             this.Name = "FormAddNewMOL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormAddNewMOL";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

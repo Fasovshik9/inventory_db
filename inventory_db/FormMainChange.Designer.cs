@@ -355,6 +355,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel1);
             this.Name = "FormMainChange";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMainChange";
             this.Load += new System.EventHandler(this.FormMainChange_Load);
             this.panel1.ResumeLayout(false);

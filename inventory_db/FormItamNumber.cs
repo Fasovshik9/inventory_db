@@ -36,6 +36,14 @@ namespace inventory_db
             ItamNumberAddNew.ShowDialog();
         }
 
+        private void RefreshlistViewEquipmentModel(List<string[]> list)
+        {
+            listViewItamNumber.Items.Clear();
+            foreach (string[] s in list)
+            {
+                listViewItamNumber.Items.Add(new ListViewItem(s));
+            }
+        }
 
 
         private void RefreshlistViewEquipmentModel()
@@ -161,6 +169,22 @@ namespace inventory_db
             {
                 MessageBox.Show("Выберете тип!", "Ошибка");
             }
+        }
+
+        private void textBoxFilter_TextChanged(object sender, EventArgs e)
+        {
+            filteredList = rowsEquipmentModel.Where(x =>
+                (x[0].ToLower().Contains(textBoxFilter.Text.ToLower())) ||
+                (x[1].ToLower().Contains(textBoxFilter.Text.ToLower())) ||
+                (x[2].ToLower().Contains(textBoxFilter.Text.ToLower())) ||
+                (x[3].ToLower().Contains(textBoxFilter.Text.ToLower()))
+            ).ToList();
+            RefreshlistViewEquipmentModel(filteredList);
+        }
+
+        private void buttonEmptyFilter_Click(object sender, EventArgs e)
+        {
+            textBoxFilter.Text = "";
         }
     }
 }

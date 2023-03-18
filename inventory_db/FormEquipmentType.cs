@@ -90,12 +90,12 @@ namespace inventory_db
         {
             if (textBoxAddNewEquipment.Text == phraseEquipment)
             {
-                MessageBox.Show("Введите название локации!");
+                MessageBox.Show("Введите название типа!");
                 return;
             }
             if (textBoxAddNewEquipment.TextLength >= 50)
             {
-                MessageBox.Show("Некоректное название локации!\nМаксимум 50!", "Ошибка");
+                MessageBox.Show("Некоректное название типа!\nМаксимум 50!", "Ошибка");
                 zeroFildEquipment();
                 return;
             }

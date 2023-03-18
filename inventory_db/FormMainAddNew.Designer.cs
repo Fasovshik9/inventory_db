@@ -122,6 +122,7 @@
             this.textBoxInventNumber.Name = "textBoxInventNumber";
             this.textBoxInventNumber.Size = new System.Drawing.Size(395, 32);
             this.textBoxInventNumber.TabIndex = 88;
+            this.textBoxInventNumber.Visible = false;
             // 
             // label4
             // 
@@ -133,6 +134,7 @@
             this.label4.Size = new System.Drawing.Size(212, 24);
             this.label4.TabIndex = 87;
             this.label4.Text = "Инвентарный номер";
+            this.label4.Visible = false;
             // 
             // comboBoxLocation
             // 
@@ -355,6 +357,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonCencel);
             this.Name = "FormMainAddNew";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMainAddNew";
             this.Activated += new System.EventHandler(this.FormMainAddNew_Activated);
             this.panel1.ResumeLayout(false);

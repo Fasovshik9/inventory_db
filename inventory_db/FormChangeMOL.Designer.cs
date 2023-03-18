@@ -46,6 +46,8 @@
             this.textBoxChangeDepartmentMOL.Name = "textBoxChangeDepartmentMOL";
             this.textBoxChangeDepartmentMOL.Size = new System.Drawing.Size(252, 29);
             this.textBoxChangeDepartmentMOL.TabIndex = 30;
+            this.textBoxChangeDepartmentMOL.Enter += new System.EventHandler(this.textBoxChangeDepartmentMOL_Enter);
+            this.textBoxChangeDepartmentMOL.Leave += new System.EventHandler(this.textBoxChangeDepartmentMOL_Leave);
             // 
             // textBoxlChangeMOL
             // 
@@ -54,6 +56,8 @@
             this.textBoxlChangeMOL.Name = "textBoxlChangeMOL";
             this.textBoxlChangeMOL.Size = new System.Drawing.Size(252, 29);
             this.textBoxlChangeMOL.TabIndex = 29;
+            this.textBoxlChangeMOL.Enter += new System.EventHandler(this.textBoxlChangeMOL_Enter);
+            this.textBoxlChangeMOL.Leave += new System.EventHandler(this.textBoxlChangeMOL_Leave);
             // 
             // buttonChangeMOL
             // 
@@ -141,6 +145,7 @@
             this.Controls.Add(this.labelFullNameMOL);
             this.Controls.Add(this.label2);
             this.Name = "FormChangeMOL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormChangeMOL";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

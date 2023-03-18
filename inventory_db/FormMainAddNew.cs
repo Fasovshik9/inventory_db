@@ -445,13 +445,7 @@ namespace inventory_db
                 MessageBox.Show("Все поля должны быть заполенны !");
                 return;
             }
-            if (textBoxInventNumber.TextLength <= 1 && textBoxInventNumber.TextLength >= 20)
-            {
-
-                MessageBox.Show("Номенклатурный артикуль слишком короткий!\nМинимум 5 знаков!", "Ошибка");
-                //zeroFildPass();
-                return;
-            }
+            
 
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
 

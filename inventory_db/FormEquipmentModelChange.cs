@@ -44,7 +44,7 @@ namespace inventory_db
             }
             if (textBoxEquipmentModelChange.TextLength >= 20 && textBoxEquipmentModelChange.TextLength <= 1)
             {
-                MessageBox.Show("Некоректное навазние можели!\nМинимум 5 знаков и максимум 20!", "Ошибка");
+                MessageBox.Show("Название модели слишком длинное!\nМаксимум 20 знаков!", "Ошибка");
                 return;
             }
 

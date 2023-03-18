@@ -38,12 +38,12 @@ namespace inventory_db
         {
             if (textBoxAddNewEquipmentManufacturer.Text == phraseEquipmentManufacturer)
             {
-                MessageBox.Show("Введите название локации!");
+                MessageBox.Show("Введите производителя!");
                 return;
             }
             if (textBoxAddNewEquipmentManufacturer.TextLength >= 50)
             {
-                MessageBox.Show("Некоректное название локации!\nМаксимум 50!", "Ошибка");
+                MessageBox.Show("Некоректное название производителя!\nМаксимум 50!", "Ошибка");
                 zeroFildEquipmentManufacturer();
                 return;
             }
@@ -61,7 +61,7 @@ namespace inventory_db
 
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("Этот локация уже существует!\nИзменить название локации!", "Ошибка");
+                MessageBox.Show("Этот производитель уже существует!\nИзменить название производителя!", "Ошибка");
                 return;
             }
             /////////////////////////////////////////////////////////////////////////////
@@ -82,7 +82,7 @@ namespace inventory_db
                     {
                         sqlConnection.Open();
                         MySqlDataReader myReader = commandDatabase.ExecuteReader();
-                        MessageBox.Show("Локация успешно добавлена!", "Уведомление");
+                        MessageBox.Show("производитель успешно добавлен!", "Уведомление");
                         sqlConnection.Close();
                         zeroFildEquipmentManufacturer();
                     }
@@ -167,7 +167,7 @@ namespace inventory_db
         {
             if (this.listViewEquipmentManufacturer.SelectedItems.Count != 0)
             {
-                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить Локацию?", "Удаление локации", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить производителя?", "Удаление производителя", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     string query = "DELETE FROM `tb_equipment_manufacturer` WHERE `col_equipment_manufacturer_name` = @col_equipment_manufacturer_name";
@@ -192,7 +192,7 @@ namespace inventory_db
             }
             else
             {
-                MessageBox.Show("Выберете локацию!", "Ошибка");
+                MessageBox.Show("Выберете производителя!", "Ошибка");
             }
         }
 
@@ -252,7 +252,7 @@ namespace inventory_db
                 }
                 else
                 {
-                    MessageBox.Show("Выберете локацию!", "Ошибка");
+                    MessageBox.Show("Выберете производителя!", "Ошибка");
                 }
             }
             else
@@ -279,7 +279,7 @@ namespace inventory_db
 
                 if (table.Rows.Count > 0)
                 {
-                    MessageBox.Show("Этот локация уже существует!\nИзменить логин!", "Ошибка");
+                    MessageBox.Show("Этот производитель уже существует!\nИзменить название производителя!", "Ошибка");
                     return;
                 }
 
@@ -307,7 +307,7 @@ namespace inventory_db
                         reader = commandDatabase.ExecuteReader();
                         // Succesfully updated
                         sqlConnection.Close();
-                        MessageBox.Show("Локация изменена!", "Уведомление");
+                        MessageBox.Show("Название производителя изменено!", "Уведомление");
                         buttonChangeEquipmentManufacturer.Text = "Изменить";
                         textBoxChangeEquipmentManufacturer.Visible = false;
                         RefreshlistViewEquipmentManufacturer();

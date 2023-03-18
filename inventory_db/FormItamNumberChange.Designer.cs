@@ -195,6 +195,7 @@
             this.Controls.Add(this.buttonCencel);
             this.Controls.Add(this.labellAccountManagementFilter);
             this.Name = "FormItamNumberChange";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormItamNumberChange";
             this.Load += new System.EventHandler(this.FormItamNumberChange_Load);
             this.panel1.ResumeLayout(false);

@@ -15,6 +15,8 @@ namespace inventory_db
 {
     public partial class AuthorizationForm : Form
     {
+        public string userLogin;
+        public string oldUserPassword;
         const string phraseLogin = "Введите логин";
         const string phrasePass = "Введите пароль";
 
@@ -66,7 +68,8 @@ namespace inventory_db
                             //MainForm.userNameLabel.Text = this.textBoxUserLogin.Text;
                             //MainForm.oldUserPass = textBoxUserPassword.Text;
                             //MainForm.idValueUser = idValueUser;
-                            //MainForm.privilegeUser = privilegeUser;
+                            MainForm.userLogin = textBoxUserLogin.Text;
+                            MainForm.oldUserPassword = textBoxUserPassword.Text;
                             MainForm.ShowDialog();
                         }
                         Show();

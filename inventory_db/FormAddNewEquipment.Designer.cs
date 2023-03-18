@@ -165,6 +165,7 @@
             this.Controls.Add(this.labelAccountManagementUserFullName);
             this.Controls.Add(this.comboBoxEquipmentManufacturer);
             this.Name = "FormAddNewEquipment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormAddNewEquipment";
             this.Activated += new System.EventHandler(this.FormAddNewEquipment_Activated);
             this.panel1.ResumeLayout(false);

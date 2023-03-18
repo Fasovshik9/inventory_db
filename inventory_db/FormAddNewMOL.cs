@@ -15,7 +15,7 @@ namespace inventory_db
     public partial class FormAddNewMOL : Form
     {
         const string phraseFullNameMOL = "Введите ФИО МОЛ'а";
-        const string phraseDepatmentMOLL = "Введите подразделение";
+        const string phraseDepatmentMOLL = "Введите подразделение МОЛ'а";
 
         public FormAddNewMOL()
         {
@@ -34,27 +34,21 @@ namespace inventory_db
             }
             if (textBoxlNewMOL.TextLength <= 20 && textBoxlNewMOL.TextLength >= 1)
             {
-                //if (textBoxAccountManagementUserFullName.TextLength >= 5)
+                if (textBoxDepartmentMOL.TextLength >= 20)
                 {
-                    if (textBoxDepartmentMOL.TextLength >= 5) { }
-                    else
-                    {
-                        MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!", "Ошибка");
-                        //zeroFildPass();
-                        return;
-                    }
+                    MessageBox.Show("Название отдела слишком длинное!\nМаксимум 20 знаков!", "Ошибка");
+                    zeroDepartmentMOL();
+                    return;
                 }
-                //else
-                //{
-                //    MessageBox.Show("!\nМинимум 5 знаков!", "Ошибка");
-                //    zeroFildPass();
-                //    return;
-                //}
+                else
+                {
+
+                }
             }
             else
             {
-                MessageBox.Show("Некоректное имя пользователя!\nМинимум 5 знаков и максимум 20!", "Ошибка");
-                //zeroFildPass();
+                MessageBox.Show("Некоректное имя МОЛ'а!\nМаксимум 20 знаков!", "Ошибка");
+                zeroFullNameMOL();
                 return;
             }
 
@@ -70,7 +64,7 @@ namespace inventory_db
 
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("МОЛ с таким отделом уже существует\nИзменить отдел!", "Ошибка");
+                MessageBox.Show("Такой отдел уже сущществует\nИзменить отдел!", "Ошибка");
                 return;
             }
             /////////////////////////////////////////////////////////////////////////////

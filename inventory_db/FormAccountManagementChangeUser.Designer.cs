@@ -153,7 +153,7 @@
             // 
             this.textBoxAccountManagementUserFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxAccountManagementUserFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxAccountManagementUserFullName.Location = new System.Drawing.Point(203, 186);
+            this.textBoxAccountManagementUserFullName.Location = new System.Drawing.Point(203, 191);
             this.textBoxAccountManagementUserFullName.Name = "textBoxAccountManagementUserFullName";
             this.textBoxAccountManagementUserFullName.Size = new System.Drawing.Size(252, 29);
             this.textBoxAccountManagementUserFullName.TabIndex = 14;

@@ -442,7 +442,7 @@ namespace inventory_db
                     reader = commandDatabase.ExecuteReader();
                     // Succesfully updated
                     sqlConnection.Close();
-                    MessageBox.Show("оборудование изменено!", "Уведомление");
+                    MessageBox.Show("Оборудование изменено!", "Уведомление");
                     this.Close();
                 }
                 catch (Exception ex)

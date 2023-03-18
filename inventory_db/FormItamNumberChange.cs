@@ -46,7 +46,7 @@ namespace inventory_db
             if (textBoxItamNumberChange.TextLength <= 1 && textBoxItamNumberChange.TextLength >= 20)
             {
 
-                MessageBox.Show("Номенклатурный артикуль слишком короткий!\nМинимум 5 знаков!", "Ошибка");
+                MessageBox.Show("Номенклатурный артикуль слишком длинный!\nМаксимум 20 знаков!", "Ошибка");
                 //zeroFildPass();
                 return;
             }
@@ -69,7 +69,7 @@ namespace inventory_db
 
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("Номенклатурный артикуль с такой моделью уже существует!\nИзменить название модели!", "Ошибка");
+                MessageBox.Show("Номенклатурный артикуль с такой моделью уже существует!\nИзменить название модели или номеклатурного артикуля!", "Ошибка");
                 return;
             }
 
@@ -90,7 +90,7 @@ namespace inventory_db
 
                 if (table2.Rows.Count > 0)
                 {
-                    MessageBox.Show("Такой номенклатурный артикуль уже существует!\nИзменить название модели!", "Ошибка");
+                    MessageBox.Show("Такой номенклатурный артикуль уже существует!\nИзменить номенклатурный артикуль!", "Ошибка");
                     return;
                 }
             }
@@ -117,7 +117,7 @@ namespace inventory_db
                     reader = commandDatabase.ExecuteReader();
                     // Succesfully updated
                     sqlConnection.Close();
-                    MessageBox.Show("Номенклатурный номер изменент!", "Уведомление");
+                    MessageBox.Show("Номенклатурный артикуль изменент!", "Уведомление");
                     this.Close();
                 }
                 catch (Exception ex)

@@ -233,6 +233,7 @@
             this.Controls.Add(this.listViewLocation);
             this.Controls.Add(this.buttonAddNewLocation);
             this.Name = "FormLocation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLocation";
             this.Activated += new System.EventHandler(this.FormLocation_Activated);
             this.Load += new System.EventHandler(this.FormLocation_Load);

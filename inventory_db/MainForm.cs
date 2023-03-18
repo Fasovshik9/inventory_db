@@ -14,6 +14,8 @@ namespace inventory_db
 {
     public partial class MainForm : Form
     {
+        public string userLogin;
+        public string oldUserPassword;
 
         public string rowstextBoxInventNumberMouse;
         public string rowscomboBoxLocationMouse;
@@ -96,8 +98,6 @@ namespace inventory_db
                 listViewMain.Items.Add(new ListViewItem(s));
             }
         }
-
-
 
         private void RefreshlistViewMain()
         {
@@ -602,6 +602,17 @@ namespace inventory_db
                 FilterForWithoutDate();
                 FilterStuff(9);
             }
+            else if (comboBoxFilter.SelectedIndex == 10)
+            {
+                dateTimePickerStart.Visible = false;
+                dateTimePickerFinish.Visible = false;
+                labelDateStart.Visible = false;
+                labelDateFinish.Visible = false;
+                labelFilter.Visible = true;
+                comboBoxFilterAll.Visible = false;
+                textBoxFilterAll.Visible = true;
+
+            }
             comboBoxFilterAll.SelectedIndex = -1;
         }
 
@@ -622,6 +633,7 @@ namespace inventory_db
 
         private void comboBoxFilterAll_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBoxFilterAll.DataSource = null;
             if (comboBoxFilter.SelectedIndex == 0)
                 Filter(0);
             else if (comboBoxFilter.SelectedIndex == 1)
@@ -664,6 +676,7 @@ namespace inventory_db
             labelDateFinish.Visible = false;
             labelFilter.Visible = true;
             comboBoxFilterAll.Visible = true;
+            textBoxFilterAll.Visible = false;
         }
         private void FilterForWithtDate()
         {
@@ -673,6 +686,7 @@ namespace inventory_db
             labelDateFinish.Visible = true;
             labelFilter.Visible = false;
             comboBoxFilterAll.Visible = false;
+            textBoxFilterAll.Visible = false;
         }
 
         private void dateTimePickerStart_ValueChanged(object sender, EventArgs e)
@@ -683,6 +697,34 @@ namespace inventory_db
         private void dateTimePickerFinish_ValueChanged(object sender, EventArgs e)
         {
             FilterDateSpec(2);
+        }
+
+        private void изменитьПарольToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormChangeUserPaswword FormChangeUserPaswword = new FormChangeUserPaswword();
+
+            FormChangeUserPaswword.userLogin = userLogin;
+            FormChangeUserPaswword.oldUserPassword = oldUserPassword;
+
+            FormChangeUserPaswword.ShowDialog();
+        }
+
+        private void textBoxFilterAll_TextChanged(object sender, EventArgs e)
+        {
+            comboBoxFilterAll.DataSource = null;
+            filteredList = rowsMain.Where(x =>
+                (x[0].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
+                (x[1].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
+                (x[2].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
+                (x[3].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
+                (x[4].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
+                (x[5].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
+                (x[6].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
+                (x[7].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
+                (x[8].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
+                (x[9].ToLower().Contains(textBoxFilterAll.Text.ToLower()))
+            ).ToList();
+            RefreshlistViewMain(filteredList);
         }
     }
 }
