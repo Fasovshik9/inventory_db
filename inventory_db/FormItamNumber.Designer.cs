@@ -132,6 +132,7 @@
             this.buttonDeleteItamNumber.TabIndex = 39;
             this.buttonDeleteItamNumber.Text = "Удалить";
             this.buttonDeleteItamNumber.UseVisualStyleBackColor = false;
+            this.buttonDeleteItamNumber.Click += new System.EventHandler(this.buttonDeleteItamNumber_Click);
             // 
             // buttonAddNewItamNumber
             // 

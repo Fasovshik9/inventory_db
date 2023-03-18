@@ -19,8 +19,6 @@ namespace inventory_db
         private List<string[]> rowsEquipmentModel = new List<string[]>();
         MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
 
-       
-
         private string rowsItamNumberMouse;
         private string rowsEquipmentManufacturerMouse;
         private string rowsEquipmentModelMouse;
@@ -129,6 +127,39 @@ namespace inventory_db
                 {
                     this.listViewItamNumber.SelectedItems.Clear();
                 }
+            }
+        }
+
+        private void buttonDeleteItamNumber_Click(object sender, EventArgs e)
+        {
+            if (this.listViewItamNumber.SelectedItems.Count != 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить нуменклатурный номер?", "Удаление типа", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    string query = "DELETE FROM `tb_itam_number` WHERE `item_number` = @item_number";
+                    MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+                    commandDatabase.Parameters.Add("@item_number", MySqlDbType.VarChar).Value = rowsItamNumberMouse;
+
+                    commandDatabase.CommandTimeout = 60;
+                    MySqlDataReader reader;
+                    try
+                    {
+                        sqlConnection.Open();
+                        reader = commandDatabase.ExecuteReader();
+                        // Succesfully deleted
+                        sqlConnection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    RefreshlistViewEquipmentModel();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберете тип!", "Ошибка");
             }
         }
     }

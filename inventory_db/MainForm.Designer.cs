@@ -51,6 +51,18 @@
             this.columnHeaderModel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderUser = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonIMainAddNew = new System.Windows.Forms.Button();
+            this.buttonMainChange = new System.Windows.Forms.Button();
+            this.buttonDeleteMain = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.labelFilter = new System.Windows.Forms.Label();
+            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
+            this.buttonFilterEmpty = new System.Windows.Forms.Button();
+            this.comboBoxFilterAll = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFinish = new System.Windows.Forms.DateTimePicker();
+            this.labelDateStart = new System.Windows.Forms.Label();
+            this.labelDateFinish = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,12 +177,13 @@
             this.listViewMain.FullRowSelect = true;
             this.listViewMain.GridLines = true;
             this.listViewMain.HideSelection = false;
-            this.listViewMain.Location = new System.Drawing.Point(12, 63);
+            this.listViewMain.Location = new System.Drawing.Point(9, 134);
             this.listViewMain.Name = "listViewMain";
             this.listViewMain.Size = new System.Drawing.Size(1137, 438);
             this.listViewMain.TabIndex = 1;
             this.listViewMain.UseCompatibleStateImageBehavior = false;
             this.listViewMain.View = System.Windows.Forms.View.Details;
+            this.listViewMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewMain_MouseDown);
             // 
             // columnHeaderInvent
             // 
@@ -180,7 +193,7 @@
             // columnHeaderLocation
             // 
             this.columnHeaderLocation.Text = "Локация";
-            this.columnHeaderLocation.Width = 97;
+            this.columnHeaderLocation.Width = 166;
             // 
             // columnHeaderDate
             // 
@@ -222,11 +235,181 @@
             this.columnHeaderUser.Text = "Сотрудник ИТ";
             this.columnHeaderUser.Width = 100;
             // 
+            // buttonIMainAddNew
+            // 
+            this.buttonIMainAddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.buttonIMainAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonIMainAddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonIMainAddNew.ForeColor = System.Drawing.Color.White;
+            this.buttonIMainAddNew.Location = new System.Drawing.Point(300, 578);
+            this.buttonIMainAddNew.Name = "buttonIMainAddNew";
+            this.buttonIMainAddNew.Size = new System.Drawing.Size(132, 36);
+            this.buttonIMainAddNew.TabIndex = 76;
+            this.buttonIMainAddNew.Text = "Добавить";
+            this.buttonIMainAddNew.UseVisualStyleBackColor = false;
+            this.buttonIMainAddNew.Click += new System.EventHandler(this.buttonIMainAddNew_Click);
+            // 
+            // buttonMainChange
+            // 
+            this.buttonMainChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.buttonMainChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMainChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonMainChange.ForeColor = System.Drawing.Color.White;
+            this.buttonMainChange.Location = new System.Drawing.Point(470, 578);
+            this.buttonMainChange.Name = "buttonMainChange";
+            this.buttonMainChange.Size = new System.Drawing.Size(132, 36);
+            this.buttonMainChange.TabIndex = 111;
+            this.buttonMainChange.Text = "Изменить";
+            this.buttonMainChange.UseVisualStyleBackColor = false;
+            this.buttonMainChange.Click += new System.EventHandler(this.buttonMainChange_Click);
+            // 
+            // buttonDeleteMain
+            // 
+            this.buttonDeleteMain.BackColor = System.Drawing.Color.Red;
+            this.buttonDeleteMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeleteMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonDeleteMain.ForeColor = System.Drawing.Color.White;
+            this.buttonDeleteMain.Location = new System.Drawing.Point(653, 578);
+            this.buttonDeleteMain.Name = "buttonDeleteMain";
+            this.buttonDeleteMain.Size = new System.Drawing.Size(132, 36);
+            this.buttonDeleteMain.TabIndex = 112;
+            this.buttonDeleteMain.Text = "Удалить";
+            this.buttonDeleteMain.UseVisualStyleBackColor = false;
+            this.buttonDeleteMain.Click += new System.EventHandler(this.buttonDeleteMain_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
+            this.buttonExit.Location = new System.Drawing.Point(957, 578);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(132, 36);
+            this.buttonExit.TabIndex = 113;
+            this.buttonExit.Text = "Выход";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // labelFilter
+            // 
+            this.labelFilter.AutoSize = true;
+            this.labelFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.labelFilter.ForeColor = System.Drawing.Color.White;
+            this.labelFilter.Location = new System.Drawing.Point(3, 66);
+            this.labelFilter.Name = "labelFilter";
+            this.labelFilter.Size = new System.Drawing.Size(96, 26);
+            this.labelFilter.TabIndex = 115;
+            this.labelFilter.Text = "Фильтр";
+            // 
+            // comboBoxFilter
+            // 
+            this.comboBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.comboBoxFilter.FormattingEnabled = true;
+            this.comboBoxFilter.Items.AddRange(new object[] {
+            "По инвентарному номеру",
+            "По локации",
+            "По дате",
+            "По МОЛ\'у",
+            "По отделу",
+            "По номен. артикулю",
+            "По производителю",
+            "По модели",
+            "По типу",
+            "По сотруднику ИТ"});
+            this.comboBoxFilter.Location = new System.Drawing.Point(400, 59);
+            this.comboBoxFilter.Name = "comboBoxFilter";
+            this.comboBoxFilter.Size = new System.Drawing.Size(304, 33);
+            this.comboBoxFilter.TabIndex = 116;
+            this.comboBoxFilter.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilter_SelectedIndexChanged);
+            // 
+            // buttonFilterEmpty
+            // 
+            this.buttonFilterEmpty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonFilterEmpty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFilterEmpty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonFilterEmpty.ForeColor = System.Drawing.Color.White;
+            this.buttonFilterEmpty.Location = new System.Drawing.Point(729, 59);
+            this.buttonFilterEmpty.Name = "buttonFilterEmpty";
+            this.buttonFilterEmpty.Size = new System.Drawing.Size(240, 36);
+            this.buttonFilterEmpty.TabIndex = 117;
+            this.buttonFilterEmpty.Text = "Отчистить фильтр";
+            this.buttonFilterEmpty.UseVisualStyleBackColor = false;
+            this.buttonFilterEmpty.Click += new System.EventHandler(this.buttonFilterEmpty_Click);
+            // 
+            // comboBoxFilterAll
+            // 
+            this.comboBoxFilterAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.comboBoxFilterAll.FormattingEnabled = true;
+            this.comboBoxFilterAll.Location = new System.Drawing.Point(105, 59);
+            this.comboBoxFilterAll.Name = "comboBoxFilterAll";
+            this.comboBoxFilterAll.Size = new System.Drawing.Size(275, 33);
+            this.comboBoxFilterAll.TabIndex = 118;
+            this.comboBoxFilterAll.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilterAll_SelectedIndexChanged);
+            this.comboBoxFilterAll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxFilterAll_KeyPress);
+            // 
+            // dateTimePickerStart
+            // 
+            this.dateTimePickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.dateTimePickerStart.Location = new System.Drawing.Point(105, 40);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.Size = new System.Drawing.Size(275, 32);
+            this.dateTimePickerStart.TabIndex = 119;
+            this.dateTimePickerStart.Visible = false;
+            this.dateTimePickerStart.ValueChanged += new System.EventHandler(this.dateTimePickerStart_ValueChanged);
+            // 
+            // dateTimePickerFinish
+            // 
+            this.dateTimePickerFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.dateTimePickerFinish.Location = new System.Drawing.Point(105, 87);
+            this.dateTimePickerFinish.Name = "dateTimePickerFinish";
+            this.dateTimePickerFinish.Size = new System.Drawing.Size(275, 32);
+            this.dateTimePickerFinish.TabIndex = 120;
+            this.dateTimePickerFinish.Visible = false;
+            this.dateTimePickerFinish.ValueChanged += new System.EventHandler(this.dateTimePickerFinish_ValueChanged);
+            // 
+            // labelDateStart
+            // 
+            this.labelDateStart.AutoSize = true;
+            this.labelDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.labelDateStart.ForeColor = System.Drawing.Color.White;
+            this.labelDateStart.Location = new System.Drawing.Point(63, 46);
+            this.labelDateStart.Name = "labelDateStart";
+            this.labelDateStart.Size = new System.Drawing.Size(36, 26);
+            this.labelDateStart.TabIndex = 121;
+            this.labelDateStart.Text = "от";
+            this.labelDateStart.Visible = false;
+            // 
+            // labelDateFinish
+            // 
+            this.labelDateFinish.AutoSize = true;
+            this.labelDateFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.labelDateFinish.ForeColor = System.Drawing.Color.White;
+            this.labelDateFinish.Location = new System.Drawing.Point(60, 87);
+            this.labelDateFinish.Name = "labelDateFinish";
+            this.labelDateFinish.Size = new System.Drawing.Size(39, 26);
+            this.labelDateFinish.TabIndex = 122;
+            this.labelDateFinish.Text = "до";
+            this.labelDateFinish.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 545);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1158, 627);
+            this.Controls.Add(this.labelDateFinish);
+            this.Controls.Add(this.labelDateStart);
+            this.Controls.Add(this.dateTimePickerFinish);
+            this.Controls.Add(this.dateTimePickerStart);
+            this.Controls.Add(this.comboBoxFilterAll);
+            this.Controls.Add(this.buttonFilterEmpty);
+            this.Controls.Add(this.comboBoxFilter);
+            this.Controls.Add(this.labelFilter);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonDeleteMain);
+            this.Controls.Add(this.buttonMainChange);
+            this.Controls.Add(this.buttonIMainAddNew);
             this.Controls.Add(this.listViewMain);
             this.Controls.Add(this.menuStrip1);
             this.Name = "MainForm";
@@ -266,6 +449,18 @@
         private System.Windows.Forms.ColumnHeader columnHeaderModel;
         private System.Windows.Forms.ColumnHeader columnHeaderType;
         private System.Windows.Forms.ColumnHeader columnHeaderUser;
+        private System.Windows.Forms.Button buttonIMainAddNew;
+        private System.Windows.Forms.Button buttonMainChange;
+        private System.Windows.Forms.Button buttonDeleteMain;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label labelFilter;
+        private System.Windows.Forms.ComboBox comboBoxFilter;
+        private System.Windows.Forms.Button buttonFilterEmpty;
+        private System.Windows.Forms.ComboBox comboBoxFilterAll;
+        private System.Windows.Forms.DateTimePicker dateTimePickerStart;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFinish;
+        private System.Windows.Forms.Label labelDateStart;
+        private System.Windows.Forms.Label labelDateFinish;
     }
 }
 
