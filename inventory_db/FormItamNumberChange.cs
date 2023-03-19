@@ -251,5 +251,12 @@ namespace inventory_db
         {
             this.Close();
         }
+
+        private void FormItamNumberChange_Activated(object sender, EventArgs e)
+        {
+            //comboBoxModelChange.Text = "";
+            //comboBoxEquipmentManufacturerChange.Text = "";
+            //comboBoxEquipmentTypeChange.Text = "";
+        }
     }
 }

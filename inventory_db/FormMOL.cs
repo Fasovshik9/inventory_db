@@ -91,6 +91,8 @@ namespace inventory_db
         private void FormMOL_Activated(object sender, EventArgs e)
         {
             RefreshlistViewMOL();
+            columnHeaderFullNameMOL.Width = 200;
+            columnHeaderMOLDepartment.Width = 200;
         }
 
         private void buttonDeleteUser_Click(object sender, EventArgs e)

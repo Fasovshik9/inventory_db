@@ -108,6 +108,7 @@
             // comboBoxEquipmentTypeChange
             // 
             this.comboBoxEquipmentTypeChange.DisplayMember = "1";
+            this.comboBoxEquipmentTypeChange.Enabled = false;
             this.comboBoxEquipmentTypeChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxEquipmentTypeChange.FormattingEnabled = true;
             this.comboBoxEquipmentTypeChange.Location = new System.Drawing.Point(294, 326);
@@ -130,6 +131,7 @@
             // comboBoxEquipmentManufacturerChange
             // 
             this.comboBoxEquipmentManufacturerChange.DisplayMember = "1";
+            this.comboBoxEquipmentManufacturerChange.Enabled = false;
             this.comboBoxEquipmentManufacturerChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxEquipmentManufacturerChange.FormattingEnabled = true;
             this.comboBoxEquipmentManufacturerChange.Location = new System.Drawing.Point(294, 251);
@@ -197,6 +199,7 @@
             this.Name = "FormItamNumberChange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormItamNumberChange";
+            this.Activated += new System.EventHandler(this.FormItamNumberChange_Activated);
             this.Load += new System.EventHandler(this.FormItamNumberChange_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -95,6 +95,9 @@ namespace inventory_db
         private void FormEquipmentModel_Activated(object sender, EventArgs e)
         {
             RefreshlistViewEquipmentModel();
+            columnHeaderEquipmentManufacturerName.Width = 200;
+            columnHeadeEquipmentModel.Width = 300;
+            columnHeaderTypeEquipment.Width = 200;
         }
 
         private void buttonDeleteEquipmentModel_Click(object sender, EventArgs e)

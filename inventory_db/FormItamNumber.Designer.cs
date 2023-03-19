@@ -56,7 +56,7 @@
             this.listViewItamNumber.FullRowSelect = true;
             this.listViewItamNumber.GridLines = true;
             this.listViewItamNumber.HideSelection = false;
-            this.listViewItamNumber.Location = new System.Drawing.Point(37, 160);
+            this.listViewItamNumber.Location = new System.Drawing.Point(12, 158);
             this.listViewItamNumber.Name = "listViewItamNumber";
             this.listViewItamNumber.Size = new System.Drawing.Size(876, 366);
             this.listViewItamNumber.TabIndex = 37;
@@ -66,7 +66,7 @@
             // 
             // columnHeaderItamNumber
             // 
-            this.columnHeaderItamNumber.Text = "Номенклатурный артикуль";
+            this.columnHeaderItamNumber.Text = "Номен. артикуль";
             this.columnHeaderItamNumber.Width = 221;
             // 
             // columnHeaderEquipmentManufacturerName
@@ -91,7 +91,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(957, 60);
+            this.panel1.Size = new System.Drawing.Size(899, 60);
             this.panel1.TabIndex = 41;
             // 
             // labelItamNumber
@@ -100,7 +100,7 @@
             this.labelItamNumber.AutoSize = true;
             this.labelItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelItamNumber.ForeColor = System.Drawing.Color.White;
-            this.labelItamNumber.Location = new System.Drawing.Point(236, 9);
+            this.labelItamNumber.Location = new System.Drawing.Point(207, 9);
             this.labelItamNumber.Name = "labelItamNumber";
             this.labelItamNumber.Size = new System.Drawing.Size(478, 39);
             this.labelItamNumber.TabIndex = 10;
@@ -158,8 +158,9 @@
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 45;
-            this.buttonCencel.Text = "Отмена";
+            this.buttonCencel.Text = "Назад";
             this.buttonCencel.UseVisualStyleBackColor = false;
+            this.buttonCencel.Click += new System.EventHandler(this.buttonCencel_Click);
             // 
             // textBoxFilter
             // 
@@ -200,7 +201,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(957, 589);
+            this.ClientSize = new System.Drawing.Size(899, 589);
             this.Controls.Add(this.listViewItamNumber);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonChangeItamNumber);

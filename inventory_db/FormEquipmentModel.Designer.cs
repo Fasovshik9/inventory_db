@@ -54,9 +54,9 @@
             this.listViewEquipmentModel.FullRowSelect = true;
             this.listViewEquipmentModel.GridLines = true;
             this.listViewEquipmentModel.HideSelection = false;
-            this.listViewEquipmentModel.Location = new System.Drawing.Point(37, 154);
+            this.listViewEquipmentModel.Location = new System.Drawing.Point(12, 154);
             this.listViewEquipmentModel.Name = "listViewEquipmentModel";
-            this.listViewEquipmentModel.Size = new System.Drawing.Size(658, 366);
+            this.listViewEquipmentModel.Size = new System.Drawing.Size(725, 366);
             this.listViewEquipmentModel.TabIndex = 28;
             this.listViewEquipmentModel.UseCompatibleStateImageBehavior = false;
             this.listViewEquipmentModel.View = System.Windows.Forms.View.Details;
@@ -65,12 +65,12 @@
             // columnHeaderEquipmentManufacturerName
             // 
             this.columnHeaderEquipmentManufacturerName.Text = "Производитель";
-            this.columnHeaderEquipmentManufacturerName.Width = 250;
+            this.columnHeaderEquipmentManufacturerName.Width = 153;
             // 
             // columnHeadeEquipmentModel
             // 
             this.columnHeadeEquipmentModel.Text = "Модель";
-            this.columnHeadeEquipmentModel.Width = 208;
+            this.columnHeadeEquipmentModel.Width = 313;
             // 
             // columnHeaderTypeEquipment
             // 
@@ -84,7 +84,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(740, 60);
+            this.panel1.Size = new System.Drawing.Size(751, 60);
             this.panel1.TabIndex = 32;
             // 
             // labelAccountEquipmentModel
@@ -93,7 +93,7 @@
             this.labelAccountEquipmentModel.AutoSize = true;
             this.labelAccountEquipmentModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountEquipmentModel.ForeColor = System.Drawing.Color.White;
-            this.labelAccountEquipmentModel.Location = new System.Drawing.Point(128, 9);
+            this.labelAccountEquipmentModel.Location = new System.Drawing.Point(133, 9);
             this.labelAccountEquipmentModel.Name = "labelAccountEquipmentModel";
             this.labelAccountEquipmentModel.Size = new System.Drawing.Size(402, 39);
             this.labelAccountEquipmentModel.TabIndex = 10;
@@ -151,14 +151,14 @@
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 36;
-            this.buttonCencel.Text = "Отмена";
+            this.buttonCencel.Text = "Назад";
             this.buttonCencel.UseVisualStyleBackColor = false;
             this.buttonCencel.Click += new System.EventHandler(this.buttonCencel_Click);
             // 
             // textBoxFilter
             // 
             this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxFilter.Location = new System.Drawing.Point(124, 105);
+            this.textBoxFilter.Location = new System.Drawing.Point(149, 105);
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(265, 32);
             this.textBoxFilter.TabIndex = 35;
@@ -170,7 +170,7 @@
             this.buttonEmptyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEmptyFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmptyFilter.ForeColor = System.Drawing.Color.White;
-            this.buttonEmptyFilter.Location = new System.Drawing.Point(395, 103);
+            this.buttonEmptyFilter.Location = new System.Drawing.Point(420, 103);
             this.buttonEmptyFilter.Name = "buttonEmptyFilter";
             this.buttonEmptyFilter.Size = new System.Drawing.Size(208, 36);
             this.buttonEmptyFilter.TabIndex = 34;
@@ -183,7 +183,7 @@
             this.labellAccountManagementFilter.AutoSize = true;
             this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
-            this.labellAccountManagementFilter.Location = new System.Drawing.Point(33, 109);
+            this.labellAccountManagementFilter.Location = new System.Drawing.Point(58, 109);
             this.labellAccountManagementFilter.Name = "labellAccountManagementFilter";
             this.labellAccountManagementFilter.Size = new System.Drawing.Size(85, 24);
             this.labellAccountManagementFilter.TabIndex = 33;
@@ -194,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(740, 603);
+            this.ClientSize = new System.Drawing.Size(751, 603);
             this.Controls.Add(this.listViewEquipmentModel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonChangeEquipmentModel);

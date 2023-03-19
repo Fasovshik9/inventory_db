@@ -15,6 +15,7 @@ namespace inventory_db
 {
     public partial class FormMainAddNew : Form
     {
+        public string fullStuffName;
 
         private List<string[]> filteredList = null;
         private List<string[]> rowsMainAddNew = new List<string[]>();
@@ -34,18 +35,16 @@ namespace inventory_db
             FillComboBoxEquipmentManufacturer();
             FillComboBoxEquipmentType();
             FillComboBoxStuff();
-
             
-
         }
 
         private void buttonCencel_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            label5.Text = comboBoxLocation.SelectedValue.ToString();
-            label3.Text = comboBoxDepartment.SelectedValue.ToString();
-            label1.Text = comboBoxItamNumber.SelectedValue.ToString();
-            label9.Text = comboBoxStuff.SelectedValue.ToString();
+            this.Close();
+            //label5.Text = comboBoxLocation.SelectedValue.ToString();
+            //label3.Text = comboBoxDepartment.SelectedValue.ToString();
+            //label1.Text = comboBoxItamNumber.SelectedValue.ToString();
+            //label9.Text = comboBoxStuff.SelectedValue.ToString();
             //FillComboBoxes_ItamNumber_Model_EquipmentManufacturer_EquipmentType();
         }
 
@@ -373,14 +372,8 @@ namespace inventory_db
 
         private void FormMainAddNew_Activated(object sender, EventArgs e)
         {
-            comboBoxLocation.Text = "";
-            comboBoxDepartment.Text = "";
-            comboBoxMOL.Text = "";
-            comboBoxItamNumber.Text = "";
-            comboBoxModel.Text = "";
-            comboBoxEquipmentManufacturer.Text = "";
-            comboBoxEquipmentType.Text = "";
-            comboBoxStuff.Text = "";
+
+            //comboBoxStuff.Text = "";
 
 
         }
@@ -482,6 +475,19 @@ namespace inventory_db
                 //else MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!", "Ошибка");
             }
             //else MessageBox.Show("Некоректное имя пользователя!\nМинимум 5 знаков и максимум 12!", "Ошибка");
+        }
+
+        private void FormMainAddNew_Load(object sender, EventArgs e)
+        {
+
+            comboBoxLocation.Text = "";
+            comboBoxDepartment.Text = "";
+            comboBoxMOL.Text = "";
+            comboBoxItamNumber.Text = "";
+            comboBoxModel.Text = "";
+            comboBoxEquipmentManufacturer.Text = "";
+            comboBoxEquipmentType.Text = "";
+            comboBoxStuff.Text = fullStuffName;
         }
     }
 }

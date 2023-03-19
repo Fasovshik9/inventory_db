@@ -211,5 +211,11 @@ namespace inventory_db
                 zerophraseEquipmentModelAddNew();
             }
         }
+
+        private void FormEquipmentModelAddNew_Activated(object sender, EventArgs e)
+        {
+            comboBoxEquipmentManufacturer.Text = "";
+            comboBoxEquipmentType.Text = "";
+        }
     }
 }

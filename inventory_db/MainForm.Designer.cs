@@ -65,6 +65,8 @@
             this.labelDateStart = new System.Windows.Forms.Label();
             this.labelDateFinish = new System.Windows.Forms.Label();
             this.textBoxFilterAll = new System.Windows.Forms.TextBox();
+            this.labelUserLogin = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +79,7 @@
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1158, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1319, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -185,12 +187,13 @@
             this.columnHeaderModel,
             this.columnHeaderType,
             this.columnHeaderUser});
+            this.listViewMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewMain.FullRowSelect = true;
             this.listViewMain.GridLines = true;
             this.listViewMain.HideSelection = false;
             this.listViewMain.Location = new System.Drawing.Point(9, 134);
             this.listViewMain.Name = "listViewMain";
-            this.listViewMain.Size = new System.Drawing.Size(1137, 438);
+            this.listViewMain.Size = new System.Drawing.Size(1300, 438);
             this.listViewMain.TabIndex = 1;
             this.listViewMain.UseCompatibleStateImageBehavior = false;
             this.listViewMain.View = System.Windows.Forms.View.Details;
@@ -198,7 +201,7 @@
             // 
             // columnHeaderInvent
             // 
-            this.columnHeaderInvent.Text = "Инвентарный номер";
+            this.columnHeaderInvent.Text = "Инвент. номер";
             this.columnHeaderInvent.Width = 118;
             // 
             // columnHeaderLocation
@@ -223,7 +226,7 @@
             // 
             // columnHeaderItamNumber
             // 
-            this.columnHeaderItamNumber.Text = "Номен. Артикуль";
+            this.columnHeaderItamNumber.Text = "Номен. Артикл.";
             this.columnHeaderItamNumber.Width = 116;
             // 
             // columnHeaderManufacturer
@@ -252,7 +255,7 @@
             this.buttonIMainAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonIMainAddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonIMainAddNew.ForeColor = System.Drawing.Color.White;
-            this.buttonIMainAddNew.Location = new System.Drawing.Point(300, 578);
+            this.buttonIMainAddNew.Location = new System.Drawing.Point(436, 579);
             this.buttonIMainAddNew.Name = "buttonIMainAddNew";
             this.buttonIMainAddNew.Size = new System.Drawing.Size(132, 36);
             this.buttonIMainAddNew.TabIndex = 76;
@@ -266,7 +269,7 @@
             this.buttonMainChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMainChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonMainChange.ForeColor = System.Drawing.Color.White;
-            this.buttonMainChange.Location = new System.Drawing.Point(470, 578);
+            this.buttonMainChange.Location = new System.Drawing.Point(606, 579);
             this.buttonMainChange.Name = "buttonMainChange";
             this.buttonMainChange.Size = new System.Drawing.Size(132, 36);
             this.buttonMainChange.TabIndex = 111;
@@ -280,7 +283,7 @@
             this.buttonDeleteMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonDeleteMain.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteMain.Location = new System.Drawing.Point(653, 578);
+            this.buttonDeleteMain.Location = new System.Drawing.Point(789, 579);
             this.buttonDeleteMain.Name = "buttonDeleteMain";
             this.buttonDeleteMain.Size = new System.Drawing.Size(132, 36);
             this.buttonDeleteMain.TabIndex = 112;
@@ -290,11 +293,11 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(957, 578);
+            this.buttonExit.Location = new System.Drawing.Point(1077, 579);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(132, 36);
             this.buttonExit.TabIndex = 113;
@@ -329,7 +332,7 @@
             "По типу",
             "По сотруднику ИТ",
             "По всем полям"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(400, 59);
+            this.comboBoxFilter.Location = new System.Drawing.Point(386, 63);
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(304, 33);
             this.comboBoxFilter.TabIndex = 116;
@@ -341,9 +344,9 @@
             this.buttonFilterEmpty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFilterEmpty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonFilterEmpty.ForeColor = System.Drawing.Color.White;
-            this.buttonFilterEmpty.Location = new System.Drawing.Point(729, 59);
+            this.buttonFilterEmpty.Location = new System.Drawing.Point(706, 53);
             this.buttonFilterEmpty.Name = "buttonFilterEmpty";
-            this.buttonFilterEmpty.Size = new System.Drawing.Size(240, 36);
+            this.buttonFilterEmpty.Size = new System.Drawing.Size(240, 43);
             this.buttonFilterEmpty.TabIndex = 117;
             this.buttonFilterEmpty.Text = "Отчистить фильтр";
             this.buttonFilterEmpty.UseVisualStyleBackColor = false;
@@ -407,19 +410,43 @@
             // textBoxFilterAll
             // 
             this.textBoxFilterAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxFilterAll.Location = new System.Drawing.Point(105, 59);
+            this.textBoxFilterAll.Location = new System.Drawing.Point(105, 66);
             this.textBoxFilterAll.Name = "textBoxFilterAll";
             this.textBoxFilterAll.Size = new System.Drawing.Size(275, 32);
             this.textBoxFilterAll.TabIndex = 123;
             this.textBoxFilterAll.Visible = false;
             this.textBoxFilterAll.TextChanged += new System.EventHandler(this.textBoxFilterAll_TextChanged);
             // 
+            // labelUserLogin
+            // 
+            this.labelUserLogin.AutoSize = true;
+            this.labelUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.labelUserLogin.ForeColor = System.Drawing.Color.White;
+            this.labelUserLogin.Location = new System.Drawing.Point(1158, 40);
+            this.labelUserLogin.Name = "labelUserLogin";
+            this.labelUserLogin.Size = new System.Drawing.Size(76, 26);
+            this.labelUserLogin.TabIndex = 124;
+            this.labelUserLogin.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(978, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 26);
+            this.label1.TabIndex = 125;
+            this.label1.Text = "Пользователь: ";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1158, 627);
+            this.ClientSize = new System.Drawing.Size(1319, 627);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelUserLogin);
             this.Controls.Add(this.textBoxFilterAll);
             this.Controls.Add(this.labelDateFinish);
             this.Controls.Add(this.labelDateStart);
@@ -440,6 +467,7 @@
             this.Text = "MainForm";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -486,6 +514,8 @@
         private System.Windows.Forms.Label labelDateFinish;
         private System.Windows.Forms.ToolStripMenuItem изменитьПарольToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxFilterAll;
+        private System.Windows.Forms.Label labelUserLogin;
+        private System.Windows.Forms.Label label1;
     }
 }
 

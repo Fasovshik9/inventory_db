@@ -17,6 +17,7 @@ namespace inventory_db
     {
         public string userLogin;
         public string oldUserPassword;
+        public string privilegeUser;
         const string phraseLogin = "Введите логин";
         const string phrasePass = "Введите пароль";
 
@@ -41,7 +42,7 @@ namespace inventory_db
                 DataTable table = new DataTable();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_authorization_staff` " +
-                    "                                    WHERE `login_authorization_staff` = @login_authorization_staff AND `col_password_staff` = @col_password_staff", sqlConnection);
+                                                        " WHERE `login_authorization_staff` = @login_authorization_staff AND `col_password_staff` = @col_password_staff", sqlConnection);
 
                 command.Parameters.Add("@login_authorization_staff", MySqlDbType.VarChar).Value = loginUser;
                 command.Parameters.Add("@col_password_staff", MySqlDbType.VarChar).Value = passUser;
@@ -64,7 +65,8 @@ namespace inventory_db
                         using (MainForm MainForm = new MainForm())
                         {
                             //idValueUser = Convert.ToString(table.Rows[0].ItemArray[0]);
-                            //privilegeUser = Convert.ToString(table.Rows[0].ItemArray[3]);
+                            MainForm.privilegeUser = Convert.ToString(table.Rows[0].ItemArray[3]);
+                            MainForm.fullUserName = Convert.ToString(table.Rows[0].ItemArray[1]);
                             //MainForm.userNameLabel.Text = this.textBoxUserLogin.Text;
                             //MainForm.oldUserPass = textBoxUserPassword.Text;
                             //MainForm.idValueUser = idValueUser;

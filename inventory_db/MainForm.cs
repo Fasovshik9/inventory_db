@@ -16,6 +16,8 @@ namespace inventory_db
     {
         public string userLogin;
         public string oldUserPassword;
+        public string privilegeUser;
+        public string fullUserName;
 
         public string rowstextBoxInventNumberMouse;
         public string rowscomboBoxLocationMouse;
@@ -167,11 +169,16 @@ namespace inventory_db
         private void MainForm_Activated(object sender, EventArgs e)
         {
             RefreshlistViewMain();
+            if (privilegeUser != "1")
+                администрированиеToolStripMenuItem.Visible = false;
+
+            labelUserLogin.Text = fullUserName;
         }
 
         private void buttonIMainAddNew_Click(object sender, EventArgs e)
         {
             FormMainAddNew FormMainAddNew = new FormMainAddNew();
+            FormMainAddNew.fullStuffName = fullUserName;
             FormMainAddNew.ShowDialog();
 
         }
@@ -286,7 +293,7 @@ namespace inventory_db
 
         private void FilterInventNumber(int a)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
@@ -313,7 +320,7 @@ namespace inventory_db
         }
         private void FilterLocation(int a)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
@@ -339,7 +346,7 @@ namespace inventory_db
         }
         private void FilterDate(int a)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
@@ -365,7 +372,7 @@ namespace inventory_db
         }
         private void FilterDepartment(int a)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
@@ -391,7 +398,7 @@ namespace inventory_db
         }
         private void FilterMOL(int a)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
@@ -417,7 +424,7 @@ namespace inventory_db
         }
         private void FilterItamNumber(int a)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
@@ -443,7 +450,7 @@ namespace inventory_db
         }
         private void FilterModel(int a)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
 
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
@@ -470,7 +477,7 @@ namespace inventory_db
         }
         private void FilterEquipmentManufacturer(int a)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
 
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
@@ -497,7 +504,7 @@ namespace inventory_db
         }
         private void FilterEquipmentType(int a)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
 
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
@@ -524,7 +531,7 @@ namespace inventory_db
         }
         private void FilterStuff(int a)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
 
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
@@ -552,6 +559,7 @@ namespace inventory_db
 
         private void comboBoxFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBoxFilterAll.DataSource = null;
             if (comboBoxFilter.SelectedIndex == 0)
             {
                 FilterForWithoutDate();
@@ -633,7 +641,7 @@ namespace inventory_db
 
         private void comboBoxFilterAll_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
             if (comboBoxFilter.SelectedIndex == 0)
                 Filter(0);
             else if (comboBoxFilter.SelectedIndex == 1)
@@ -666,7 +674,7 @@ namespace inventory_db
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            FilterDateSpec(2);
+            this.Close();
         }
         private void FilterForWithoutDate()
         {
@@ -711,7 +719,7 @@ namespace inventory_db
 
         private void textBoxFilterAll_TextChanged(object sender, EventArgs e)
         {
-            comboBoxFilterAll.DataSource = null;
+            //comboBoxFilterAll.DataSource = null;
             filteredList = rowsMain.Where(x =>
                 (x[0].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
                 (x[1].ToLower().Contains(textBoxFilterAll.Text.ToLower())) ||
@@ -725,6 +733,20 @@ namespace inventory_db
                 (x[9].ToLower().Contains(textBoxFilterAll.Text.ToLower()))
             ).ToList();
             RefreshlistViewMain(filteredList);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            columnHeaderInvent.Width = 110;
+            columnHeaderLocation.Width = 200;
+            columnHeaderDate.Width = 80;
+            columnHeaderMOLFullName.Width = 120;
+            columnHeaderDepatnment.Width = 120;
+            columnHeaderItamNumber.Width = 120;
+            columnHeaderManufacturer.Width = 120;
+            columnHeaderModel.Width = 200;
+            columnHeaderType.Width = 100;
+            columnHeaderUser.Width = 105;
         }
     }
 }

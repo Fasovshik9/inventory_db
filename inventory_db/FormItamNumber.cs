@@ -67,8 +67,8 @@ namespace inventory_db
                     row = new string[]
                     {
                         Convert.ToString(dataReader["item_number"]),
-                        Convert.ToString(dataReader["equipment_model_name"]),
                         Convert.ToString(dataReader["col_equipment_manufacturer_name"]),
+                        Convert.ToString(dataReader["equipment_model_name"]),
                         Convert.ToString(dataReader["col_type_equipment_name"])
                     };
                     rowsEquipmentModel.Add(row);
@@ -97,6 +97,10 @@ namespace inventory_db
         private void FormItamNumber_Activated(object sender, EventArgs e)
         {
             RefreshlistViewEquipmentModel();
+            columnHeaderItamNumber.Width = 150;
+            columnHeaderEquipmentManufacturerName.Width = 200;
+            columnHeadeEquipmentModel.Width = 350;
+            columnHeaderTypeEquipment.Width = 150;
         }
 
         private void buttonChangeItamNumber_Click(object sender, EventArgs e)
@@ -185,6 +189,11 @@ namespace inventory_db
         private void buttonEmptyFilter_Click(object sender, EventArgs e)
         {
             textBoxFilter.Text = "";
+        }
+
+        private void buttonCencel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
