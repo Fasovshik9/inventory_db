@@ -410,7 +410,7 @@
             // textBoxFilterAll
             // 
             this.textBoxFilterAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxFilterAll.Location = new System.Drawing.Point(105, 66);
+            this.textBoxFilterAll.Location = new System.Drawing.Point(105, 63);
             this.textBoxFilterAll.Name = "textBoxFilterAll";
             this.textBoxFilterAll.Size = new System.Drawing.Size(275, 32);
             this.textBoxFilterAll.TabIndex = 123;

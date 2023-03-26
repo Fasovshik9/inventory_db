@@ -165,9 +165,51 @@ namespace inventory_db
 
         private void buttonDeleteEquipmentManufacturer_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult;
             if (this.listViewEquipmentManufacturer.SelectedItems.Count != 0)
             {
-                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить производителя?", "Удаление производителя", MessageBoxButtons.YesNo);
+                //////
+                MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_equipment_model` " +
+                                                        "JOIN tb_equipment_manufacturer " +
+                                                        "ON tb_equipment_model.id_equipment_manufacturer = tb_equipment_manufacturer.id_equipment_manufacturer " +
+                                                        "WHERE col_equipment_manufacturer_name = @col_equipment_manufacturer_name", sqlConnection);
+                command.Parameters.Add("@col_equipment_manufacturer_name", MySqlDbType.VarChar).Value = EquipmentManufacturerMameMouse;
+
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    dialogResult = MessageBox.Show("Данный производитель иммется в других таблицах\nПри удалении, удаляться все записи с свзанные с ним!\nВы уверены что хотите удалить производителя?", "Предупреждение", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string query = "DELETE FROM `tb_equipment_manufacturer` WHERE `col_equipment_manufacturer_name` = @col_equipment_manufacturer_name";
+                        MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+                        commandDatabase.Parameters.Add("@col_equipment_manufacturer_name", MySqlDbType.VarChar).Value = EquipmentManufacturerMameMouse;
+
+                        commandDatabase.CommandTimeout = 60;
+                        MySqlDataReader reader;
+                        try
+                        {
+                            sqlConnection.Open();
+                            reader = commandDatabase.ExecuteReader();
+                            // Succesfully deleted
+                            sqlConnection.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        RefreshlistViewEquipmentManufacturer();
+                        return;
+                    }
+                    else
+                        return;
+                }
+
+                dialogResult = MessageBox.Show("Вы уверены, что хотите удалить производителя?", "Удаление производителя", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     string query = "DELETE FROM `tb_equipment_manufacturer` WHERE `col_equipment_manufacturer_name` = @col_equipment_manufacturer_name";

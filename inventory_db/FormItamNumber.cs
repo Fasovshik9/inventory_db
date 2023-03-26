@@ -144,9 +144,48 @@ namespace inventory_db
 
         private void buttonDeleteItamNumber_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult;
             if (this.listViewItamNumber.SelectedItems.Count != 0)
             {
-                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить нуменклатурный номер?", "Удаление типа", MessageBoxButtons.YesNo);
+                //////
+                MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_main` " +
+                                                        "WHERE item_number = @item_number", sqlConnection);
+                command.Parameters.Add("@item_number", MySqlDbType.VarChar).Value = rowsItamNumberMouse;
+
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    dialogResult = MessageBox.Show("Данный номенклатурный артикул иммется в других таблицах\nПри удалении, удаляться все записи с свзанные с ним!\nВы уверены что хотите удалить номеклатурный артикул?", "Предупреждение", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string query = "DELETE FROM `tb_itam_number` WHERE `item_number` = @item_number";
+                        MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+                        commandDatabase.Parameters.Add("@item_number", MySqlDbType.VarChar).Value = rowsItamNumberMouse;
+
+                        commandDatabase.CommandTimeout = 60;
+                        MySqlDataReader reader;
+                        try
+                        {
+                            sqlConnection.Open();
+                            reader = commandDatabase.ExecuteReader();
+                            // Succesfully deleted
+                            sqlConnection.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        RefreshlistViewEquipmentModel();
+                        return;
+                    }
+                    else
+                        return;
+                }
+                dialogResult = MessageBox.Show("Вы уверены, что хотите удалить нуменклатурный номер?", "Удаление типа", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     string query = "DELETE FROM `tb_itam_number` WHERE `item_number` = @item_number";

@@ -161,9 +161,51 @@ namespace inventory_db
 
         private void buttonDeleteEquipment_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult;
             if (this.listViewEquipment.SelectedItems.Count != 0)
             {
-                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить тип?", "Удаление типа", MessageBoxButtons.YesNo);
+                //////
+                MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_equipment_model` " +
+                                                        "JOIN tb_type_equipment " +
+                                                        "ON tb_equipment_model.id_type_equipment = tb_type_equipment.id_type_equipment " +
+                                                        "WHERE col_type_equipment_name = @col_type_equipment_name", sqlConnection);
+                command.Parameters.Add("@col_type_equipment_name", MySqlDbType.VarChar).Value = EquipmentTypeMouse;
+
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    dialogResult = MessageBox.Show("Данный тип иммется в других таблицах\nПри удалении, удаляться все записи с свзанные с ним!\nВы уверены что хотите удалить тип?", "Предупреждение", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string query = "DELETE FROM `tb_type_equipment` WHERE `col_type_equipment_name` = @col_type_equipment_name";
+                        MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+                        commandDatabase.Parameters.Add("@col_type_equipment_name", MySqlDbType.VarChar).Value = EquipmentTypeMouse;
+
+                        commandDatabase.CommandTimeout = 60;
+                        MySqlDataReader reader;
+                        try
+                        {
+                            sqlConnection.Open();
+                            reader = commandDatabase.ExecuteReader();
+                            // Succesfully deleted
+                            sqlConnection.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        RefreshlistViewEquipment();
+                        return;
+                    }
+                    else
+                        return;
+                }
+
+                dialogResult = MessageBox.Show("Вы уверены, что хотите удалить тип?", "Удаление типа", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     string query = "DELETE FROM `tb_type_equipment` WHERE `col_type_equipment_name` = @col_type_equipment_name";

@@ -131,7 +131,8 @@
             this.comboBoxAccountManagementUserPrivilege.FormattingEnabled = true;
             this.comboBoxAccountManagementUserPrivilege.Items.AddRange(new object[] {
             "admin",
-            "user"});
+            "user",
+            "Уволен"});
             this.comboBoxAccountManagementUserPrivilege.Location = new System.Drawing.Point(203, 307);
             this.comboBoxAccountManagementUserPrivilege.Name = "comboBoxAccountManagementUserPrivilege";
             this.comboBoxAccountManagementUserPrivilege.Size = new System.Drawing.Size(252, 32);

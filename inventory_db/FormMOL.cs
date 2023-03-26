@@ -97,9 +97,49 @@ namespace inventory_db
 
         private void buttonDeleteUser_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult;
             if (this.listViewMOL.SelectedItems.Count != 0)
             {
-                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить МОЛ'а?", "Удаление МОЛ'а", MessageBoxButtons.YesNo);
+                //////
+                MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_main` " +
+                                                        "WHERE mol_department = @mol_department", sqlConnection);
+                command.Parameters.Add("@mol_department", MySqlDbType.VarChar).Value = fullDepartmentMOL;
+
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    dialogResult = MessageBox.Show("Данное подразделение иммется в других таблицах\nПри его удалении, удаляться все записи с свзанные с ним!\nВы уверены что хотите удалить данное подразделение?", "Предупреждение", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string query = "DELETE FROM `tb_mol` WHERE `mol_department` = @mol_department";
+                        MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+                        commandDatabase.Parameters.Add("@mol_department", MySqlDbType.VarChar).Value = fullDepartmentMOL;
+
+                        commandDatabase.CommandTimeout = 60;
+                        MySqlDataReader reader;
+                        try
+                        {
+                            sqlConnection.Open();
+                            reader = commandDatabase.ExecuteReader();
+                            // Succesfully deleted
+                            sqlConnection.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        RefreshlistViewMOL();
+                        return;
+                    }
+                    else
+                        return;
+                }
+                ///////
+                dialogResult = MessageBox.Show("Вы уверены, что хотите удалить МОЛ'а?", "Удаление МОЛ'а", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     string query = "DELETE FROM `tb_mol` WHERE `mol_department` = @mol_department";

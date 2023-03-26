@@ -32,6 +32,13 @@ namespace inventory_db
 
         private void buttonAddNewItamNumber_Click(object sender, EventArgs e)
         {
+            var result = 0;
+            if (!int.TryParse(textBoxItamNumber.Text, out result))
+            {
+                MessageBox.Show("Номенклатурный артикул может содрежать только цифры !");
+                return;
+            }
+
             if (textBoxItamNumber.Text == phraseFullItamNumber || comboBoxModel.Text == "" || comboBoxEquipmentType.Text == "" || comboBoxEquipmentManufacturer.Text == "")
             {
                 MessageBox.Show("Все поля должны быть заполенны !");

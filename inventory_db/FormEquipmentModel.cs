@@ -102,9 +102,48 @@ namespace inventory_db
 
         private void buttonDeleteEquipmentModel_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult;
             if (this.listViewEquipmentModel.SelectedItems.Count != 0)
             {
-                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить модель?", "Удаление модели", MessageBoxButtons.YesNo);
+                //////
+                MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_itam_number` " +
+                                                        "WHERE equipment_model_name = @equipment_model_name", sqlConnection);
+                command.Parameters.Add("@equipment_model_name", MySqlDbType.VarChar).Value = rowsEquipmentModelChange;
+
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    dialogResult = MessageBox.Show("Данная модель иммется в других таблицах\nПри удалении, удаляться все записи с свзанные с ней!\nВы уверены что хотите удалить модель?", "Предупреждение", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string query = "DELETE FROM `tb_equipment_model` WHERE `equipment_model_name` = @equipment_model_name";
+                        MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+                        commandDatabase.Parameters.Add("@equipment_model_name", MySqlDbType.VarChar).Value = rowsEquipmentModelChange;
+
+                        commandDatabase.CommandTimeout = 60;
+                        MySqlDataReader reader;
+                        try
+                        {
+                            sqlConnection.Open();
+                            reader = commandDatabase.ExecuteReader();
+                            // Succesfully deleted
+                            sqlConnection.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        RefreshlistViewEquipmentModel();
+                        return;
+                    }
+                    else
+                        return;
+                }
+                dialogResult = MessageBox.Show("Вы уверены, что хотите удалить модель?", "Удаление модели", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     string query = "DELETE FROM `tb_equipment_model` WHERE `equipment_model_name` = @equipment_model_name";

@@ -169,7 +169,9 @@ namespace inventory_db
         private void MainForm_Activated(object sender, EventArgs e)
         {
             RefreshlistViewMain();
-            if (privilegeUser != "1")
+            if (privilegeUser == "0")
+                администрированиеToolStripMenuItem.Visible = true;
+            else
                 администрированиеToolStripMenuItem.Visible = false;
 
             labelUserLogin.Text = fullUserName;

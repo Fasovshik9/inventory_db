@@ -234,11 +234,13 @@ namespace inventory_db
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
-                MySqlCommand command = new MySqlCommand("SELECT * FROM tb_authorization_staff", sqlConnection);
+                MySqlCommand command = new MySqlCommand("SELECT * FROM tb_authorization_staff " +
+                                                        "WHERE id_status_level_staff <> 2 ", sqlConnection);
                 //SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 DataTable table = new DataTable();
                 adapter.SelectCommand = command;
+
 
 
                 sqlConnection.Open();

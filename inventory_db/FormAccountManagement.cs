@@ -48,9 +48,9 @@ namespace inventory_db
             try
             {
                 sqlConnection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand("SELECT login_authorization_staff, col_full_name_staff, col_privilege_staff_name " +
-                                                           "FROM tb_authorization_staff JOIN tb_privilege_level_staff " +
-                                                           "ON tb_authorization_staff.id_privilege_level_staff = tb_privilege_level_staff.id_privilege_level_staff", sqlConnection);
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT login_authorization_staff, col_full_name_staff, col_status_staff_name " +
+                                                           "FROM tb_authorization_staff JOIN tb_status_level_staff " +
+                                                           "ON tb_authorization_staff.id_status_level_staff = tb_status_level_staff.id_status_level_staff", sqlConnection);
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
@@ -58,7 +58,7 @@ namespace inventory_db
                     {
                         Convert.ToString(dataReader["login_authorization_staff"]),
                         Convert.ToString(dataReader["col_full_name_staff"]),
-                        Convert.ToString(dataReader["col_privilege_staff_name"])
+                        Convert.ToString(dataReader["col_status_staff_name"])
                     };
                     rowsUserAccountManagement.Add(row);
                 }
@@ -103,9 +103,49 @@ namespace inventory_db
 
         private void buttonDeleteUser_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult;
             if (this.listViewAccountManagement.SelectedItems.Count != 0)
             {
-                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Удаление пользователя", MessageBoxButtons.YesNo);
+                //////
+                MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_main` " +
+                                                        "WHERE login_authorization_staff = @login_authorization_staff", sqlConnection);
+                command.Parameters.Add("@login_authorization_staff", MySqlDbType.VarChar).Value = userNameMouse;
+
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    dialogResult = MessageBox.Show("Данный пользователь иммется в других таблицах\nПри его удалении, удаляться все записи с свзанные с ним!\nВы уверены что хотите удалить данного пользователя?", "Предупреждение", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string query = "DELETE FROM `tb_authorization_staff` WHERE `login_authorization_staff` = @login_authorization_staff";
+                        MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+                        commandDatabase.Parameters.Add("@login_authorization_staff", MySqlDbType.VarChar).Value = userNameMouse;
+
+                        commandDatabase.CommandTimeout = 60;
+                        MySqlDataReader reader;
+                        try
+                        {
+                            sqlConnection.Open();
+                            reader = commandDatabase.ExecuteReader();
+                            // Succesfully deleted
+                            sqlConnection.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        RefreshlistViewAccountManagement();
+                        return;
+                    }
+                    else
+                        return;
+                }
+                ////////
+                dialogResult = MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Удаление пользователя", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     string query = "DELETE FROM `tb_authorization_staff` WHERE `login_authorization_staff` = @login_authorization_staff";
@@ -146,7 +186,10 @@ namespace inventory_db
                 //this.userPrivilegeMouse = item.SubItems[2].Text;
                 if (item.SubItems[2].Text == "admin")
                     userPrivilegeMouse = 0;
-                else userPrivilegeMouse = 1;
+                else if (item.SubItems[2].Text == "user")
+                    userPrivilegeMouse = 1;
+                else userPrivilegeMouse = 2;
+
             }
             else
             {

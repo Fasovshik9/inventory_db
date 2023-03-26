@@ -167,9 +167,51 @@ namespace inventory_db
 
         private void buttonDeleteUser_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult;
             if (this.listViewLocation.SelectedItems.Count != 0)
             {
-                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить Локацию?", "Удаление локации", MessageBoxButtons.YesNo);
+                //////
+                MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_main` " +
+                                                        "JOIN tb_location " +
+                                                        "ON tb_main.id_col_location = tb_location.id_col_location " +
+                                                        "WHERE col_location_name = @col_location_name", sqlConnection);
+                command.Parameters.Add("@col_location_name", MySqlDbType.VarChar).Value = locationMameMouse;
+
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    dialogResult = MessageBox.Show("Данная локация иммется в других таблицах\nПри удалении, удаляться все записи с свзанные с ней!\nВы уверены что хотите удалить локацию?", "Предупреждение", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string query = "DELETE FROM `tb_location` WHERE `col_location_name` = @col_location_name";
+                        MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
+                        commandDatabase.Parameters.Add("@col_location_name", MySqlDbType.VarChar).Value = locationMameMouse;
+
+                        commandDatabase.CommandTimeout = 60;
+                        MySqlDataReader reader;
+                        try
+                        {
+                            sqlConnection.Open();
+                            reader = commandDatabase.ExecuteReader();
+                            // Succesfully deleted
+                            sqlConnection.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        RefreshlistViewLocation();
+                        return;
+                    }
+                    else
+                        return;
+                }
+
+                dialogResult = MessageBox.Show("Вы уверены, что хотите удалить Локацию?", "Удаление локации", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     string query = "DELETE FROM `tb_location` WHERE `col_location_name` = @col_location_name";
