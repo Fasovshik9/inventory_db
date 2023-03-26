@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `inventory` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `inventory`;
 -- MySQL dump 10.13  Distrib 8.0.32, for Win64 (x86_64)
 --
 -- Host: localhost    Database: inventory
@@ -264,6 +266,14 @@ LOCK TABLES `tb_type_equipment` WRITE;
 INSERT INTO `tb_type_equipment` VALUES (8,'веб-камера'),(9,'видеокамера'),(5,'компьютер'),(6,'монитор'),(1,'МФУ'),(7,'ноутбук'),(4,'сканер'),(2,'телефон');
 /*!40000 ALTER TABLE `tb_type_equipment` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'inventory'
+--
+
+--
+-- Dumping routines for database 'inventory'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -274,4 +284,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-26 19:53:55
+-- Dump completed on 2023-03-26 19:59:49
