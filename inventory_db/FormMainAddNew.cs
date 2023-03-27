@@ -79,7 +79,7 @@ namespace inventory_db
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
-                MySqlCommand command = new MySqlCommand("SELECT * FROM tb_mol", sqlConnection);
+                MySqlCommand command = new MySqlCommand("SELECT * FROM tb_department", sqlConnection);
                 //SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 DataTable table = new DataTable();
@@ -105,7 +105,7 @@ namespace inventory_db
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
-                MySqlCommand command = new MySqlCommand("SELECT * FROM tb_mol", sqlConnection);
+                MySqlCommand command = new MySqlCommand("SELECT * FROM tb_department", sqlConnection);
                 //SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 DataTable table = new DataTable();
@@ -389,9 +389,9 @@ namespace inventory_db
             try
             {
                 sqlConnection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand("SELECT tb_mol.col_mol_full_name " +
-                                                            "FROM tb_mol " +
-                                                            "WHERE tb_mol.mol_department=@department", sqlConnection);
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT tb_department.col_mol_full_name " +
+                                                            "FROM tb_department " +
+                                                            "WHERE tb_department.mol_department=@department", sqlConnection);
 
                 sqlCommand.Parameters.Add("@department", MySqlDbType.VarChar).Value = comboBoxDepartment.Text;
 

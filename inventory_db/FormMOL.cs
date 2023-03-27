@@ -50,7 +50,7 @@ namespace inventory_db
             {
                 sqlConnection.Open();
                 MySqlCommand sqlCommand = new MySqlCommand("SELECT col_mol_full_name, mol_department " +
-                                                           "FROM tb_mol", sqlConnection);
+                                                           "FROM tb_department", sqlConnection);
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
@@ -115,7 +115,7 @@ namespace inventory_db
                     dialogResult = MessageBox.Show("Данное подразделение иммется в других таблицах\nПри его удалении, удаляться все записи с свзанные с ним!\nВы уверены что хотите удалить данное подразделение?", "Предупреждение", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        string query = "DELETE FROM `tb_mol` WHERE `mol_department` = @mol_department";
+                        string query = "DELETE FROM `tb_department` WHERE `mol_department` = @mol_department";
                         MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
                         commandDatabase.Parameters.Add("@mol_department", MySqlDbType.VarChar).Value = fullDepartmentMOL;
 
@@ -142,7 +142,7 @@ namespace inventory_db
                 dialogResult = MessageBox.Show("Вы уверены, что хотите удалить МОЛ'а?", "Удаление МОЛ'а", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    string query = "DELETE FROM `tb_mol` WHERE `mol_department` = @mol_department";
+                    string query = "DELETE FROM `tb_department` WHERE `mol_department` = @mol_department";
                     MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
                     commandDatabase.Parameters.Add("@mol_department", MySqlDbType.VarChar).Value = fullDepartmentMOL;
 

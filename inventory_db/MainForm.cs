@@ -111,12 +111,12 @@ namespace inventory_db
             {
                 sqlConnection.Open();
                 MySqlCommand sqlCommand = new MySqlCommand(" " +
-                                                           "SELECT tb_main.invent_number,  tb_location.col_location_name, tb_main.col_date,  tb_mol.col_mol_full_name, tb_mol.mol_department, tb_itam_number.item_number, tb_equipment_model.equipment_model_name, tb_equipment_manufacturer.col_equipment_manufacturer_name, tb_type_equipment.col_type_equipment_name,tb_authorization_staff.col_full_name_staff " +
+                                                           "SELECT tb_main.invent_number,  tb_location.col_location_name, tb_main.col_date,  tb_department.col_mol_full_name, tb_department.mol_department, tb_itam_number.item_number, tb_equipment_model.equipment_model_name, tb_equipment_manufacturer.col_equipment_manufacturer_name, tb_type_equipment.col_type_equipment_name,tb_authorization_staff.col_full_name_staff " +
                                                            "FROM  tb_main " +
                                                            "JOIN tb_location " +
                                                            "ON tb_main.id_col_location = tb_location.id_col_location " +
-                                                           "JOIN tb_mol " +
-                                                           "ON tb_main.mol_department = tb_mol.mol_department " +
+                                                           "JOIN tb_department " +
+                                                           "ON tb_main.mol_department = tb_department.mol_department " +
                                                            "JOIN tb_itam_number " +
                                                            "ON tb_main.item_number = tb_itam_number.item_number " +
                                                            "JOIN tb_equipment_model " +
@@ -378,7 +378,7 @@ namespace inventory_db
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
-                MySqlCommand command = new MySqlCommand("SELECT * FROM tb_mol", sqlConnection);
+                MySqlCommand command = new MySqlCommand("SELECT * FROM tb_department", sqlConnection);
                 //SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 DataTable table = new DataTable();
@@ -404,7 +404,7 @@ namespace inventory_db
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {
-                MySqlCommand command = new MySqlCommand("SELECT * FROM tb_mol", sqlConnection);
+                MySqlCommand command = new MySqlCommand("SELECT * FROM tb_department", sqlConnection);
                 //SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 DataTable table = new DataTable();

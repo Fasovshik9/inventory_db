@@ -60,7 +60,7 @@ namespace inventory_db
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_mol` WHERE mol_department = @mol_department", sqlConnection);
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_department` WHERE mol_department = @mol_department", sqlConnection);
             command.Parameters.Add("@mol_department", MySqlDbType.VarChar).Value = textBoxChangeDepartmentMOL.Text;
 
             adapter.SelectCommand = command;
@@ -75,7 +75,7 @@ namespace inventory_db
 
 
             //MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["journal"].ConnectionString);
-            string query = "UPDATE `tb_mol` " +
+            string query = "UPDATE `tb_department` " +
                 "SET `col_mol_full_name`=@col_mol_full_name,`mol_department`=@mol_department " +
                 "WHERE mol_department = @MOL_old_department";
 
