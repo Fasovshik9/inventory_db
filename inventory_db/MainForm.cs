@@ -134,7 +134,7 @@ namespace inventory_db
                     {
                         Convert.ToString(dataReader["invent_number"]),
                         Convert.ToString(dataReader["col_location_name"]),
-                        Convert.ToString(dataReader["col_date"]),
+                        Convert.ToString(dataReader["col_date"]).Substring(0, Convert.ToString(dataReader["col_date"]).Length - 11),
                         Convert.ToString(dataReader["col_mol_full_name"]),
                         Convert.ToString(dataReader["mol_department"]),
                         Convert.ToString(dataReader["item_number"]),
