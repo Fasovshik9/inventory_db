@@ -71,6 +71,8 @@
             this.textBoxItamNumber.Name = "textBoxItamNumber";
             this.textBoxItamNumber.Size = new System.Drawing.Size(395, 32);
             this.textBoxItamNumber.TabIndex = 62;
+            this.textBoxItamNumber.Enter += new System.EventHandler(this.textBoxItamNumber_Enter);
+            this.textBoxItamNumber.Leave += new System.EventHandler(this.textBoxItamNumber_Leave);
             // 
             // label3
             // 
@@ -200,6 +202,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItamNumberAddNew";
             this.Activated += new System.EventHandler(this.FormItamNumberAddNew_Activated);
+            this.Load += new System.EventHandler(this.FormItamNumberAddNew_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

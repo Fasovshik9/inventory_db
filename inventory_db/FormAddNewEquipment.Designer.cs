@@ -117,7 +117,7 @@
             // 
             // buttonExitFronForm
             // 
-            this.buttonExitFronForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonExitFronForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonExitFronForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExitFronForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonExitFronForm.ForeColor = System.Drawing.Color.White;

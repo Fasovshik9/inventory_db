@@ -97,7 +97,7 @@
             // 
             // buttonExitFromForm
             // 
-            this.buttonExitFromForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonExitFromForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonExitFromForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExitFromForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonExitFromForm.ForeColor = System.Drawing.Color.White;
@@ -107,6 +107,7 @@
             this.buttonExitFromForm.TabIndex = 27;
             this.buttonExitFromForm.Text = "Отмена";
             this.buttonExitFromForm.UseVisualStyleBackColor = false;
+            this.buttonExitFromForm.Click += new System.EventHandler(this.buttonExitFromForm_Click);
             // 
             // labelFullNameMOL
             // 

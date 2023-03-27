@@ -294,6 +294,7 @@
             this.buttonCencel.TabIndex = 108;
             this.buttonCencel.Text = "Отмена";
             this.buttonCencel.UseVisualStyleBackColor = false;
+            this.buttonCencel.Click += new System.EventHandler(this.buttonCencel_Click);
             // 
             // labelAccountItamNumber
             // 

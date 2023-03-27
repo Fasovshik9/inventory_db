@@ -34,6 +34,7 @@ namespace inventory_db
             FillComboBoxEquipmentManufacturer();
             FillComboBoxEquipmentType();
             FillComboBoxModel();
+            //zeroItamNumber();
         }
 
         private void buttonItamNumberChange_Click(object sender, EventArgs e)
@@ -49,11 +50,9 @@ namespace inventory_db
                 MessageBox.Show("Все поля должны быть заполенны !");
                 return;
             }
-            if (textBoxItamNumberChange.TextLength <= 1 && textBoxItamNumberChange.TextLength >= 20)
+            if (textBoxItamNumberChange.TextLength != 9)
             {
-
-                MessageBox.Show("Номенклатурный артикуль слишком длинный!\nМаксимум 20 знаков!", "Ошибка");
-                //zeroFildPass();
+                MessageBox.Show("Номенклатурный артикуль неверный!\nНоменклатурный артикуль должен ровняться 9 символам!", "Ошибка");
                 return;
             }
 
@@ -263,6 +262,28 @@ namespace inventory_db
             //comboBoxModelChange.Text = "";
             //comboBoxEquipmentManufacturerChange.Text = "";
             //comboBoxEquipmentTypeChange.Text = "";
+        }
+
+        private void textBoxItamNumberChange_Leave(object sender, EventArgs e)
+        {
+            if (textBoxItamNumberChange.Text == "")
+            {
+                zeroItamNumber();
+            }
+        }
+
+        private void textBoxItamNumberChange_Enter(object sender, EventArgs e)
+        {
+            if (textBoxItamNumberChange.Text == phraseFullItamNumber)
+            {
+                textBoxItamNumberChange.Text = "";
+                textBoxItamNumberChange.ForeColor = Color.Black;
+            }
+        }
+        private void zeroItamNumber()
+        {
+            textBoxItamNumberChange.Text = phraseFullItamNumber;
+            textBoxItamNumberChange.ForeColor = Color.Gray;
         }
     }
 }

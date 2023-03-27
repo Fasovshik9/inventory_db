@@ -82,6 +82,8 @@
             this.textBoxItamNumberChange.Name = "textBoxItamNumberChange";
             this.textBoxItamNumberChange.Size = new System.Drawing.Size(395, 32);
             this.textBoxItamNumberChange.TabIndex = 73;
+            this.textBoxItamNumberChange.Enter += new System.EventHandler(this.textBoxItamNumberChange_Enter);
+            this.textBoxItamNumberChange.Leave += new System.EventHandler(this.textBoxItamNumberChange_Leave);
             // 
             // label3
             // 

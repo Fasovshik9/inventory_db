@@ -418,7 +418,7 @@ namespace inventory_db
 
             /////////////////////////////////////////////////////////////////////////////
             //MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["journal"].ConnectionString);
-            string query = "UPDATE `tb_main` " +
+            string query = "UPDATE `tb_equipment_report` " +
                 "SET `id_col_location`=@id_col_location, `col_date`=@col_date, `mol_department`=@mol_department, `item_number`=@item_number, `login_authorization_staff`=@login_authorization_staff " +
                 "WHERE invent_number = @invent_number";
 
@@ -477,6 +477,11 @@ namespace inventory_db
             comboBoxEquipmentManufacturer.Text = comboBoxEquipmentManufacturerBuff;
             comboBoxEquipmentType.Text = comboBoxEquipmentTypeBuff;
             comboBoxStuff.Text = comboBoxStuffBuff;
+        }
+
+        private void buttonCencel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

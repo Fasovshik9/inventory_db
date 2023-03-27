@@ -445,7 +445,7 @@ namespace inventory_db
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
 
             /////////////////////////////////////////////////////////////////////////////
-            string query = "INSERT INTO tb_main(`id_col_location`, `col_date`, `mol_department`, `item_number`, `login_authorization_staff`) " +
+            string query = "INSERT INTO tb_equipment_report(`id_col_location`, `col_date`, `mol_department`, `item_number`, `login_authorization_staff`) " +
                            "VALUES (@id_col_location, @col_date, @mol_department, @item_number, @login_authorization_staff)";
             MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
 

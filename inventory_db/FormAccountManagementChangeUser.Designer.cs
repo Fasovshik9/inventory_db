@@ -62,11 +62,11 @@
             // buttonExitProgram
             // 
             this.buttonExitProgram.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonExitProgram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonExitProgram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExitProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonExitProgram.ForeColor = System.Drawing.Color.White;
-            this.buttonExitProgram.Location = new System.Drawing.Point(232, 445);
+            this.buttonExitProgram.Location = new System.Drawing.Point(232, 436);
             this.buttonExitProgram.Name = "buttonExitProgram";
             this.buttonExitProgram.Size = new System.Drawing.Size(135, 33);
             this.buttonExitProgram.TabIndex = 23;
@@ -200,7 +200,7 @@
             this.buttonChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonChangePassword.ForeColor = System.Drawing.Color.White;
-            this.buttonChangePassword.Location = new System.Drawing.Point(213, 396);
+            this.buttonChangePassword.Location = new System.Drawing.Point(213, 387);
             this.buttonChangePassword.Name = "buttonChangePassword";
             this.buttonChangePassword.Size = new System.Drawing.Size(180, 34);
             this.buttonChangePassword.TabIndex = 25;

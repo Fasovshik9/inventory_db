@@ -147,5 +147,10 @@ namespace inventory_db
                 textBoxDepartmentMOL.ForeColor = Color.Black;
             }
         }
+
+        private void buttonExitFromForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

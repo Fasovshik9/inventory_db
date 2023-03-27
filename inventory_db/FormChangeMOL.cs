@@ -53,7 +53,7 @@ namespace inventory_db
             else
             {
                 MessageBox.Show("Некоректное имя МОЛ'а!\nМаксимум 20 знаков!", "Ошибка");
-                zeroFullNameMOL();
+                //zeroFullNameMOL();
                 return;
             }
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
