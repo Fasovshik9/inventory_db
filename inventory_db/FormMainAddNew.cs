@@ -235,7 +235,7 @@ namespace inventory_db
             try
             {
                 MySqlCommand command = new MySqlCommand("SELECT * FROM tb_authorization_staff " +
-                                                        "WHERE id_status_level_staff <> 2 ", sqlConnection);
+                                                        "WHERE col_status_level_staff <> 'Уволен' ", sqlConnection);
                 //SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 DataTable table = new DataTable();
@@ -481,7 +481,7 @@ namespace inventory_db
 
         private void FormMainAddNew_Load(object sender, EventArgs e)
         {
-
+            comboBoxItamNumber.DropDownHeight = 200;
             comboBoxLocation.Text = "";
             comboBoxDepartment.Text = "";
             comboBoxMOL.Text = "";

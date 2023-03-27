@@ -466,6 +466,7 @@ namespace inventory_db
 
         private void FormMainChange_Load(object sender, EventArgs e)
         {
+            comboBoxItamNumber.DropDownHeight = 200;
             textBoxInventNumber.Text = textBoxInventNumberBuff;
             comboBoxLocation.Text = comboBoxLocationBuff;
             dateTimePicker1.Text = dateTimePicker1Buff;

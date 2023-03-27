@@ -169,7 +169,7 @@ namespace inventory_db
         private void MainForm_Activated(object sender, EventArgs e)
         {
             RefreshlistViewMain();
-            if (privilegeUser == "0")
+            if (privilegeUser == "Администратор")
                 администрированиеToolStripMenuItem.Visible = true;
             else
                 администрированиеToolStripMenuItem.Visible = false;
@@ -739,6 +739,7 @@ namespace inventory_db
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            comboBoxFilterAll.DropDownHeight = 200;
             columnHeaderInvent.Width = 110;
             columnHeaderLocation.Width = 200;
             columnHeaderDate.Width = 80;

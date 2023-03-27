@@ -81,8 +81,8 @@
             this.comboBoxAccountManagementUserPrivilege.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxAccountManagementUserPrivilege.FormattingEnabled = true;
             this.comboBoxAccountManagementUserPrivilege.Items.AddRange(new object[] {
-            "admin",
-            "user",
+            "Администратор",
+            "Пользователь",
             "Уволен"});
             this.comboBoxAccountManagementUserPrivilege.Location = new System.Drawing.Point(203, 247);
             this.comboBoxAccountManagementUserPrivilege.Name = "comboBoxAccountManagementUserPrivilege";

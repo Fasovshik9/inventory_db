@@ -106,6 +106,7 @@ namespace inventory_db
 
         private void AuthorizationForm_Load(object sender, EventArgs e)
         {
+
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
             try
             {

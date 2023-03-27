@@ -48,9 +48,7 @@ namespace inventory_db
             try
             {
                 sqlConnection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand("SELECT login_authorization_staff, col_full_name_staff, col_status_staff_name " +
-                                                           "FROM tb_authorization_staff JOIN tb_status_level_staff " +
-                                                           "ON tb_authorization_staff.id_status_level_staff = tb_status_level_staff.id_status_level_staff", sqlConnection);
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT login_authorization_staff, col_full_name_staff, col_status_level_staff FROM tb_authorization_staff", sqlConnection);
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
@@ -58,7 +56,7 @@ namespace inventory_db
                     {
                         Convert.ToString(dataReader["login_authorization_staff"]),
                         Convert.ToString(dataReader["col_full_name_staff"]),
-                        Convert.ToString(dataReader["col_status_staff_name"])
+                        Convert.ToString(dataReader["col_status_level_staff"])
                     };
                     rowsUserAccountManagement.Add(row);
                 }
@@ -184,9 +182,9 @@ namespace inventory_db
                 this.userNameMouse = item.SubItems[0].Text;
                 this.userFullNameMouse = item.SubItems[1].Text;
                 //this.userPrivilegeMouse = item.SubItems[2].Text;
-                if (item.SubItems[2].Text == "admin")
+                if (item.SubItems[2].Text == "Администратор")
                     userPrivilegeMouse = 0;
-                else if (item.SubItems[2].Text == "user")
+                else if (item.SubItems[2].Text == "Пользователь")
                     userPrivilegeMouse = 1;
                 else userPrivilegeMouse = 2;
 

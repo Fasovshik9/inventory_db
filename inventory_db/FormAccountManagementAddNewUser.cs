@@ -84,16 +84,17 @@ namespace inventory_db
             string userLogin = textBoxlAccountManagementUserLogin.Text;
             string userFullName = textBoxAccountManagementUserFullName.Text;
             string userPass = textBoxAccountManagementUserPassword.Text;
-            string userPrivilege = Convert.ToString(comboBoxAccountManagementUserPrivilege.Items.IndexOf(comboBoxAccountManagementUserPrivilege.Text));
+            string userPrivilege = Convert.ToString(comboBoxAccountManagementUserPrivilege.Text);
+            //string userPrivilege = Convert.ToString(comboBoxAccountManagementUserPrivilege.Items.IndexOf(comboBoxAccountManagementUserPrivilege.Text));
 
-            string query = "INSERT INTO tb_authorization_staff(`login_authorization_staff`, `col_full_name_staff`, `col_password_staff`, `id_status_level_staff`) " +
-                "VALUES (@login_authorization_staff, @col_full_name_staff,@col_password_staff, @id_status_level_staff)";
+            string query = "INSERT INTO tb_authorization_staff(`login_authorization_staff`, `col_full_name_staff`, `col_password_staff`, `col_status_level_staff`) " +
+                "VALUES (@login_authorization_staff, @col_full_name_staff,@col_password_staff, @col_status_level_staff)";
             MySqlCommand commandDatabase = new MySqlCommand(query, sqlConnection);
 
             commandDatabase.Parameters.Add("@login_authorization_staff", MySqlDbType.VarChar).Value = userLogin;
             commandDatabase.Parameters.Add("@col_full_name_staff", MySqlDbType.VarChar).Value = userFullName;
             commandDatabase.Parameters.Add("@col_password_staff", MySqlDbType.VarChar).Value = userPass;
-            commandDatabase.Parameters.Add("@id_status_level_staff", MySqlDbType.VarChar).Value = userPrivilege;
+            commandDatabase.Parameters.Add("@col_status_level_staff", MySqlDbType.VarChar).Value = userPrivilege;
 
             commandDatabase.CommandTimeout = 60;
             //if (textBoxlAccountManagementUserLogin.TextLength <= 12 && textBoxlAccountManagementUserLogin.TextLength >= 5)

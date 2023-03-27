@@ -332,7 +332,7 @@
             "По типу",
             "По сотруднику ИТ",
             "По всем полям"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(386, 63);
+            this.comboBoxFilter.Location = new System.Drawing.Point(386, 59);
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(304, 33);
             this.comboBoxFilter.TabIndex = 116;
@@ -410,7 +410,7 @@
             // textBoxFilterAll
             // 
             this.textBoxFilterAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxFilterAll.Location = new System.Drawing.Point(105, 63);
+            this.textBoxFilterAll.Location = new System.Drawing.Point(105, 59);
             this.textBoxFilterAll.Name = "textBoxFilterAll";
             this.textBoxFilterAll.Size = new System.Drawing.Size(275, 32);
             this.textBoxFilterAll.TabIndex = 123;
