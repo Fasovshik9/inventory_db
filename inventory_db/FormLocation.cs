@@ -39,10 +39,9 @@ namespace inventory_db
                 MessageBox.Show("Введите название локации!");
                 return;
             }
-            if (textBoxAddNewLocation.TextLength >= 50)
+            if (textBoxAddNewLocation.TextLength >= 40)
             {
-                MessageBox.Show("Некоректное название локации!\nМаксимум 50!", "Ошибка");
-                zeroFildLocation();
+                MessageBox.Show("Некорректное название локации!\nМаксимум 40!", "Ошибка");
                 return;
             }
             else {}
@@ -174,9 +173,9 @@ namespace inventory_db
                 MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
                 DataTable table = new DataTable();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_main` " +
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_equipment_report` " +
                                                         "JOIN tb_location " +
-                                                        "ON tb_main.id_col_location = tb_location.id_col_location " +
+                                                        "ON tb_equipment_report.id_col_location = tb_location.id_col_location " +
                                                         "WHERE col_location_name = @col_location_name", sqlConnection);
                 command.Parameters.Add("@col_location_name", MySqlDbType.VarChar).Value = locationMameMouse;
 
@@ -315,6 +314,12 @@ namespace inventory_db
             }
             else
             {
+                if (textBoxAddNewLocation.TextLength >= 40)
+                {
+                    MessageBox.Show("Некорректное название локации!\nМаксимум 40!", "Ошибка");
+                    return;
+                }
+                else { }
 
                 ///////////////////////////////////////////////////////////////////////////// check new user to reapit
                 MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);

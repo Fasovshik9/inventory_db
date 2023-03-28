@@ -55,7 +55,7 @@
             this.listViewEquipment.FullRowSelect = true;
             this.listViewEquipment.GridLines = true;
             this.listViewEquipment.HideSelection = false;
-            this.listViewEquipment.Location = new System.Drawing.Point(7, 127);
+            this.listViewEquipment.Location = new System.Drawing.Point(11, 127);
             this.listViewEquipment.Name = "listViewEquipment";
             this.listViewEquipment.Size = new System.Drawing.Size(658, 366);
             this.listViewEquipment.TabIndex = 19;
@@ -79,26 +79,25 @@
             // 
             // buttonChangeEquipment
             // 
-            this.buttonChangeEquipment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonChangeEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonChangeEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonChangeEquipment.ForeColor = System.Drawing.Color.White;
-            this.buttonChangeEquipment.Location = new System.Drawing.Point(165, 513);
+            this.buttonChangeEquipment.Location = new System.Drawing.Point(169, 513);
             this.buttonChangeEquipment.Name = "buttonChangeEquipment";
             this.buttonChangeEquipment.Size = new System.Drawing.Size(132, 36);
             this.buttonChangeEquipment.TabIndex = 22;
             this.buttonChangeEquipment.Text = "Изменить";
             this.buttonChangeEquipment.UseVisualStyleBackColor = false;
+            this.buttonChangeEquipment.Click += new System.EventHandler(this.buttonChangeEquipment_Click);
             // 
             // buttonDeleteEquipment
             // 
-            this.buttonDeleteEquipment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonDeleteEquipment.BackColor = System.Drawing.Color.Red;
             this.buttonDeleteEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonDeleteEquipment.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteEquipment.Location = new System.Drawing.Point(360, 513);
+            this.buttonDeleteEquipment.Location = new System.Drawing.Point(364, 513);
             this.buttonDeleteEquipment.Name = "buttonDeleteEquipment";
             this.buttonDeleteEquipment.Size = new System.Drawing.Size(132, 36);
             this.buttonDeleteEquipment.TabIndex = 21;
@@ -107,12 +106,11 @@
             // 
             // buttonAddNewEquipment
             // 
-            this.buttonAddNewEquipment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddNewEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonAddNewEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddNewEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonAddNewEquipment.ForeColor = System.Drawing.Color.White;
-            this.buttonAddNewEquipment.Location = new System.Drawing.Point(12, 513);
+            this.buttonAddNewEquipment.Location = new System.Drawing.Point(16, 513);
             this.buttonAddNewEquipment.Name = "buttonAddNewEquipment";
             this.buttonAddNewEquipment.Size = new System.Drawing.Size(132, 36);
             this.buttonAddNewEquipment.TabIndex = 20;
@@ -126,7 +124,7 @@
             this.labelAccountManagementAddNewUser.AutoSize = true;
             this.labelAccountManagementAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementAddNewUser.ForeColor = System.Drawing.Color.White;
-            this.labelAccountManagementAddNewUser.Location = new System.Drawing.Point(179, 9);
+            this.labelAccountManagementAddNewUser.Location = new System.Drawing.Point(183, 9);
             this.labelAccountManagementAddNewUser.Name = "labelAccountManagementAddNewUser";
             this.labelAccountManagementAddNewUser.Size = new System.Drawing.Size(267, 39);
             this.labelAccountManagementAddNewUser.TabIndex = 10;
@@ -134,12 +132,11 @@
             // 
             // buttonCencel
             // 
-            this.buttonCencel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCencel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonCencel.ForeColor = System.Drawing.Color.White;
-            this.buttonCencel.Location = new System.Drawing.Point(521, 513);
+            this.buttonCencel.Location = new System.Drawing.Point(525, 513);
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 27;
@@ -150,7 +147,7 @@
             // 
             this.textBoxFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxFilter.Location = new System.Drawing.Point(98, 78);
+            this.textBoxFilter.Location = new System.Drawing.Point(102, 78);
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(332, 32);
             this.textBoxFilter.TabIndex = 26;
@@ -162,7 +159,7 @@
             this.buttonEmptyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEmptyFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmptyFilter.ForeColor = System.Drawing.Color.White;
-            this.buttonEmptyFilter.Location = new System.Drawing.Point(436, 76);
+            this.buttonEmptyFilter.Location = new System.Drawing.Point(440, 76);
             this.buttonEmptyFilter.Name = "buttonEmptyFilter";
             this.buttonEmptyFilter.Size = new System.Drawing.Size(208, 36);
             this.buttonEmptyFilter.TabIndex = 25;
@@ -175,7 +172,7 @@
             this.labellAccountManagementFilter.AutoSize = true;
             this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
-            this.labellAccountManagementFilter.Location = new System.Drawing.Point(7, 82);
+            this.labellAccountManagementFilter.Location = new System.Drawing.Point(11, 82);
             this.labellAccountManagementFilter.Name = "labellAccountManagementFilter";
             this.labellAccountManagementFilter.Size = new System.Drawing.Size(85, 24);
             this.labellAccountManagementFilter.TabIndex = 24;
@@ -188,7 +185,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(677, 60);
+            this.panel1.Size = new System.Drawing.Size(684, 60);
             this.panel1.TabIndex = 23;
             // 
             // FormEquipment
@@ -196,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(677, 561);
+            this.ClientSize = new System.Drawing.Size(684, 561);
             this.Controls.Add(this.listViewEquipment);
             this.Controls.Add(this.buttonChangeEquipment);
             this.Controls.Add(this.buttonDeleteEquipment);
@@ -206,6 +203,7 @@
             this.Controls.Add(this.buttonEmptyFilter);
             this.Controls.Add(this.labellAccountManagementFilter);
             this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(700, 600);
             this.Name = "FormEquipment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEquipment";

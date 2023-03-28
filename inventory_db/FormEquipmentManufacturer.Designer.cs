@@ -227,6 +227,7 @@
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonDeleteEquipmentManufacturer);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormEquipmentManufacturer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEquipmentManufacturer";

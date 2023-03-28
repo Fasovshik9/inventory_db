@@ -226,6 +226,7 @@
             this.Controls.Add(this.textBoxChangeEquipment);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonDeleteEquipment);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormEquipmentType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEquipment";

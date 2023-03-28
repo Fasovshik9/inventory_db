@@ -93,10 +93,9 @@ namespace inventory_db
                 MessageBox.Show("Введите название типа!");
                 return;
             }
-            if (textBoxAddNewEquipment.TextLength >= 50)
+            if (textBoxAddNewEquipment.TextLength >= 40)
             {
-                MessageBox.Show("Некоректное название типа!\nМаксимум 50!", "Ошибка");
-                zeroFildEquipment();
+                MessageBox.Show("Некоректное название типа!\nМаксимум 40!", "Ошибка");
                 return;
             }
             else { }
@@ -307,7 +306,12 @@ namespace inventory_db
             }
             else
             {
-
+                if (textBoxAddNewEquipment.TextLength >= 40)
+                {
+                    MessageBox.Show("Некоректное название типа!\nМаксимум 40!", "Ошибка");
+                    return;
+                }
+                else { }
                 ///////////////////////////////////////////////////////////////////////////// check new user to reapit
                 MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
                 //DataTable table = new DataTable();

@@ -42,9 +42,11 @@ namespace inventory_db
                 MessageBox.Show("Все поля должны быть заполенны !");
                 return;
             }
-            if (textBoxEquipmentModelChange.TextLength >= 20 && textBoxEquipmentModelChange.TextLength <= 1)
+            if (textBoxEquipmentModelChange.TextLength >= 40)
             {
-                MessageBox.Show("Название модели слишком длинное!\nМаксимум 20 знаков!", "Ошибка");
+
+                MessageBox.Show("Название модели слишком длинное!\nМаксимум 40 знаков!", "Ошибка");
+                //zeroFildPass();
                 return;
             }
 

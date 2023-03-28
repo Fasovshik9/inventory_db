@@ -28,8 +28,9 @@ namespace inventory_db
             FormAddNewEquipment.ShowDialog();
         }
 
+        private void buttonChangeEquipment_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

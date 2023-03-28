@@ -61,6 +61,7 @@
             this.listViewAccountManagement.TabIndex = 0;
             this.listViewAccountManagement.UseCompatibleStateImageBehavior = false;
             this.listViewAccountManagement.View = System.Windows.Forms.View.Details;
+            this.listViewAccountManagement.SelectedIndexChanged += new System.EventHandler(this.listViewAccountManagement_SelectedIndexChanged);
             this.listViewAccountManagement.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewAccountManagement_MouseDoubleClick);
             this.listViewAccountManagement.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewAccountManagement_MouseDown);
             // 
@@ -132,6 +133,7 @@
             this.labelAccountManagementAddNewUser.Size = new System.Drawing.Size(560, 39);
             this.labelAccountManagementAddNewUser.TabIndex = 10;
             this.labelAccountManagementAddNewUser.Text = "Управление учеными записями";
+            this.labelAccountManagementAddNewUser.Click += new System.EventHandler(this.labelAccountManagementAddNewUser_Click);
             // 
             // panel1
             // 
@@ -154,6 +156,7 @@
             this.labellAccountManagementFilter.Size = new System.Drawing.Size(85, 24);
             this.labellAccountManagementFilter.TabIndex = 15;
             this.labellAccountManagementFilter.Text = "Фильтр";
+            this.labellAccountManagementFilter.Click += new System.EventHandler(this.labellAccountManagementFilter_Click);
             // 
             // buttonEmptyFilter
             // 

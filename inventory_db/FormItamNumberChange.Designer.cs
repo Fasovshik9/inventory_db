@@ -45,9 +45,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.labelAccountItamNumber);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 60);
@@ -55,6 +55,7 @@
             // 
             // labelAccountItamNumber
             // 
+            this.labelAccountItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountItamNumber.AutoSize = true;
             this.labelAccountItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountItamNumber.ForeColor = System.Drawing.Color.White;
@@ -66,6 +67,7 @@
             // 
             // comboBoxModelChange
             // 
+            this.comboBoxModelChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxModelChange.DisplayMember = "1";
             this.comboBoxModelChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxModelChange.FormattingEnabled = true;
@@ -73,10 +75,12 @@
             this.comboBoxModelChange.Name = "comboBoxModelChange";
             this.comboBoxModelChange.Size = new System.Drawing.Size(395, 32);
             this.comboBoxModelChange.TabIndex = 74;
+            this.comboBoxModelChange.SelectedIndexChanged += new System.EventHandler(this.comboBoxModelChange_SelectedIndexChanged);
             this.comboBoxModelChange.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxModelChange_KeyPress);
             // 
             // textBoxItamNumberChange
             // 
+            this.textBoxItamNumberChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxItamNumberChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxItamNumberChange.Location = new System.Drawing.Point(294, 113);
             this.textBoxItamNumberChange.Name = "textBoxItamNumberChange";
@@ -87,6 +91,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -98,6 +103,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -109,6 +115,7 @@
             // 
             // comboBoxEquipmentTypeChange
             // 
+            this.comboBoxEquipmentTypeChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxEquipmentTypeChange.DisplayMember = "1";
             this.comboBoxEquipmentTypeChange.Enabled = false;
             this.comboBoxEquipmentTypeChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -121,6 +128,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -132,6 +140,7 @@
             // 
             // comboBoxEquipmentManufacturerChange
             // 
+            this.comboBoxEquipmentManufacturerChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxEquipmentManufacturerChange.DisplayMember = "1";
             this.comboBoxEquipmentManufacturerChange.Enabled = false;
             this.comboBoxEquipmentManufacturerChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -144,11 +153,12 @@
             // 
             // buttonCencel
             // 
+            this.buttonCencel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCencel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonCencel.ForeColor = System.Drawing.Color.White;
-            this.buttonCencel.Location = new System.Drawing.Point(392, 405);
+            this.buttonCencel.Location = new System.Drawing.Point(407, 389);
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 67;
@@ -158,6 +168,7 @@
             // 
             // labellAccountManagementFilter
             // 
+            this.labellAccountManagementFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labellAccountManagementFilter.AutoSize = true;
             this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
@@ -169,11 +180,12 @@
             // 
             // buttonItamNumberChange
             // 
+            this.buttonItamNumberChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonItamNumberChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonItamNumberChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItamNumberChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonItamNumberChange.ForeColor = System.Drawing.Color.White;
-            this.buttonItamNumberChange.Location = new System.Drawing.Point(232, 405);
+            this.buttonItamNumberChange.Location = new System.Drawing.Point(247, 389);
             this.buttonItamNumberChange.Name = "buttonItamNumberChange";
             this.buttonItamNumberChange.Size = new System.Drawing.Size(132, 36);
             this.buttonItamNumberChange.TabIndex = 75;
@@ -198,6 +210,7 @@
             this.Controls.Add(this.comboBoxEquipmentManufacturerChange);
             this.Controls.Add(this.buttonCencel);
             this.Controls.Add(this.labellAccountManagementFilter);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormItamNumberChange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormItamNumberChange";

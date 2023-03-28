@@ -32,25 +32,12 @@ namespace inventory_db
                 MessageBox.Show("Все поля должны быть заполенны !");
                 return;
             }
-            if (textBoxlNewMOL.TextLength <= 20 && textBoxlNewMOL.TextLength >= 1)
+            if (textBoxDepartmentMOL.TextLength >= 40)
             {
-                if (textBoxDepartmentMOL.TextLength >= 20)
-                {
-                    MessageBox.Show("Название отдела слишком длинное!\nМаксимум 20 знаков!", "Ошибка");
-                    zeroDepartmentMOL();
-                    return;
-                }
-                else
-                {
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("Некоректное имя МОЛ'а!\nМаксимум 20 знаков!", "Ошибка");
-                zeroFullNameMOL();
+                MessageBox.Show("Название отдела слишком длинное!\nМаксимум 40 символов!", "Ошибка");
                 return;
             }
+
 
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);

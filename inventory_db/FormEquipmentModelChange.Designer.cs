@@ -43,16 +43,17 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.labelAccountEquipmentModel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(678, 60);
+            this.panel1.Size = new System.Drawing.Size(619, 60);
             this.panel1.TabIndex = 51;
             // 
             // labelAccountEquipmentModel
             // 
+            this.labelAccountEquipmentModel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountEquipmentModel.AutoSize = true;
             this.labelAccountEquipmentModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountEquipmentModel.ForeColor = System.Drawing.Color.White;
@@ -64,10 +65,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(128, 284);
+            this.label2.Location = new System.Drawing.Point(128, 262);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 24);
             this.label2.TabIndex = 58;
@@ -75,10 +77,11 @@
             // 
             // comboBoxEquipmentType
             // 
+            this.comboBoxEquipmentType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxEquipmentType.DisplayMember = "1";
             this.comboBoxEquipmentType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxEquipmentType.FormattingEnabled = true;
-            this.comboBoxEquipmentType.Location = new System.Drawing.Point(181, 276);
+            this.comboBoxEquipmentType.Location = new System.Drawing.Point(181, 254);
             this.comboBoxEquipmentType.Name = "comboBoxEquipmentType";
             this.comboBoxEquipmentType.Size = new System.Drawing.Size(395, 32);
             this.comboBoxEquipmentType.TabIndex = 57;
@@ -86,10 +89,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 130);
+            this.label1.Location = new System.Drawing.Point(12, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 24);
             this.label1.TabIndex = 56;
@@ -97,10 +101,11 @@
             // 
             // comboBoxEquipmentManufacturer
             // 
+            this.comboBoxEquipmentManufacturer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxEquipmentManufacturer.DisplayMember = "1";
             this.comboBoxEquipmentManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxEquipmentManufacturer.FormattingEnabled = true;
-            this.comboBoxEquipmentManufacturer.Location = new System.Drawing.Point(181, 122);
+            this.comboBoxEquipmentManufacturer.Location = new System.Drawing.Point(181, 100);
             this.comboBoxEquipmentManufacturer.Name = "comboBoxEquipmentManufacturer";
             this.comboBoxEquipmentManufacturer.Size = new System.Drawing.Size(395, 32);
             this.comboBoxEquipmentManufacturer.TabIndex = 55;
@@ -108,11 +113,12 @@
             // 
             // buttonAEquipmentModelChange
             // 
+            this.buttonAEquipmentModelChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAEquipmentModelChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonAEquipmentModelChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAEquipmentModelChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonAEquipmentModelChange.ForeColor = System.Drawing.Color.White;
-            this.buttonAEquipmentModelChange.Location = new System.Drawing.Point(159, 359);
+            this.buttonAEquipmentModelChange.Location = new System.Drawing.Point(170, 328);
             this.buttonAEquipmentModelChange.Name = "buttonAEquipmentModelChange";
             this.buttonAEquipmentModelChange.Size = new System.Drawing.Size(132, 36);
             this.buttonAEquipmentModelChange.TabIndex = 50;
@@ -122,11 +128,12 @@
             // 
             // buttonCencel
             // 
+            this.buttonCencel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCencel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonCencel.ForeColor = System.Drawing.Color.White;
-            this.buttonCencel.Location = new System.Drawing.Point(341, 359);
+            this.buttonCencel.Location = new System.Drawing.Point(352, 328);
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 54;
@@ -136,18 +143,20 @@
             // 
             // textBoxEquipmentModelChange
             // 
+            this.textBoxEquipmentModelChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxEquipmentModelChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxEquipmentModelChange.Location = new System.Drawing.Point(181, 200);
+            this.textBoxEquipmentModelChange.Location = new System.Drawing.Point(181, 178);
             this.textBoxEquipmentModelChange.Name = "textBoxEquipmentModelChange";
             this.textBoxEquipmentModelChange.Size = new System.Drawing.Size(395, 32);
             this.textBoxEquipmentModelChange.TabIndex = 53;
             // 
             // labellAccountManagementFilter
             // 
+            this.labellAccountManagementFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labellAccountManagementFilter.AutoSize = true;
             this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
-            this.labellAccountManagementFilter.Location = new System.Drawing.Point(88, 208);
+            this.labellAccountManagementFilter.Location = new System.Drawing.Point(88, 186);
             this.labellAccountManagementFilter.Name = "labellAccountManagementFilter";
             this.labellAccountManagementFilter.Size = new System.Drawing.Size(87, 24);
             this.labellAccountManagementFilter.TabIndex = 52;
@@ -158,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(678, 439);
+            this.ClientSize = new System.Drawing.Size(619, 395);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxEquipmentType);
@@ -168,6 +177,7 @@
             this.Controls.Add(this.buttonCencel);
             this.Controls.Add(this.textBoxEquipmentModelChange);
             this.Controls.Add(this.labellAccountManagementFilter);
+            this.MinimumSize = new System.Drawing.Size(635, 434);
             this.Name = "FormEquipmentModelChange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEquipmentModelChange";

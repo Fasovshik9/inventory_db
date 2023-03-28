@@ -232,6 +232,7 @@
             this.Controls.Add(this.textBoxAddNewLocation);
             this.Controls.Add(this.listViewLocation);
             this.Controls.Add(this.buttonAddNewLocation);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormLocation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLocation";

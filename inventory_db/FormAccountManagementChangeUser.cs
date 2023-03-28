@@ -30,34 +30,19 @@ namespace inventory_db
 
         private void buttonUserLogin_Click(object sender, EventArgs e)
         {
-            if (textBoxlAccountManagementUserLogin.Text == phraseLogin || (textBoxAccountManagementUserPassword.Text == phrasePass && boolAccountManagementUserPassword == true) || textBoxAccountManagementUserFullName.Text == phraseFullName)
+            if (textBoxlAccountManagementUserLogin.Text == phraseLogin || textBoxAccountManagementUserPassword.Text == phrasePass || textBoxAccountManagementUserFullName.Text == phraseFullName)
             {
                 MessageBox.Show("Все поля должны быть заполенны !");
                 return;
             }
-            if (textBoxlAccountManagementUserLogin.TextLength <= 20 && textBoxlAccountManagementUserLogin.TextLength >= 5)
+            if (textBoxlAccountManagementUserLogin.TextLength >= 20 && textBoxlAccountManagementUserLogin.TextLength <= 4)
             {
-                //if (textBoxAccountManagementUserFullName.TextLength >= 5)
-                {
-                    if (textBoxAccountManagementUserPassword.TextLength <= 5 && boolAccountManagementUserPassword == true) 
-                    {
-                        MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!", "Ошибка");
-                        zeroFildPass();
-                        return;
-                    }
-                    else {}
-                }
-                //else
-                //{
-                //    MessageBox.Show("!\nМинимум 5 знаков!", "Ошибка");
-                //    zeroFildPass();
-                //    return;
-                //}
+                MessageBox.Show("Некорректный имя пользователя!\nМинимум 5 знаков и максимум 20!", "Ошибка");
+                return;
             }
-            else
+            if (textBoxAccountManagementUserPassword.TextLength >= 20 && textBoxAccountManagementUserPassword.TextLength <= 4)
             {
-                MessageBox.Show("Некоректное имя пользователя!\nМинимум 5 знаков и максимум 20!", "Ошибка");
-                zeroFildPass();
+                MessageBox.Show("Некорректный пароль!\nМинимум 5 знаков и максимум 20!", "Ошибка");
                 return;
             }
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit

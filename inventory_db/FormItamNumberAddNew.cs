@@ -33,23 +33,23 @@ namespace inventory_db
 
         private void buttonAddNewItamNumber_Click(object sender, EventArgs e)
         {
-            var result = 0;
-            if (!int.TryParse(textBoxItamNumber.Text, out result))
-            {
-                MessageBox.Show("Номенклатурный артикул может содрежать только цифры !");
-                return;
-            }
+            //var result = 0;
+            //if (!int.TryParse(textBoxItamNumber.Text, out result))
+            //{
+            //    MessageBox.Show("Номенклатурный артикул может содрежать только цифры !");
+            //    return;
+            //}
 
             if (textBoxItamNumber.Text == phraseFullItamNumber || comboBoxModel.Text == "" || comboBoxEquipmentType.Text == "" || comboBoxEquipmentManufacturer.Text == "")
             {
                 MessageBox.Show("Все поля должны быть заполенны !");
                 return;
             }
-            if (textBoxItamNumber.TextLength != 9)
-            {
-                MessageBox.Show("Номенклатурный артикуль неверный!\nНоменклатурный артикуль должен ровняться 9 символам!", "Ошибка");
-                return;
-            }
+            //if (textBoxItamNumber.TextLength != 9)
+            //{
+            //    MessageBox.Show("Номенклатурный артикуль неверный!\nНоменклатурный артикуль должен ровняться 9 символам!", "Ошибка");
+            //    return;
+            //}
 
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
@@ -72,6 +72,25 @@ namespace inventory_db
                 MessageBox.Show("Номенклатурный артикуль с такой моделью уже существует!\nИзменить название модели или номенклатурного артикуля!", "Ошибка");
                 return;
             }
+            ///////////////////////////////////////////////////////////////////////////// check new user to reapit
+            MySqlConnection sqlConnection2 = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
+            DataTable table2 = new DataTable();
+            MySqlDataAdapter adapter2 = new MySqlDataAdapter();
+            MySqlCommand command2 = new MySqlCommand("SELECT tb_itam_number.item_number " +
+                                                    "FROM tb_itam_number  " +
+                                                    "WHERE tb_itam_number.item_number = @item_number", sqlConnection);
+
+            command2.Parameters.Add("@item_number", MySqlDbType.VarChar).Value = textBoxItamNumber.Text;
+            
+
+            adapter2.SelectCommand = command2;
+            adapter2.Fill(table2);
+
+            if (table2.Rows.Count > 0)
+            {
+                MessageBox.Show("Такой номенклатурный артикул уже существует!", "Ошибка");
+                return;
+            }
             /////////////////////////////////////////////////////////////////////////////
             string query = "INSERT INTO tb_itam_number(`item_number`, `equipment_model_name`) " +
                            "VALUES (@item_number, @equipment_model_name)";
@@ -92,13 +111,14 @@ namespace inventory_db
                         MySqlDataReader myReader = commandDatabase.ExecuteReader();
                         MessageBox.Show("Номенклатурный артикуль успешно добавлен!", "Уведомление");
                         sqlConnection.Close();
+                        this.Close();
                     }
                     catch (Exception ex)
                     {
                         // Show any error message.
                         MessageBox.Show(ex.Message);
                     }
-                    this.Close();
+                    //this.Close();
                 }
                 //else MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!", "Ошибка");
             }

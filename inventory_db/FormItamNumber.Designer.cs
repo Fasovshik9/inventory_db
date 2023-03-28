@@ -47,6 +47,7 @@
             // 
             // listViewItamNumber
             // 
+            this.listViewItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listViewItamNumber.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderItamNumber,
             this.columnHeaderEquipmentManufacturerName,
@@ -108,11 +109,12 @@
             // 
             // buttonChangeItamNumber
             // 
+            this.buttonChangeItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonChangeItamNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonChangeItamNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonChangeItamNumber.ForeColor = System.Drawing.Color.White;
-            this.buttonChangeItamNumber.Location = new System.Drawing.Point(294, 541);
+            this.buttonChangeItamNumber.Location = new System.Drawing.Point(308, 541);
             this.buttonChangeItamNumber.Name = "buttonChangeItamNumber";
             this.buttonChangeItamNumber.Size = new System.Drawing.Size(132, 36);
             this.buttonChangeItamNumber.TabIndex = 40;
@@ -122,11 +124,12 @@
             // 
             // buttonDeleteItamNumber
             // 
+            this.buttonDeleteItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonDeleteItamNumber.BackColor = System.Drawing.Color.Red;
             this.buttonDeleteItamNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonDeleteItamNumber.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteItamNumber.Location = new System.Drawing.Point(489, 541);
+            this.buttonDeleteItamNumber.Location = new System.Drawing.Point(479, 541);
             this.buttonDeleteItamNumber.Name = "buttonDeleteItamNumber";
             this.buttonDeleteItamNumber.Size = new System.Drawing.Size(132, 36);
             this.buttonDeleteItamNumber.TabIndex = 39;
@@ -136,11 +139,12 @@
             // 
             // buttonAddNewItamNumber
             // 
+            this.buttonAddNewItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddNewItamNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonAddNewItamNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddNewItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonAddNewItamNumber.ForeColor = System.Drawing.Color.White;
-            this.buttonAddNewItamNumber.Location = new System.Drawing.Point(141, 541);
+            this.buttonAddNewItamNumber.Location = new System.Drawing.Point(136, 541);
             this.buttonAddNewItamNumber.Name = "buttonAddNewItamNumber";
             this.buttonAddNewItamNumber.Size = new System.Drawing.Size(132, 36);
             this.buttonAddNewItamNumber.TabIndex = 38;
@@ -150,11 +154,12 @@
             // 
             // buttonCencel
             // 
+            this.buttonCencel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCencel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonCencel.ForeColor = System.Drawing.Color.White;
-            this.buttonCencel.Location = new System.Drawing.Point(650, 541);
+            this.buttonCencel.Location = new System.Drawing.Point(659, 541);
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 45;
@@ -164,6 +169,7 @@
             // 
             // textBoxFilter
             // 
+            this.textBoxFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxFilter.Location = new System.Drawing.Point(212, 105);
             this.textBoxFilter.Name = "textBoxFilter";
@@ -173,6 +179,7 @@
             // 
             // buttonEmptyFilter
             // 
+            this.buttonEmptyFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonEmptyFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonEmptyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEmptyFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,6 +218,7 @@
             this.Controls.Add(this.textBoxFilter);
             this.Controls.Add(this.buttonEmptyFilter);
             this.Controls.Add(this.labellAccountManagementFilter);
+            this.MinimumSize = new System.Drawing.Size(915, 628);
             this.Name = "FormItamNumber";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormItamNumber";

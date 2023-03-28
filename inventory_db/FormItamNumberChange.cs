@@ -50,11 +50,11 @@ namespace inventory_db
                 MessageBox.Show("Все поля должны быть заполенны !");
                 return;
             }
-            if (textBoxItamNumberChange.TextLength != 9)
-            {
-                MessageBox.Show("Номенклатурный артикуль неверный!\nНоменклатурный артикуль должен ровняться 9 символам!", "Ошибка");
-                return;
-            }
+            //if (textBoxItamNumberChange.TextLength != 9)
+            //{
+            //    MessageBox.Show("Номенклатурный артикуль неверный!\nНоменклатурный артикуль должен ровняться 9 символам!", "Ошибка");
+            //    return;
+            //}
 
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
             MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
@@ -284,6 +284,60 @@ namespace inventory_db
         {
             textBoxItamNumberChange.Text = phraseFullItamNumber;
             textBoxItamNumberChange.ForeColor = Color.Gray;
+        }
+
+        private void comboBoxModelChange_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillComboBoxes();
+        }
+
+        private void FillComboBoxes()
+        {
+            rowsItamNumber.Clear();
+            MySqlDataReader dataReader = null;
+            string[] row;
+            try
+            {
+                sqlConnection.Open();
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT col_equipment_manufacturer_name, col_type_equipment_name " +
+                                                            "FROM tb_equipment_model " +
+                                                            "JOIN tb_equipment_manufacturer " +
+                                                            "ON tb_equipment_model.id_equipment_manufacturer = tb_equipment_manufacturer.id_equipment_manufacturer " +
+                                                            "JOIN tb_type_equipment " +
+                                                            "ON tb_equipment_model.id_type_equipment = tb_type_equipment.id_type_equipment " +
+                                                            "WHERE tb_equipment_model.equipment_model_name=@equipment_model_name ", sqlConnection);
+
+                sqlCommand.Parameters.Add("@equipment_model_name", MySqlDbType.VarChar).Value = comboBoxModelChange.Text;
+
+                dataReader = sqlCommand.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    row = new string[]
+                    {
+                        Convert.ToString(dataReader["col_equipment_manufacturer_name"]),
+                        Convert.ToString(dataReader["col_type_equipment_name"])
+                    };
+                    rowsItamNumber.Add(row);
+                }
+                sqlConnection.Close();
+                dataReader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (dataReader != null && !dataReader.IsClosed)
+                {
+                    dataReader.Close();
+                }
+            }
+            if (comboBoxModelChange.Text != "")
+            {
+                comboBoxEquipmentManufacturerChange.Text = rowsItamNumber[0][0].ToString();
+                comboBoxEquipmentTypeChange.Text = rowsItamNumber[0][1].ToString();
+            }
         }
     }
 }

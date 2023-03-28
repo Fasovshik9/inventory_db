@@ -34,7 +34,6 @@
             this.labelAccountManagementUserPrivilege = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelAccountManagementUserFullName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.comboBoxAccountManagementUserPrivilege = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.labelAccountManagementUserLogin = new System.Windows.Forms.Label();
@@ -61,9 +60,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.labelAccountManagementAddNewUser);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(594, 60);
@@ -71,6 +70,7 @@
             // 
             // labelAccountManagementUserPassword
             // 
+            this.labelAccountManagementUserPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountManagementUserPassword.AutoSize = true;
             this.labelAccountManagementUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementUserPassword.ForeColor = System.Drawing.Color.White;
@@ -82,17 +82,19 @@
             // 
             // labelAccountManagementUserPrivilege
             // 
+            this.labelAccountManagementUserPrivilege.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountManagementUserPrivilege.AutoSize = true;
             this.labelAccountManagementUserPrivilege.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementUserPrivilege.ForeColor = System.Drawing.Color.White;
-            this.labelAccountManagementUserPrivilege.Location = new System.Drawing.Point(56, 315);
+            this.labelAccountManagementUserPrivilege.Location = new System.Drawing.Point(106, 315);
             this.labelAccountManagementUserPrivilege.Name = "labelAccountManagementUserPrivilege";
-            this.labelAccountManagementUserPrivilege.Size = new System.Drawing.Size(128, 24);
+            this.labelAccountManagementUserPrivilege.Size = new System.Drawing.Size(78, 24);
             this.labelAccountManagementUserPrivilege.TabIndex = 8;
-            this.labelAccountManagementUserPrivilege.Text = "Привилегия";
+            this.labelAccountManagementUserPrivilege.Text = "Статус";
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -104,6 +106,7 @@
             // 
             // labelAccountManagementUserFullName
             // 
+            this.labelAccountManagementUserFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountManagementUserFullName.AutoSize = true;
             this.labelAccountManagementUserFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementUserFullName.ForeColor = System.Drawing.Color.White;
@@ -113,19 +116,9 @@
             this.labelAccountManagementUserFullName.TabIndex = 6;
             this.labelAccountManagementUserFullName.Text = "ФИО";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(56, 315);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 24);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Привилегия";
-            // 
             // comboBoxAccountManagementUserPrivilege
             // 
+            this.comboBoxAccountManagementUserPrivilege.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxAccountManagementUserPrivilege.DisplayMember = "1";
             this.comboBoxAccountManagementUserPrivilege.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxAccountManagementUserPrivilege.FormattingEnabled = true;
@@ -140,6 +133,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -151,6 +145,7 @@
             // 
             // labelAccountManagementUserLogin
             // 
+            this.labelAccountManagementUserLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountManagementUserLogin.AutoSize = true;
             this.labelAccountManagementUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementUserLogin.ForeColor = System.Drawing.Color.White;
@@ -162,11 +157,12 @@
             // 
             // buttonExitFronForm
             // 
+            this.buttonExitFronForm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonExitFronForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonExitFronForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExitFronForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonExitFronForm.ForeColor = System.Drawing.Color.White;
-            this.buttonExitFronForm.Location = new System.Drawing.Point(320, 377);
+            this.buttonExitFronForm.Location = new System.Drawing.Point(341, 392);
             this.buttonExitFronForm.Name = "buttonExitFronForm";
             this.buttonExitFronForm.Size = new System.Drawing.Size(135, 33);
             this.buttonExitFronForm.TabIndex = 12;
@@ -176,6 +172,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -187,6 +184,7 @@
             // 
             // textBoxAccountManagementUserPassword
             // 
+            this.textBoxAccountManagementUserPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxAccountManagementUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBoxAccountManagementUserPassword.Location = new System.Drawing.Point(203, 245);
             this.textBoxAccountManagementUserPassword.Name = "textBoxAccountManagementUserPassword";
@@ -197,11 +195,12 @@
             // 
             // buttonAddNewUser
             // 
+            this.buttonAddNewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonAddNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonAddNewUser.ForeColor = System.Drawing.Color.White;
-            this.buttonAddNewUser.Location = new System.Drawing.Point(136, 376);
+            this.buttonAddNewUser.Location = new System.Drawing.Point(152, 391);
             this.buttonAddNewUser.Name = "buttonAddNewUser";
             this.buttonAddNewUser.Size = new System.Drawing.Size(135, 34);
             this.buttonAddNewUser.TabIndex = 11;
@@ -211,6 +210,7 @@
             // 
             // textBoxlAccountManagementUserLogin
             // 
+            this.textBoxlAccountManagementUserLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxlAccountManagementUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBoxlAccountManagementUserLogin.Location = new System.Drawing.Point(203, 129);
             this.textBoxlAccountManagementUserLogin.Name = "textBoxlAccountManagementUserLogin";
@@ -221,6 +221,7 @@
             // 
             // textBoxAccountManagementUserFullName
             // 
+            this.textBoxAccountManagementUserFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxAccountManagementUserFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBoxAccountManagementUserFullName.Location = new System.Drawing.Point(203, 186);
             this.textBoxAccountManagementUserFullName.Name = "textBoxAccountManagementUserFullName";
@@ -248,7 +249,6 @@
             this.Controls.Add(this.labelAccountManagementUserLogin);
             this.Controls.Add(this.labelAccountManagementUserFullName);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxAccountManagementUserPrivilege);
             this.MinimumSize = new System.Drawing.Size(610, 520);
             this.Name = "FormAccountManagementAddNewUser";
@@ -269,7 +269,6 @@
         private System.Windows.Forms.Label labelAccountManagementUserPrivilege;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelAccountManagementUserFullName;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxAccountManagementUserPrivilege;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelAccountManagementUserLogin;

@@ -57,9 +57,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.labelAccountItamNumber);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(728, 60);
@@ -67,6 +67,7 @@
             // 
             // labelAccountItamNumber
             // 
+            this.labelAccountItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountItamNumber.AutoSize = true;
             this.labelAccountItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountItamNumber.ForeColor = System.Drawing.Color.White;
@@ -78,6 +79,7 @@
             // 
             // buttonItamNumberChange
             // 
+            this.buttonItamNumberChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonItamNumberChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonItamNumberChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItamNumberChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -92,6 +94,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -103,6 +106,7 @@
             // 
             // buttonCencel
             // 
+            this.buttonCencel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCencel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -117,6 +121,7 @@
             // 
             // textBoxInventNumber
             // 
+            this.textBoxInventNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxInventNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxInventNumber.Location = new System.Drawing.Point(286, 99);
             this.textBoxInventNumber.Name = "textBoxInventNumber";
@@ -126,6 +131,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -138,6 +144,7 @@
             // 
             // comboBoxLocation
             // 
+            this.comboBoxLocation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxLocation.DisplayMember = "1";
             this.comboBoxLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxLocation.FormattingEnabled = true;
@@ -149,6 +156,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
@@ -160,6 +168,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
@@ -171,6 +180,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker1.Location = new System.Drawing.Point(286, 198);
@@ -180,6 +190,7 @@
             // 
             // comboBoxMOL
             // 
+            this.comboBoxMOL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxMOL.DisplayMember = "1";
             this.comboBoxMOL.Enabled = false;
             this.comboBoxMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -192,6 +203,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
@@ -203,6 +215,7 @@
             // 
             // comboBoxDepartment
             // 
+            this.comboBoxDepartment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxDepartment.DisplayMember = "1";
             this.comboBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxDepartment.FormattingEnabled = true;
@@ -215,6 +228,7 @@
             // 
             // comboBoxModel
             // 
+            this.comboBoxModel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxModel.DisplayMember = "1";
             this.comboBoxModel.Enabled = false;
             this.comboBoxModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -227,6 +241,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -238,6 +253,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -249,6 +265,7 @@
             // 
             // comboBoxEquipmentType
             // 
+            this.comboBoxEquipmentType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxEquipmentType.DisplayMember = "1";
             this.comboBoxEquipmentType.Enabled = false;
             this.comboBoxEquipmentType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -261,6 +278,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
@@ -272,6 +290,7 @@
             // 
             // comboBoxEquipmentManufacturer
             // 
+            this.comboBoxEquipmentManufacturer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxEquipmentManufacturer.DisplayMember = "1";
             this.comboBoxEquipmentManufacturer.Enabled = false;
             this.comboBoxEquipmentManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -284,6 +303,7 @@
             // 
             // labellAccountManagementFilter
             // 
+            this.labellAccountManagementFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labellAccountManagementFilter.AutoSize = true;
             this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
@@ -295,6 +315,7 @@
             // 
             // comboBoxItamNumber
             // 
+            this.comboBoxItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxItamNumber.DisplayMember = "1";
             this.comboBoxItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxItamNumber.FormattingEnabled = true;
@@ -307,6 +328,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
@@ -318,6 +340,7 @@
             // 
             // comboBoxStuff
             // 
+            this.comboBoxStuff.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxStuff.DisplayMember = "1";
             this.comboBoxStuff.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxStuff.FormattingEnabled = true;
@@ -356,6 +379,7 @@
             this.Controls.Add(this.buttonItamNumberChange);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonCencel);
+            this.MinimumSize = new System.Drawing.Size(744, 677);
             this.Name = "FormMainAddNew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMainAddNew";

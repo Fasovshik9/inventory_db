@@ -151,7 +151,7 @@ namespace inventory_db
                 MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
                 DataTable table = new DataTable();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_main` " +
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_equipment_report` " +
                                                         "WHERE item_number = @item_number", sqlConnection);
                 command.Parameters.Add("@item_number", MySqlDbType.VarChar).Value = rowsItamNumberMouse;
 

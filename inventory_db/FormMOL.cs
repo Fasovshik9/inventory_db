@@ -104,7 +104,7 @@ namespace inventory_db
                 MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
                 DataTable table = new DataTable();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_main` " +
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_equipment_report` " +
                                                         "WHERE mol_department = @mol_department", sqlConnection);
                 command.Parameters.Add("@mol_department", MySqlDbType.VarChar).Value = fullDepartmentMOL;
 

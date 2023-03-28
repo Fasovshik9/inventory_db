@@ -47,7 +47,7 @@
             this.labelAccountManagementAddNewUser.AutoSize = true;
             this.labelAccountManagementAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementAddNewUser.ForeColor = System.Drawing.Color.White;
-            this.labelAccountManagementAddNewUser.Location = new System.Drawing.Point(57, 9);
+            this.labelAccountManagementAddNewUser.Location = new System.Drawing.Point(54, 9);
             this.labelAccountManagementAddNewUser.Name = "labelAccountManagementAddNewUser";
             this.labelAccountManagementAddNewUser.Size = new System.Drawing.Size(604, 39);
             this.labelAccountManagementAddNewUser.TabIndex = 9;
@@ -55,6 +55,7 @@
             // 
             // textBoxEquipmentModel
             // 
+            this.textBoxEquipmentModel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxEquipmentModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBoxEquipmentModel.Location = new System.Drawing.Point(326, 279);
             this.textBoxEquipmentModel.Name = "textBoxEquipmentModel";
@@ -63,6 +64,7 @@
             // 
             // textBoxItemNumber
             // 
+            this.textBoxItemNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxItemNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBoxItemNumber.Location = new System.Drawing.Point(326, 124);
             this.textBoxItemNumber.Name = "textBoxItemNumber";
@@ -71,6 +73,7 @@
             // 
             // buttonAddNewEquipment
             // 
+            this.buttonAddNewEquipment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddNewEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonAddNewEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddNewEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -85,16 +88,17 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.labelAccountManagementAddNewUser);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(711, 60);
+            this.panel1.Size = new System.Drawing.Size(704, 60);
             this.panel1.TabIndex = 28;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -106,6 +110,7 @@
             // 
             // labelAccountManagementUserPrivilege
             // 
+            this.labelAccountManagementUserPrivilege.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountManagementUserPrivilege.AutoSize = true;
             this.labelAccountManagementUserPrivilege.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementUserPrivilege.ForeColor = System.Drawing.Color.White;
@@ -117,6 +122,7 @@
             // 
             // buttonExitFronForm
             // 
+            this.buttonExitFronForm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonExitFronForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonExitFronForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExitFronForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -130,6 +136,7 @@
             // 
             // labelAccountManagementUserFullName
             // 
+            this.labelAccountManagementUserFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountManagementUserFullName.AutoSize = true;
             this.labelAccountManagementUserFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementUserFullName.ForeColor = System.Drawing.Color.White;
@@ -141,6 +148,7 @@
             // 
             // comboBoxEquipmentManufacturer
             // 
+            this.comboBoxEquipmentManufacturer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxEquipmentManufacturer.DisplayMember = "1";
             this.comboBoxEquipmentManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxEquipmentManufacturer.FormattingEnabled = true;
@@ -154,7 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(711, 416);
+            this.ClientSize = new System.Drawing.Size(704, 431);
             this.Controls.Add(this.textBoxEquipmentModel);
             this.Controls.Add(this.textBoxItemNumber);
             this.Controls.Add(this.buttonAddNewEquipment);
@@ -164,6 +172,7 @@
             this.Controls.Add(this.buttonExitFronForm);
             this.Controls.Add(this.labelAccountManagementUserFullName);
             this.Controls.Add(this.comboBoxEquipmentManufacturer);
+            this.MaximumSize = new System.Drawing.Size(720, 470);
             this.Name = "FormAddNewEquipment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormAddNewEquipment";

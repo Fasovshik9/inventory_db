@@ -46,12 +46,11 @@
             // 
             // buttonUserLogin
             // 
-            this.buttonUserLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonUserLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonUserLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonUserLogin.ForeColor = System.Drawing.Color.White;
-            this.buttonUserLogin.Location = new System.Drawing.Point(232, 347);
+            this.buttonUserLogin.Location = new System.Drawing.Point(252, 321);
             this.buttonUserLogin.Name = "buttonUserLogin";
             this.buttonUserLogin.Size = new System.Drawing.Size(135, 34);
             this.buttonUserLogin.TabIndex = 22;
@@ -61,12 +60,11 @@
             // 
             // buttonExitProgram
             // 
-            this.buttonExitProgram.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonExitProgram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExitProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonExitProgram.ForeColor = System.Drawing.Color.White;
-            this.buttonExitProgram.Location = new System.Drawing.Point(232, 436);
+            this.buttonExitProgram.Location = new System.Drawing.Point(252, 422);
             this.buttonExitProgram.Name = "buttonExitProgram";
             this.buttonExitProgram.Size = new System.Drawing.Size(135, 33);
             this.buttonExitProgram.TabIndex = 23;
@@ -76,7 +74,6 @@
             // 
             // comboBoxAccountManagementUserPrivilege
             // 
-            this.comboBoxAccountManagementUserPrivilege.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxAccountManagementUserPrivilege.DisplayMember = "1";
             this.comboBoxAccountManagementUserPrivilege.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxAccountManagementUserPrivilege.FormattingEnabled = true;
@@ -84,18 +81,17 @@
             "Администратор",
             "Пользователь",
             "Уволен"});
-            this.comboBoxAccountManagementUserPrivilege.Location = new System.Drawing.Point(203, 247);
+            this.comboBoxAccountManagementUserPrivilege.Location = new System.Drawing.Point(202, 201);
             this.comboBoxAccountManagementUserPrivilege.Name = "comboBoxAccountManagementUserPrivilege";
             this.comboBoxAccountManagementUserPrivilege.Size = new System.Drawing.Size(252, 32);
             this.comboBoxAccountManagementUserPrivilege.TabIndex = 21;
             // 
             // labelAccountManagementUserPrivilege
             // 
-            this.labelAccountManagementUserPrivilege.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountManagementUserPrivilege.AutoSize = true;
             this.labelAccountManagementUserPrivilege.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementUserPrivilege.ForeColor = System.Drawing.Color.White;
-            this.labelAccountManagementUserPrivilege.Location = new System.Drawing.Point(56, 255);
+            this.labelAccountManagementUserPrivilege.Location = new System.Drawing.Point(55, 209);
             this.labelAccountManagementUserPrivilege.Name = "labelAccountManagementUserPrivilege";
             this.labelAccountManagementUserPrivilege.Size = new System.Drawing.Size(128, 24);
             this.labelAccountManagementUserPrivilege.TabIndex = 19;
@@ -103,11 +99,10 @@
             // 
             // labelAccountManagementUserPassword
             // 
-            this.labelAccountManagementUserPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountManagementUserPassword.AutoSize = true;
             this.labelAccountManagementUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementUserPassword.ForeColor = System.Drawing.Color.White;
-            this.labelAccountManagementUserPassword.Location = new System.Drawing.Point(102, 315);
+            this.labelAccountManagementUserPassword.Location = new System.Drawing.Point(101, 269);
             this.labelAccountManagementUserPassword.Name = "labelAccountManagementUserPassword";
             this.labelAccountManagementUserPassword.Size = new System.Drawing.Size(82, 24);
             this.labelAccountManagementUserPassword.TabIndex = 18;
@@ -116,11 +111,10 @@
             // 
             // labelAccountManagementUserFullName
             // 
-            this.labelAccountManagementUserFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountManagementUserFullName.AutoSize = true;
             this.labelAccountManagementUserFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementUserFullName.ForeColor = System.Drawing.Color.White;
-            this.labelAccountManagementUserFullName.Location = new System.Drawing.Point(127, 191);
+            this.labelAccountManagementUserFullName.Location = new System.Drawing.Point(126, 145);
             this.labelAccountManagementUserFullName.Name = "labelAccountManagementUserFullName";
             this.labelAccountManagementUserFullName.Size = new System.Drawing.Size(57, 24);
             this.labelAccountManagementUserFullName.TabIndex = 17;
@@ -128,11 +122,10 @@
             // 
             // labelAccountManagementUserLogin
             // 
-            this.labelAccountManagementUserLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountManagementUserLogin.AutoSize = true;
             this.labelAccountManagementUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementUserLogin.ForeColor = System.Drawing.Color.White;
-            this.labelAccountManagementUserLogin.Location = new System.Drawing.Point(115, 134);
+            this.labelAccountManagementUserLogin.Location = new System.Drawing.Point(114, 88);
             this.labelAccountManagementUserLogin.Name = "labelAccountManagementUserLogin";
             this.labelAccountManagementUserLogin.Size = new System.Drawing.Size(69, 24);
             this.labelAccountManagementUserLogin.TabIndex = 16;
@@ -140,9 +133,8 @@
             // 
             // textBoxAccountManagementUserPassword
             // 
-            this.textBoxAccountManagementUserPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxAccountManagementUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxAccountManagementUserPassword.Location = new System.Drawing.Point(203, 312);
+            this.textBoxAccountManagementUserPassword.Location = new System.Drawing.Point(202, 266);
             this.textBoxAccountManagementUserPassword.Name = "textBoxAccountManagementUserPassword";
             this.textBoxAccountManagementUserPassword.Size = new System.Drawing.Size(252, 29);
             this.textBoxAccountManagementUserPassword.TabIndex = 15;
@@ -152,9 +144,8 @@
             // 
             // textBoxAccountManagementUserFullName
             // 
-            this.textBoxAccountManagementUserFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxAccountManagementUserFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxAccountManagementUserFullName.Location = new System.Drawing.Point(203, 191);
+            this.textBoxAccountManagementUserFullName.Location = new System.Drawing.Point(202, 145);
             this.textBoxAccountManagementUserFullName.Name = "textBoxAccountManagementUserFullName";
             this.textBoxAccountManagementUserFullName.Size = new System.Drawing.Size(252, 29);
             this.textBoxAccountManagementUserFullName.TabIndex = 14;
@@ -163,10 +154,9 @@
             // 
             // textBoxlAccountManagementUserLogin
             // 
-            this.textBoxlAccountManagementUserLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxlAccountManagementUserLogin.Enabled = false;
             this.textBoxlAccountManagementUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxlAccountManagementUserLogin.Location = new System.Drawing.Point(203, 129);
+            this.textBoxlAccountManagementUserLogin.Location = new System.Drawing.Point(202, 83);
             this.textBoxlAccountManagementUserLogin.Name = "textBoxlAccountManagementUserLogin";
             this.textBoxlAccountManagementUserLogin.Size = new System.Drawing.Size(252, 29);
             this.textBoxlAccountManagementUserLogin.TabIndex = 13;
@@ -195,12 +185,11 @@
             // 
             // buttonChangePassword
             // 
-            this.buttonChangePassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonChangePassword.ForeColor = System.Drawing.Color.White;
-            this.buttonChangePassword.Location = new System.Drawing.Point(213, 387);
+            this.buttonChangePassword.Location = new System.Drawing.Point(231, 370);
             this.buttonChangePassword.Name = "buttonChangePassword";
             this.buttonChangePassword.Size = new System.Drawing.Size(180, 34);
             this.buttonChangePassword.TabIndex = 25;

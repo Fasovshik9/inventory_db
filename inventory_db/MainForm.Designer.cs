@@ -176,6 +176,7 @@
             // 
             // listViewMain
             // 
+            this.listViewMain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listViewMain.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderInvent,
             this.columnHeaderLocation,
@@ -197,6 +198,7 @@
             this.listViewMain.TabIndex = 1;
             this.listViewMain.UseCompatibleStateImageBehavior = false;
             this.listViewMain.View = System.Windows.Forms.View.Details;
+            this.listViewMain.SelectedIndexChanged += new System.EventHandler(this.listViewMain_SelectedIndexChanged);
             this.listViewMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewMain_MouseDown);
             // 
             // columnHeaderInvent
@@ -251,6 +253,7 @@
             // 
             // buttonIMainAddNew
             // 
+            this.buttonIMainAddNew.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonIMainAddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonIMainAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonIMainAddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -265,6 +268,7 @@
             // 
             // buttonMainChange
             // 
+            this.buttonMainChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonMainChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonMainChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMainChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -279,6 +283,7 @@
             // 
             // buttonDeleteMain
             // 
+            this.buttonDeleteMain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonDeleteMain.BackColor = System.Drawing.Color.Red;
             this.buttonDeleteMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -293,6 +298,7 @@
             // 
             // buttonExit
             // 
+            this.buttonExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -307,6 +313,7 @@
             // 
             // labelFilter
             // 
+            this.labelFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelFilter.AutoSize = true;
             this.labelFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.labelFilter.ForeColor = System.Drawing.Color.White;
@@ -315,9 +322,11 @@
             this.labelFilter.Size = new System.Drawing.Size(96, 26);
             this.labelFilter.TabIndex = 115;
             this.labelFilter.Text = "Фильтр";
+            this.labelFilter.Click += new System.EventHandler(this.labelFilter_Click);
             // 
             // comboBoxFilter
             // 
+            this.comboBoxFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.comboBoxFilter.FormattingEnabled = true;
             this.comboBoxFilter.Items.AddRange(new object[] {
@@ -340,6 +349,7 @@
             // 
             // buttonFilterEmpty
             // 
+            this.buttonFilterEmpty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonFilterEmpty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonFilterEmpty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFilterEmpty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -354,6 +364,7 @@
             // 
             // comboBoxFilterAll
             // 
+            this.comboBoxFilterAll.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxFilterAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.comboBoxFilterAll.FormattingEnabled = true;
             this.comboBoxFilterAll.Location = new System.Drawing.Point(105, 59);
@@ -365,6 +376,7 @@
             // 
             // dateTimePickerStart
             // 
+            this.dateTimePickerStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.dateTimePickerStart.Location = new System.Drawing.Point(105, 40);
             this.dateTimePickerStart.Name = "dateTimePickerStart";
@@ -375,6 +387,7 @@
             // 
             // dateTimePickerFinish
             // 
+            this.dateTimePickerFinish.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.dateTimePickerFinish.Location = new System.Drawing.Point(105, 87);
             this.dateTimePickerFinish.Name = "dateTimePickerFinish";
@@ -385,6 +398,7 @@
             // 
             // labelDateStart
             // 
+            this.labelDateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDateStart.AutoSize = true;
             this.labelDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.labelDateStart.ForeColor = System.Drawing.Color.White;
@@ -394,9 +408,11 @@
             this.labelDateStart.TabIndex = 121;
             this.labelDateStart.Text = "от";
             this.labelDateStart.Visible = false;
+            this.labelDateStart.Click += new System.EventHandler(this.labelDateStart_Click);
             // 
             // labelDateFinish
             // 
+            this.labelDateFinish.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDateFinish.AutoSize = true;
             this.labelDateFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.labelDateFinish.ForeColor = System.Drawing.Color.White;
@@ -406,9 +422,11 @@
             this.labelDateFinish.TabIndex = 122;
             this.labelDateFinish.Text = "до";
             this.labelDateFinish.Visible = false;
+            this.labelDateFinish.Click += new System.EventHandler(this.labelDateFinish_Click);
             // 
             // textBoxFilterAll
             // 
+            this.textBoxFilterAll.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFilterAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxFilterAll.Location = new System.Drawing.Point(105, 59);
             this.textBoxFilterAll.Name = "textBoxFilterAll";
@@ -419,6 +437,7 @@
             // 
             // labelUserLogin
             // 
+            this.labelUserLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelUserLogin.AutoSize = true;
             this.labelUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.labelUserLogin.ForeColor = System.Drawing.Color.White;
@@ -427,9 +446,11 @@
             this.labelUserLogin.Size = new System.Drawing.Size(76, 26);
             this.labelUserLogin.TabIndex = 124;
             this.labelUserLogin.Text = "label1";
+            this.labelUserLogin.Click += new System.EventHandler(this.labelUserLogin_Click);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -438,6 +459,7 @@
             this.label1.Size = new System.Drawing.Size(185, 26);
             this.label1.TabIndex = 125;
             this.label1.Text = "Пользователь: ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MainForm
             // 

@@ -41,8 +41,9 @@
             // 
             // textBoxDepartmentMOL
             // 
+            this.textBoxDepartmentMOL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxDepartmentMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDepartmentMOL.Location = new System.Drawing.Point(182, 207);
+            this.textBoxDepartmentMOL.Location = new System.Drawing.Point(188, 187);
             this.textBoxDepartmentMOL.Name = "textBoxDepartmentMOL";
             this.textBoxDepartmentMOL.Size = new System.Drawing.Size(252, 29);
             this.textBoxDepartmentMOL.TabIndex = 15;
@@ -51,8 +52,9 @@
             // 
             // textBoxlNewMOL
             // 
+            this.textBoxlNewMOL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxlNewMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxlNewMOL.Location = new System.Drawing.Point(182, 148);
+            this.textBoxlNewMOL.Location = new System.Drawing.Point(188, 128);
             this.textBoxlNewMOL.Name = "textBoxlNewMOL";
             this.textBoxlNewMOL.Size = new System.Drawing.Size(252, 29);
             this.textBoxlNewMOL.TabIndex = 14;
@@ -61,6 +63,7 @@
             // 
             // buttonAddMOL
             // 
+            this.buttonAddMOL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddMOL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonAddMOL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -75,12 +78,12 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.labelAddNewMOL);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(495, 60);
+            this.panel1.Size = new System.Drawing.Size(494, 60);
             this.panel1.TabIndex = 28;
             // 
             // labelAddNewMOL
@@ -97,6 +100,7 @@
             // 
             // buttonExitFromForm
             // 
+            this.buttonExitFromForm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonExitFromForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonExitFromForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExitFromForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -111,10 +115,11 @@
             // 
             // labelFullNameMOL
             // 
+            this.labelFullNameMOL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelFullNameMOL.AutoSize = true;
             this.labelFullNameMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelFullNameMOL.ForeColor = System.Drawing.Color.White;
-            this.labelFullNameMOL.Location = new System.Drawing.Point(51, 148);
+            this.labelFullNameMOL.Location = new System.Drawing.Point(57, 128);
             this.labelFullNameMOL.Name = "labelFullNameMOL";
             this.labelFullNameMOL.Size = new System.Drawing.Size(125, 24);
             this.labelFullNameMOL.TabIndex = 19;
@@ -122,10 +127,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 207);
+            this.label2.Location = new System.Drawing.Point(15, 187);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 24);
             this.label2.TabIndex = 24;
@@ -136,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(495, 368);
+            this.ClientSize = new System.Drawing.Size(494, 371);
             this.Controls.Add(this.textBoxDepartmentMOL);
             this.Controls.Add(this.textBoxlNewMOL);
             this.Controls.Add(this.buttonAddMOL);
@@ -144,6 +150,7 @@
             this.Controls.Add(this.buttonExitFromForm);
             this.Controls.Add(this.labelFullNameMOL);
             this.Controls.Add(this.label2);
+            this.MinimumSize = new System.Drawing.Size(510, 410);
             this.Name = "FormAddNewMOL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormAddNewMOL";

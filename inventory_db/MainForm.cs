@@ -110,23 +110,24 @@ namespace inventory_db
             //try
             {
                 sqlConnection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand(" " +
-                                                           "SELECT tb_equipment_report.invent_number,  tb_location.col_location_name, tb_equipment_report.col_date,  tb_department.col_mol_full_name, tb_department.mol_department, tb_itam_number.item_number, tb_equipment_model.equipment_model_name, tb_equipment_manufacturer.col_equipment_manufacturer_name, tb_type_equipment.col_type_equipment_name,tb_authorization_staff.col_full_name_staff " +
-                                                           "FROM  tb_equipment_report " +
-                                                           "JOIN tb_location " +
-                                                           "ON tb_equipment_report.id_col_location = tb_location.id_col_location " +
-                                                           "JOIN tb_department " +
-                                                           "ON tb_equipment_report.mol_department = tb_department.mol_department " +
-                                                           "JOIN tb_itam_number " +
-                                                           "ON tb_equipment_report.item_number = tb_itam_number.item_number " +
-                                                           "JOIN tb_equipment_model " +
-                                                           "ON tb_itam_number.equipment_model_name = tb_equipment_model.equipment_model_name " +
-                                                           "JOIN tb_equipment_manufacturer " +
-                                                           "ON tb_equipment_model.id_equipment_manufacturer = tb_equipment_manufacturer.id_equipment_manufacturer " +
-                                                           "JOIN tb_type_equipment " +
-                                                           "ON tb_equipment_model.id_type_equipment = tb_type_equipment.id_type_equipment " +
-                                                           "JOIN tb_authorization_staff " +
-                                                           "ON tb_equipment_report.login_authorization_staff = tb_authorization_staff.login_authorization_staff ", sqlConnection);
+                //MySqlCommand sqlCommand = new MySqlCommand(" " +
+                //                                           "SELECT tb_equipment_report.invent_number,  tb_location.col_location_name, tb_equipment_report.col_date,  tb_department.col_mol_full_name, tb_department.mol_department, tb_itam_number.item_number, tb_equipment_model.equipment_model_name, tb_equipment_manufacturer.col_equipment_manufacturer_name, tb_type_equipment.col_type_equipment_name,tb_authorization_staff.col_full_name_staff " +
+                //                                           "FROM  tb_equipment_report " +
+                //                                           "JOIN tb_location " +
+                //                                           "ON tb_equipment_report.id_col_location = tb_location.id_col_location " +
+                //                                           "JOIN tb_department " +
+                //                                           "ON tb_equipment_report.mol_department = tb_department.mol_department " +
+                //                                           "JOIN tb_itam_number " +
+                //                                           "ON tb_equipment_report.item_number = tb_itam_number.item_number " +
+                //                                           "JOIN tb_equipment_model " +
+                //                                           "ON tb_itam_number.equipment_model_name = tb_equipment_model.equipment_model_name " +
+                //                                           "JOIN tb_equipment_manufacturer " +
+                //                                           "ON tb_equipment_model.id_equipment_manufacturer = tb_equipment_manufacturer.id_equipment_manufacturer " +
+                //                                           "JOIN tb_type_equipment " +
+                //                                           "ON tb_equipment_model.id_type_equipment = tb_type_equipment.id_type_equipment " +
+                //                                           "JOIN tb_authorization_staff " +
+                //                                           "ON tb_equipment_report.login_authorization_staff = tb_authorization_staff.login_authorization_staff ", sqlConnection);
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT * FROM inventory.main_report", sqlConnection);
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
@@ -750,6 +751,36 @@ namespace inventory_db
             columnHeaderModel.Width = 200;
             columnHeaderType.Width = 100;
             columnHeaderUser.Width = 105;
+        }
+
+        private void listViewMain_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelFilter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDateStart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDateFinish_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelUserLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

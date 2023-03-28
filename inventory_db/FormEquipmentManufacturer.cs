@@ -41,10 +41,9 @@ namespace inventory_db
                 MessageBox.Show("Введите производителя!");
                 return;
             }
-            if (textBoxAddNewEquipmentManufacturer.TextLength >= 50)
+            if (textBoxAddNewEquipmentManufacturer.TextLength >= 40)
             {
-                MessageBox.Show("Некоректное название производителя!\nМаксимум 50!", "Ошибка");
-                zeroFildEquipmentManufacturer();
+                MessageBox.Show("Некоректное название производителя!\nМаксимум 40!", "Ошибка");
                 return;
             }
             else { }
@@ -299,6 +298,12 @@ namespace inventory_db
             }
             else
             {
+                if (textBoxChangeEquipmentManufacturer.TextLength >= 40)
+                {
+                    MessageBox.Show("Некоректное название производителя!\nМаксимум 40!", "Ошибка");
+                    return;
+                }
+                else { }
 
                 ///////////////////////////////////////////////////////////////////////////// check new user to reapit
                 MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);

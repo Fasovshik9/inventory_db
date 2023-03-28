@@ -43,16 +43,17 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.labelAccountItamNumber);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(480, 60);
+            this.panel1.Size = new System.Drawing.Size(484, 60);
             this.panel1.TabIndex = 76;
             // 
             // labelAccountItamNumber
             // 
+            this.labelAccountItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountItamNumber.AutoSize = true;
             this.labelAccountItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountItamNumber.ForeColor = System.Drawing.Color.White;
@@ -64,11 +65,12 @@
             // 
             // buttonItamNumberChange
             // 
+            this.buttonItamNumberChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonItamNumberChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonItamNumberChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItamNumberChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonItamNumberChange.ForeColor = System.Drawing.Color.White;
-            this.buttonItamNumberChange.Location = new System.Drawing.Point(99, 355);
+            this.buttonItamNumberChange.Location = new System.Drawing.Point(101, 323);
             this.buttonItamNumberChange.Name = "buttonItamNumberChange";
             this.buttonItamNumberChange.Size = new System.Drawing.Size(132, 36);
             this.buttonItamNumberChange.TabIndex = 86;
@@ -78,6 +80,7 @@
             // 
             // textBoxOldPassword
             // 
+            this.textBoxOldPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxOldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxOldPassword.Location = new System.Drawing.Point(185, 118);
             this.textBoxOldPassword.Name = "textBoxOldPassword";
@@ -88,6 +91,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -99,6 +103,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -110,11 +115,12 @@
             // 
             // buttonCencel
             // 
+            this.buttonCencel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCencel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonCencel.ForeColor = System.Drawing.Color.White;
-            this.buttonCencel.Location = new System.Drawing.Point(259, 355);
+            this.buttonCencel.Location = new System.Drawing.Point(261, 323);
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 78;
@@ -124,6 +130,7 @@
             // 
             // labellAccountManagementFilter
             // 
+            this.labellAccountManagementFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labellAccountManagementFilter.AutoSize = true;
             this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
@@ -135,6 +142,7 @@
             // 
             // textBoxNewPassword
             // 
+            this.textBoxNewPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxNewPassword.Location = new System.Drawing.Point(185, 186);
             this.textBoxNewPassword.Name = "textBoxNewPassword";
@@ -145,6 +153,7 @@
             // 
             // textBoxNewPasswordRepead
             // 
+            this.textBoxNewPasswordRepead.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxNewPasswordRepead.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxNewPasswordRepead.Location = new System.Drawing.Point(185, 252);
             this.textBoxNewPasswordRepead.Name = "textBoxNewPasswordRepead";
@@ -158,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(480, 450);
+            this.ClientSize = new System.Drawing.Size(484, 381);
             this.Controls.Add(this.textBoxNewPasswordRepead);
             this.Controls.Add(this.textBoxNewPassword);
             this.Controls.Add(this.panel1);
@@ -168,6 +177,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCencel);
             this.Controls.Add(this.labellAccountManagementFilter);
+            this.MinimumSize = new System.Drawing.Size(500, 420);
             this.Name = "FormChangeUserPaswword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormChangeUserPaswword";

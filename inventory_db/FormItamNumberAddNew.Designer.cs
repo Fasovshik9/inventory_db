@@ -45,9 +45,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.labelAccountItamNumber);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(729, 60);
@@ -55,6 +55,7 @@
             // 
             // labelAccountItamNumber
             // 
+            this.labelAccountItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAccountItamNumber.AutoSize = true;
             this.labelAccountItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountItamNumber.ForeColor = System.Drawing.Color.White;
@@ -66,6 +67,7 @@
             // 
             // textBoxItamNumber
             // 
+            this.textBoxItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxItamNumber.Location = new System.Drawing.Point(294, 104);
             this.textBoxItamNumber.Name = "textBoxItamNumber";
@@ -76,6 +78,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -87,6 +90,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -98,6 +102,7 @@
             // 
             // comboBoxEquipmentType
             // 
+            this.comboBoxEquipmentType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxEquipmentType.DisplayMember = "1";
             this.comboBoxEquipmentType.Enabled = false;
             this.comboBoxEquipmentType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -109,6 +114,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -120,6 +126,7 @@
             // 
             // comboBoxEquipmentManufacturer
             // 
+            this.comboBoxEquipmentManufacturer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxEquipmentManufacturer.DisplayMember = "1";
             this.comboBoxEquipmentManufacturer.Enabled = false;
             this.comboBoxEquipmentManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -131,6 +138,7 @@
             // 
             // buttonAddNewItamNumber
             // 
+            this.buttonAddNewItamNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddNewItamNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonAddNewItamNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddNewItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -145,6 +153,7 @@
             // 
             // buttonCencel
             // 
+            this.buttonCencel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCencel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
@@ -159,6 +168,7 @@
             // 
             // labellAccountManagementFilter
             // 
+            this.labellAccountManagementFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labellAccountManagementFilter.AutoSize = true;
             this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
@@ -170,6 +180,7 @@
             // 
             // comboBoxModel
             // 
+            this.comboBoxModel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxModel.DisplayMember = "1";
             this.comboBoxModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxModel.FormattingEnabled = true;
@@ -198,6 +209,7 @@
             this.Controls.Add(this.buttonAddNewItamNumber);
             this.Controls.Add(this.buttonCencel);
             this.Controls.Add(this.labellAccountManagementFilter);
+            this.MinimumSize = new System.Drawing.Size(745, 501);
             this.Name = "FormItamNumberAddNew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItamNumberAddNew";

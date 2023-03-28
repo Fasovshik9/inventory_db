@@ -108,7 +108,7 @@ namespace inventory_db
                 MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
                 DataTable table = new DataTable();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_main` " +
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `tb_equipment_report` " +
                                                         "WHERE login_authorization_staff = @login_authorization_staff", sqlConnection);
                 command.Parameters.Add("@login_authorization_staff", MySqlDbType.VarChar).Value = userNameMouse;
 
@@ -241,6 +241,21 @@ namespace inventory_db
         private void buttonCencel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void labellAccountManagementFilter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewAccountManagement_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAccountManagementAddNewUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
