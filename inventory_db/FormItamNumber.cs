@@ -54,13 +54,15 @@ namespace inventory_db
             //try
             {
                 sqlConnection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand("SELECT tb_itam_number.item_number, tb_itam_number.equipment_model_name, tb_equipment_manufacturer.col_equipment_manufacturer_name, tb_type_equipment.col_type_equipment_name " +
-                                                            "FROM tb_itam_number JOIN tb_equipment_model " +
-                                                            "ON tb_itam_number.equipment_model_name = tb_equipment_model.equipment_model_name " +
-                                                            "JOIN tb_equipment_manufacturer " +
-                                                            "ON tb_equipment_model.id_equipment_manufacturer = tb_equipment_manufacturer.id_equipment_manufacturer " +
-                                                            "JOIN tb_type_equipment " +
-                                                            "ON tb_equipment_model.id_type_equipment = tb_type_equipment.id_type_equipment", sqlConnection);
+                //MySqlCommand sqlCommand = new MySqlCommand("SELECT tb_itam_number.item_number, tb_itam_number.equipment_model_name, tb_equipment_manufacturer.col_equipment_manufacturer_name, tb_type_equipment.col_type_equipment_name " +
+                //                                            "FROM tb_itam_number JOIN tb_equipment_model " +
+                //                                            "ON tb_itam_number.equipment_model_name = tb_equipment_model.equipment_model_name " +
+                //                                            "JOIN tb_equipment_manufacturer " +
+                //                                            "ON tb_equipment_model.id_equipment_manufacturer = tb_equipment_manufacturer.id_equipment_manufacturer " +
+                //                                            "JOIN tb_type_equipment " +
+                //                                            "ON tb_equipment_model.id_type_equipment = tb_type_equipment.id_type_equipment", sqlConnection);
+
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT * FROM inventory.view_itam_number", sqlConnection);
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {

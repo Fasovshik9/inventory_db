@@ -54,13 +54,14 @@ namespace inventory_db
             //try
             {
                 sqlConnection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand("SELECT equipment_model_name, col_equipment_manufacturer_name, col_type_equipment_name " +
-                                                            "FROM tb_equipment_model " +
-                                                            "JOIN tb_equipment_manufacturer " +
-                                                            "ON tb_equipment_model.id_equipment_manufacturer = tb_equipment_manufacturer.id_equipment_manufacturer " +
-                                                            "JOIN tb_type_equipment " +
-                                                            "ON tb_equipment_model.id_type_equipment = tb_type_equipment.id_type_equipment", sqlConnection);
-                dataReader = sqlCommand.ExecuteReader();
+                //MySqlCommand sqlCommand = new MySqlCommand("SELECT equipment_model_name, col_equipment_manufacturer_name, col_type_equipment_name " +
+                //                                            "FROM tb_equipment_model " +
+                //                                            "JOIN tb_equipment_manufacturer " +
+                //                                            "ON tb_equipment_model.id_equipment_manufacturer = tb_equipment_manufacturer.id_equipment_manufacturer " +
+                //                                            "JOIN tb_type_equipment " +
+                //                                            "ON tb_equipment_model.id_type_equipment = tb_type_equipment.id_type_equipment", sqlConnection);
+                MySqlCommand sqlCommand = new MySqlCommand("SELECT* FROM inventory.view_equipment_model", sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();  
                 while (dataReader.Read())
                 {
                     row = new string[]
