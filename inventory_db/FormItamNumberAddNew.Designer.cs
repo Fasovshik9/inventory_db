@@ -59,7 +59,7 @@
             this.labelAccountItamNumber.AutoSize = true;
             this.labelAccountItamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountItamNumber.ForeColor = System.Drawing.Color.White;
-            this.labelAccountItamNumber.Location = new System.Drawing.Point(174, 9);
+            this.labelAccountItamNumber.Location = new System.Drawing.Point(149, 9);
             this.labelAccountItamNumber.Name = "labelAccountItamNumber";
             this.labelAccountItamNumber.Size = new System.Drawing.Size(478, 39);
             this.labelAccountItamNumber.TabIndex = 10;
@@ -212,7 +212,7 @@
             this.MinimumSize = new System.Drawing.Size(745, 501);
             this.Name = "FormItamNumberAddNew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ItamNumberAddNew";
+            this.Text = "Добавление нового номенклатурного артикула";
             this.Activated += new System.EventHandler(this.FormItamNumberAddNew_Activated);
             this.Load += new System.EventHandler(this.FormItamNumberAddNew_Load);
             this.panel1.ResumeLayout(false);

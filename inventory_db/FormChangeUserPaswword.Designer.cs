@@ -180,7 +180,7 @@
             this.MinimumSize = new System.Drawing.Size(500, 420);
             this.Name = "FormChangeUserPaswword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormChangeUserPaswword";
+            this.Text = "Изменение пароля";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

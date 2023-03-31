@@ -14,6 +14,8 @@ namespace inventory_db
 {
     public partial class MainForm : Form
     {
+        // Столбец, который мы сейчас используем для сортировки.
+        private ColumnHeader SortingColumn = null;
         public string userLogin;
         public string oldUserPassword;
         public string privilegeUser;
@@ -171,7 +173,10 @@ namespace inventory_db
         {
             RefreshlistViewMain();
             if (privilegeUser == "Администратор")
+            {
                 администрированиеToolStripMenuItem.Visible = true;
+                пользовательToolStripMenuItem.Visible = false;
+            }    
             else
                 администрированиеToolStripMenuItem.Visible = false;
 
@@ -781,6 +786,145 @@ namespace inventory_db
         private void labelUserLogin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Программа инвентаризации обордования\n\nАвтор: студент группы ИВТб19з Новик В.В.\n\n\t\t2023 г.");
+        }
+
+        private void listViewMain_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            // Получить новый столбец сортировки.
+            ColumnHeader new_sorting_column = listViewMain.Columns[e.Column];
+
+            // Извлеките новый порядок сортировки.
+            System.Windows.Forms.SortOrder sort_order;
+            if (SortingColumn == null)
+            {
+                // Новый столбец. Сортировать по возрастанию.
+                sort_order = SortOrder.Ascending;
+            }
+            else
+            {
+                // См., Если это тот же самый столбец.
+                if (new_sorting_column == SortingColumn)
+                {
+                    // Тот же столбец. Переключите порядок сортировки.
+                    if (SortingColumn.Text.StartsWith("> "))
+                    {
+                        sort_order = SortOrder.Descending;
+                    }
+                    else
+                    {
+                        sort_order = SortOrder.Ascending;
+                    }
+                }
+                else
+                {
+                    // Новый столбец. Сортировать по возрастанию.
+                    sort_order = SortOrder.Ascending;
+                }
+
+                // Удаление старого индикатора сортировки.
+                SortingColumn.Text = SortingColumn.Text.Substring(2);
+            }
+
+            // Отображение нового порядка сортировки.
+            SortingColumn = new_sorting_column;
+            if (sort_order == SortOrder.Ascending)
+            {
+                SortingColumn.Text = "> " + SortingColumn.Text;
+            }
+            else
+            {
+                SortingColumn.Text = "< " + SortingColumn.Text;
+            }
+
+            // Создаем компаратор.
+            listViewMain.ListViewItemSorter =
+                new ListViewComparer(e.Column, sort_order);
+
+            // Сортировать.
+            listViewMain.Sort();
+        }
+        // Сравнивает два элемента ListView на основе выбранного столбца.
+        public class ListViewComparer : System.Collections.IComparer
+        {
+            private int ColumnNumber;
+            private SortOrder SortOrder;
+
+            public ListViewComparer(int column_number,
+                SortOrder sort_order)
+            {
+                ColumnNumber = column_number;
+                SortOrder = sort_order;
+            }
+
+            // Сравнение двух списков ListViewItems.
+            public int Compare(object object_x, object object_y)
+            {
+                // Получить объекты как ListViewItems.
+                ListViewItem item_x = object_x as ListViewItem;
+                ListViewItem item_y = object_y as ListViewItem;
+
+                // Получаем соответствующие значения подпозиции.
+                string string_x;
+                if (item_x.SubItems.Count <= ColumnNumber)
+                {
+                    string_x = "";
+                }
+                else
+                {
+                    string_x = item_x.SubItems[ColumnNumber].Text;
+                }
+
+                string string_y;
+                if (item_y.SubItems.Count <= ColumnNumber)
+                {
+                    string_y = "";
+                }
+                else
+                {
+                    string_y = item_y.SubItems[ColumnNumber].Text;
+                }
+
+                // Сравните их.
+                int result;
+                double double_x, double_y;
+                if (double.TryParse(string_x, out double_x) &&
+                    double.TryParse(string_y, out double_y))
+                {
+                    // Обрабатываем как число.
+                    result = double_x.CompareTo(double_y);
+                }
+                else
+                {
+                    DateTime date_x, date_y;
+                    if (DateTime.TryParse(string_x, out date_x) &&
+                        DateTime.TryParse(string_y, out date_y))
+                    {
+                        // Обработать как дату.
+                        result = date_x.CompareTo(date_y);
+                    }
+                    else
+                    {
+                        // Обработать как строку.
+                        result = string_x.CompareTo(string_y);
+                    }
+                }
+
+                // Вернуть правильный результат в зависимости от того,
+                // сортируем по возрастанию или по убыванию.
+                if (SortOrder == SortOrder.Ascending)
+                {
+                    return result;
+                }
+                else
+                {
+                    return -result;
+                }
+            }
         }
     }
 }

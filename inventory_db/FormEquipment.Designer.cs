@@ -124,11 +124,11 @@
             this.labelAccountManagementAddNewUser.AutoSize = true;
             this.labelAccountManagementAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementAddNewUser.ForeColor = System.Drawing.Color.White;
-            this.labelAccountManagementAddNewUser.Location = new System.Drawing.Point(183, 9);
+            this.labelAccountManagementAddNewUser.Location = new System.Drawing.Point(95, 9);
             this.labelAccountManagementAddNewUser.Name = "labelAccountManagementAddNewUser";
-            this.labelAccountManagementAddNewUser.Size = new System.Drawing.Size(267, 39);
+            this.labelAccountManagementAddNewUser.Size = new System.Drawing.Size(74, 39);
             this.labelAccountManagementAddNewUser.TabIndex = 10;
-            this.labelAccountManagementAddNewUser.Text = "Оборудование";
+            this.labelAccountManagementAddNewUser.Text = "ххх";
             // 
             // buttonCencel
             // 
@@ -206,7 +206,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 600);
             this.Name = "FormEquipment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEquipment";
+            this.Text = "Номеклатурные артикулы";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

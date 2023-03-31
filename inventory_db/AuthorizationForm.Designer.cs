@@ -155,10 +155,10 @@
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(360, 400);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AuthorizationForm";
+            this.Text = "Авторизация";
             this.Activated += new System.EventHandler(this.AuthorizationForm_Activated);
             this.Load += new System.EventHandler(this.AuthorizationForm_Load);
             this.panel1.ResumeLayout(false);

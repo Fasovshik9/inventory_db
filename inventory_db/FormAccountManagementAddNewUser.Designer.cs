@@ -253,7 +253,7 @@
             this.MinimumSize = new System.Drawing.Size(610, 520);
             this.Name = "FormAccountManagementAddNewUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAccountManagementAddNewUser";
+            this.Text = "Добавление нового пользователя";
             this.Load += new System.EventHandler(this.FormAccountManagementAddNewUser_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

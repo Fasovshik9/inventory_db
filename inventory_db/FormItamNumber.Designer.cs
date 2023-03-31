@@ -103,9 +103,9 @@
             this.labelItamNumber.ForeColor = System.Drawing.Color.White;
             this.labelItamNumber.Location = new System.Drawing.Point(207, 9);
             this.labelItamNumber.Name = "labelItamNumber";
-            this.labelItamNumber.Size = new System.Drawing.Size(478, 39);
+            this.labelItamNumber.Size = new System.Drawing.Size(484, 39);
             this.labelItamNumber.TabIndex = 10;
-            this.labelItamNumber.Text = "Номенклатурный артикуль";
+            this.labelItamNumber.Text = "Номенклатурные артикулы";
             // 
             // buttonChangeItamNumber
             // 
@@ -221,7 +221,7 @@
             this.MinimumSize = new System.Drawing.Size(915, 628);
             this.Name = "FormItamNumber";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormItamNumber";
+            this.Text = "Номенклатурные артикулы";
             this.Activated += new System.EventHandler(this.FormItamNumber_Activated);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

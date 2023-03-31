@@ -61,7 +61,7 @@ CREATE TABLE `tb_authorization_staff` (
 
 LOCK TABLES `tb_authorization_staff` WRITE;
 /*!40000 ALTER TABLE `tb_authorization_staff` DISABLE KEYS */;
-INSERT INTO `tb_authorization_staff` VALUES ('1','admin','Администратор','1'),('123123','123123','Администратор','123123'),('123123123','321321123','Уволен','123123'),('qweqwe','qweqwe','Пользователь','qweqwe');
+INSERT INTO `tb_authorization_staff` VALUES ('1','admin','Администратор','1'),('novikvv','Новик В.В.','Пользователь','26813582'),('petrovaa','Петров А.А.','Пользователь','26813582');
 /*!40000 ALTER TABLE `tb_authorization_staff` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +86,7 @@ CREATE TABLE `tb_department` (
 
 LOCK TABLES `tb_department` WRITE;
 /*!40000 ALTER TABLE `tb_department` DISABLE KEYS */;
-INSERT INTO `tb_department` VALUES ('123123','321123'),('Бухгалтерия','Попов С.И.'),('КТЦ','Иванов И.И.'),('ОППР','Михайлов А.С.'),('Отдел сбыта','Васильев А.А.'),('ТАИ','Соколов Ю.В.'),('ЦТС','Петров А.С.'),('Электроцех','Петров А.А.');
+INSERT INTO `tb_department` VALUES ('Бухгалтерия','Попов С.И.'),('КТЦ','Иванов И.И.'),('ОППР','Михайлов А.С.'),('Отдел сбыта','Васильев А.А.'),('ТАИ','Соколов Ю.В.'),('ЦТС','Петров А.С.'),('Электроцех','Петров А.А.');
 /*!40000 ALTER TABLE `tb_department` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,7 +112,7 @@ CREATE TABLE `tb_equipment_manufacturer` (
 
 LOCK TABLES `tb_equipment_manufacturer` WRITE;
 /*!40000 ALTER TABLE `tb_equipment_manufacturer` DISABLE KEYS */;
-INSERT INTO `tb_equipment_manufacturer` VALUES (15,'123321'),(7,'Asus'),(10,'Canon'),(6,'HP'),(5,'Kyocera'),(8,'Lenova'),(11,'OMNY'),(9,'Pavilion'),(4,'Xerox');
+INSERT INTO `tb_equipment_manufacturer` VALUES (7,'Asus'),(10,'Canon'),(6,'HP'),(5,'Kyocera'),(8,'Lenova'),(11,'OMNY'),(9,'Pavilion'),(4,'Xerox');
 /*!40000 ALTER TABLE `tb_equipment_manufacturer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +142,7 @@ CREATE TABLE `tb_equipment_model` (
 
 LOCK TABLES `tb_equipment_model` WRITE;
 /*!40000 ALTER TABLE `tb_equipment_model` DISABLE KEYS */;
-INSERT INTO `tb_equipment_model` VALUES (' HP TFT 19\" LP1965',6,6),(' K52JT (A52J) 15.6',7,7),('123123',8,1),('22\"Wide LCD VW224T',7,6),('34325345',15,11),('EliteDisplay E240',6,6),('EliteDisplay E242 24\" LED',6,6),('i-SENSYS LBP6000',10,6),('K55VD 15,6',7,7),('OMNY 3000',11,9),('OMNY М14Е 2812',11,9),('P24h G4 Monitor FHD',6,6),('Pavilion 15-cs2019ur',6,5),('Phaser 3100MFP/S',4,1),('ProBook 430G6',6,5),('ProDisplay P232',6,6),('ThinkPad 13 Intel Core i3',8,7),('ThinkVision T27M061C6MAT1EU',8,6),('WorkCentre 3325DNI',4,1),('X501A-XX466H',7,7);
+INSERT INTO `tb_equipment_model` VALUES (' HP TFT 19\" LP1965',6,6),(' K52JT (A52J) 15.6',7,7),('123123',8,1),('22\"Wide LCD VW224T',7,6),('EliteDisplay E240',6,6),('EliteDisplay E242 24\" LED',6,6),('i-SENSYS LBP6000',10,6),('K55VD 15,6',7,7),('OMNY 3000',11,9),('OMNY М14Е 2812',11,9),('P24h G4 Monitor FHD',6,6),('Pavilion 15-cs2019ur',6,5),('Phaser 3100MFP/S',4,1),('ProBook 430G6',6,5),('ProDisplay P232',6,6),('ThinkPad 13 Intel Core i3',8,7),('ThinkVision T27M061C6MAT1EU',8,6),('WorkCentre 3325DNI',4,1),('X501A-XX466H',7,7);
 /*!40000 ALTER TABLE `tb_equipment_model` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -170,7 +170,7 @@ CREATE TABLE `tb_equipment_report` (
   CONSTRAINT `fk_item_number` FOREIGN KEY (`item_number`) REFERENCES `tb_itam_number` (`item_number`) ON DELETE CASCADE,
   CONSTRAINT `fk_login_authorization_staff` FOREIGN KEY (`login_authorization_staff`) REFERENCES `tb_authorization_staff` (`login_authorization_staff`) ON DELETE CASCADE,
   CONSTRAINT `fk_mol_department` FOREIGN KEY (`mol_department`) REFERENCES `tb_department` (`mol_department`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -179,7 +179,7 @@ CREATE TABLE `tb_equipment_report` (
 
 LOCK TABLES `tb_equipment_report` WRITE;
 /*!40000 ALTER TABLE `tb_equipment_report` DISABLE KEYS */;
-INSERT INTO `tb_equipment_report` VALUES (46,3,'2023-03-27','Отдел сбыта',101310030,'1'),(47,4,'2023-03-27','ОППР',101310020,'1');
+INSERT INTO `tb_equipment_report` VALUES (50,4,'2023-03-31','ОППР',101310030,'novikvv'),(51,1,'2023-03-31','ОППР',101310030,'novikvv'),(52,4,'2023-03-31','ОППР',101310020,'novikvv'),(53,1,'2023-03-31','ТАИ',101310020,'novikvv'),(54,4,'2023-03-31','Отдел сбыта',101310024,'novikvv'),(55,4,'2023-03-31','Отдел сбыта',101310030,'novikvv'),(56,3,'2023-03-31','ТАИ',101310020,'novikvv'),(57,3,'2023-03-31','КТЦ',101310025,'novikvv'),(58,1,'2023-03-31','ОППР',101310012,'novikvv'),(59,1,'2023-03-31','Отдел сбыта',101310030,'petrovaa'),(60,3,'2023-03-31','Отдел сбыта',101310013,'petrovaa'),(61,3,'2023-03-31','ЦТС',101310018,'petrovaa'),(62,4,'2023-03-31','ОППР',101310020,'petrovaa'),(63,3,'2023-03-31','Отдел сбыта',101310025,'petrovaa'),(64,3,'2023-03-31','Отдел сбыта',101310004,'petrovaa'),(65,3,'2023-03-31','Отдел сбыта',101310030,'petrovaa'),(66,4,'2023-03-31','КТЦ',101310020,'petrovaa'),(67,3,'2023-03-31','Отдел сбыта',101310030,'petrovaa'),(68,4,'2023-03-31','Отдел сбыта',101310020,'petrovaa'),(69,4,'2023-03-31','ТАИ',101310018,'petrovaa');
 /*!40000 ALTER TABLE `tb_equipment_report` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,7 +206,7 @@ CREATE TABLE `tb_itam_number` (
 
 LOCK TABLES `tb_itam_number` WRITE;
 /*!40000 ALTER TABLE `tb_itam_number` DISABLE KEYS */;
-INSERT INTO `tb_itam_number` VALUES (123123123,'34325345'),(5325,'EliteDisplay E240'),(12332,'EliteDisplay E240'),(12343,'EliteDisplay E240'),(123321,'EliteDisplay E240'),(345345,'EliteDisplay E240'),(111111111,'EliteDisplay E240'),(123245678,'EliteDisplay E240'),(123,'EliteDisplay E242 24\" LED'),(123213,'EliteDisplay E242 24\" LED'),(123123232,'EliteDisplay E242 24\" LED'),(123123321,'EliteDisplay E242 24\" LED'),(123456666,'EliteDisplay E242 24\" LED'),(999999999,'EliteDisplay E242 24\" LED'),(101310001,'i-SENSYS LBP6000'),(101310004,'i-SENSYS LBP6000'),(234,'P24h G4 Monitor FHD'),(324,'P24h G4 Monitor FHD'),(345,'P24h G4 Monitor FHD'),(1234,'P24h G4 Monitor FHD'),(235432,'P24h G4 Monitor FHD'),(111111112,'P24h G4 Monitor FHD'),(657,'Pavilion 15-cs2019ur'),(101310030,'Pavilion 15-cs2019ur'),(345345345,'Pavilion 15-cs2019ur'),(101310020,'Phaser 3100MFP/S'),(101310025,'Phaser 3100MFP/S'),(343466491,'Phaser 3100MFP/S'),(101310012,'ProBook 430G6'),(101310018,'ProDisplay P232'),(101310029,'ProDisplay P232'),(101310009,'ThinkPad 13 Intel Core i3'),(101310019,'ThinkPad 13 Intel Core i3'),(101310021,'ThinkVision T27M061C6MAT1EU'),(123456789,'WorkCentre 3325DNI'),(101310013,'X501A-XX466H'),(101310016,'X501A-XX466H');
+INSERT INTO `tb_itam_number` VALUES (101310024,' K52JT (A52J) 15.6'),(101310001,'i-SENSYS LBP6000'),(101310004,'i-SENSYS LBP6000'),(101310030,'Pavilion 15-cs2019ur'),(101310020,'Phaser 3100MFP/S'),(101310025,'Phaser 3100MFP/S'),(101310012,'ProBook 430G6'),(101310018,'ProDisplay P232'),(101310029,'ProDisplay P232'),(101310009,'ThinkPad 13 Intel Core i3'),(101310019,'ThinkPad 13 Intel Core i3'),(101310021,'ThinkVision T27M061C6MAT1EU'),(101310013,'X501A-XX466H'),(101310016,'X501A-XX466H');
 /*!40000 ALTER TABLE `tb_itam_number` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -257,7 +257,7 @@ CREATE TABLE `tb_type_equipment` (
 
 LOCK TABLES `tb_type_equipment` WRITE;
 /*!40000 ALTER TABLE `tb_type_equipment` DISABLE KEYS */;
-INSERT INTO `tb_type_equipment` VALUES (11,'1233'),(8,'веб-камера'),(9,'видеокамера'),(5,'компьютер'),(6,'монитор'),(1,'МФУ'),(7,'ноутбук'),(4,'сканер'),(2,'телефон');
+INSERT INTO `tb_type_equipment` VALUES (8,'веб-камера'),(9,'видеокамера'),(5,'компьютер'),(6,'монитор'),(1,'МФУ'),(7,'ноутбук'),(4,'сканер'),(2,'телефон');
 /*!40000 ALTER TABLE `tb_type_equipment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -288,4 +288,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-28 20:19:03
+-- Dump completed on 2023-03-31 14:02:59

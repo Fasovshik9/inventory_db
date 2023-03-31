@@ -43,7 +43,7 @@
             // 
             this.textBoxChangeDepartmentMOL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxChangeDepartmentMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxChangeDepartmentMOL.Location = new System.Drawing.Point(195, 174);
+            this.textBoxChangeDepartmentMOL.Location = new System.Drawing.Point(190, 118);
             this.textBoxChangeDepartmentMOL.Name = "textBoxChangeDepartmentMOL";
             this.textBoxChangeDepartmentMOL.Size = new System.Drawing.Size(252, 29);
             this.textBoxChangeDepartmentMOL.TabIndex = 30;
@@ -54,7 +54,7 @@
             // 
             this.textBoxlChangeMOL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxlChangeMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxlChangeMOL.Location = new System.Drawing.Point(195, 115);
+            this.textBoxlChangeMOL.Location = new System.Drawing.Point(190, 167);
             this.textBoxlChangeMOL.Name = "textBoxlChangeMOL";
             this.textBoxlChangeMOL.Size = new System.Drawing.Size(252, 29);
             this.textBoxlChangeMOL.TabIndex = 29;
@@ -119,7 +119,7 @@
             this.labelFullNameMOL.AutoSize = true;
             this.labelFullNameMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelFullNameMOL.ForeColor = System.Drawing.Color.White;
-            this.labelFullNameMOL.Location = new System.Drawing.Point(64, 115);
+            this.labelFullNameMOL.Location = new System.Drawing.Point(59, 172);
             this.labelFullNameMOL.Name = "labelFullNameMOL";
             this.labelFullNameMOL.Size = new System.Drawing.Size(125, 24);
             this.labelFullNameMOL.TabIndex = 31;
@@ -131,7 +131,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(22, 179);
+            this.label2.Location = new System.Drawing.Point(17, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 24);
             this.label2.TabIndex = 32;
@@ -153,7 +153,7 @@
             this.MinimumSize = new System.Drawing.Size(510, 410);
             this.Name = "FormChangeMOL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormChangeMOL";
+            this.Text = "Изменение данных о МОЛ\'е";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

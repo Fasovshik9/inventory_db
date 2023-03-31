@@ -98,9 +98,9 @@
             this.labelEquipmentManufacturer.ForeColor = System.Drawing.Color.White;
             this.labelEquipmentManufacturer.Location = new System.Drawing.Point(118, 9);
             this.labelEquipmentManufacturer.Name = "labelEquipmentManufacturer";
-            this.labelEquipmentManufacturer.Size = new System.Drawing.Size(534, 39);
+            this.labelEquipmentManufacturer.Size = new System.Drawing.Size(536, 39);
             this.labelEquipmentManufacturer.TabIndex = 10;
-            this.labelEquipmentManufacturer.Text = "Производитель оборудования";
+            this.labelEquipmentManufacturer.Text = "Производители оборудования";
             // 
             // buttonEmptyFilter
             // 
@@ -230,7 +230,7 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormEquipmentManufacturer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEquipmentManufacturer";
+            this.Text = "Производители оборудования";
             this.Activated += new System.EventHandler(this.FormEquipmentManufacturer_Activated);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

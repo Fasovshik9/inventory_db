@@ -175,7 +175,7 @@
             this.MaximumSize = new System.Drawing.Size(720, 470);
             this.Name = "FormAddNewEquipment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormAddNewEquipment";
+            this.Text = "Добавление нового оборудования";
             this.Activated += new System.EventHandler(this.FormAddNewEquipment_Activated);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

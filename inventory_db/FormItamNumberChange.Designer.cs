@@ -61,9 +61,9 @@
             this.labelAccountItamNumber.ForeColor = System.Drawing.Color.White;
             this.labelAccountItamNumber.Location = new System.Drawing.Point(64, 9);
             this.labelAccountItamNumber.Name = "labelAccountItamNumber";
-            this.labelAccountItamNumber.Size = new System.Drawing.Size(650, 39);
+            this.labelAccountItamNumber.Size = new System.Drawing.Size(682, 39);
             this.labelAccountItamNumber.TabIndex = 10;
-            this.labelAccountItamNumber.Text = "Изменить номенклатурный артикуль";
+            this.labelAccountItamNumber.Text = "Изменение номенклатурного артикула";
             // 
             // comboBoxModelChange
             // 
@@ -213,7 +213,7 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormItamNumberChange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormItamNumberChange";
+            this.Text = "Изменение номенклатурного артикула";
             this.Activated += new System.EventHandler(this.FormItamNumberChange_Activated);
             this.Load += new System.EventHandler(this.FormItamNumberChange_Load);
             this.panel1.ResumeLayout(false);

@@ -382,7 +382,7 @@
             this.MinimumSize = new System.Drawing.Size(744, 677);
             this.Name = "FormMainAddNew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMainAddNew";
+            this.Text = "Добавление обрудования";
             this.Activated += new System.EventHandler(this.FormMainAddNew_Activated);
             this.Load += new System.EventHandler(this.FormMainAddNew_Load);
             this.panel1.ResumeLayout(false);

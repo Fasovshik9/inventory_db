@@ -194,7 +194,7 @@
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 18;
-            this.buttonCencel.Text = "Отмена";
+            this.buttonCencel.Text = "Назад";
             this.buttonCencel.UseVisualStyleBackColor = false;
             this.buttonCencel.Click += new System.EventHandler(this.buttonCencel_Click);
             // 
@@ -216,7 +216,7 @@
             this.MinimumSize = new System.Drawing.Size(610, 520);
             this.Name = "FormAccountManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAccountManagement";
+            this.Text = "Управления учетными записями";
             this.Activated += new System.EventHandler(this.FormAccountManagement_Activated);
             this.Load += new System.EventHandler(this.FormAccountManagement_Load);
             this.panel1.ResumeLayout(false);

@@ -192,7 +192,7 @@
             this.Controls.Add(this.buttonDeleteUser);
             this.Name = "FormMOL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMOL";
+            this.Text = "МОЛ\'ы";
             this.Activated += new System.EventHandler(this.FormMOL_Activated);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

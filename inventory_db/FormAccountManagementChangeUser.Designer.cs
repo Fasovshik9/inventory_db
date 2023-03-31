@@ -218,7 +218,7 @@
             this.MinimumSize = new System.Drawing.Size(610, 520);
             this.Name = "FormAccountManagementChangeUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAccountManagementChangeUser";
+            this.Text = "Изменение учетной записи";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

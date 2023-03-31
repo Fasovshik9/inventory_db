@@ -98,9 +98,9 @@
             this.labelEquipment.ForeColor = System.Drawing.Color.White;
             this.labelEquipment.Location = new System.Drawing.Point(239, 9);
             this.labelEquipment.Name = "labelEquipment";
-            this.labelEquipment.Size = new System.Drawing.Size(332, 39);
+            this.labelEquipment.Size = new System.Drawing.Size(358, 39);
             this.labelEquipment.TabIndex = 10;
-            this.labelEquipment.Text = "Тип оборудования";
+            this.labelEquipment.Text = "Типы оборудования";
             this.labelEquipment.Click += new System.EventHandler(this.labelEquipment_Click);
             // 
             // buttonEmptyFilter
@@ -229,7 +229,7 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormEquipmentType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEquipment";
+            this.Text = "Типы оборудования";
             this.Activated += new System.EventHandler(this.FormEquipment_Activated);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

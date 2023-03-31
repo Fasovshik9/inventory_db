@@ -136,11 +136,11 @@
             this.labelAccountManagementAddNewUser.AutoSize = true;
             this.labelAccountManagementAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountManagementAddNewUser.ForeColor = System.Drawing.Color.White;
-            this.labelAccountManagementAddNewUser.Location = new System.Drawing.Point(308, 9);
+            this.labelAccountManagementAddNewUser.Location = new System.Drawing.Point(105, 9);
             this.labelAccountManagementAddNewUser.Name = "labelAccountManagementAddNewUser";
-            this.labelAccountManagementAddNewUser.Size = new System.Drawing.Size(165, 39);
+            this.labelAccountManagementAddNewUser.Size = new System.Drawing.Size(581, 39);
             this.labelAccountManagementAddNewUser.TabIndex = 10;
-            this.labelAccountManagementAddNewUser.Text = "Локации";
+            this.labelAccountManagementAddNewUser.Text = "Территориальные расположения";
             this.labelAccountManagementAddNewUser.Click += new System.EventHandler(this.labelAccountManagementAddNewUser_Click);
             // 
             // buttonDeleteUser
@@ -235,7 +235,7 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormLocation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormLocation";
+            this.Text = "Территориальные расположения";
             this.Activated += new System.EventHandler(this.FormLocation_Activated);
             this.Load += new System.EventHandler(this.FormLocation_Load);
             this.panel1.ResumeLayout(false);

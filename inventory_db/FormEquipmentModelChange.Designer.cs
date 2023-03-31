@@ -57,11 +57,11 @@
             this.labelAccountEquipmentModel.AutoSize = true;
             this.labelAccountEquipmentModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.labelAccountEquipmentModel.ForeColor = System.Drawing.Color.White;
-            this.labelAccountEquipmentModel.Location = new System.Drawing.Point(186, 9);
+            this.labelAccountEquipmentModel.Location = new System.Drawing.Point(163, 9);
             this.labelAccountEquipmentModel.Name = "labelAccountEquipmentModel";
-            this.labelAccountEquipmentModel.Size = new System.Drawing.Size(322, 39);
+            this.labelAccountEquipmentModel.Size = new System.Drawing.Size(348, 39);
             this.labelAccountEquipmentModel.TabIndex = 10;
-            this.labelAccountEquipmentModel.Text = "Изменить модель";
+            this.labelAccountEquipmentModel.Text = "Изменение модели";
             // 
             // label2
             // 
@@ -180,7 +180,7 @@
             this.MinimumSize = new System.Drawing.Size(635, 434);
             this.Name = "FormEquipmentModelChange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEquipmentModelChange";
+            this.Text = "Изменение модели";
             this.Activated += new System.EventHandler(this.FormEquipmentModelChange_Activated);
             this.Load += new System.EventHandler(this.FormEquipmentModelChange_Load);
             this.panel1.ResumeLayout(false);

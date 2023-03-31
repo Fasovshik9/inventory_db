@@ -43,7 +43,7 @@
             // 
             this.textBoxDepartmentMOL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxDepartmentMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDepartmentMOL.Location = new System.Drawing.Point(188, 187);
+            this.textBoxDepartmentMOL.Location = new System.Drawing.Point(184, 115);
             this.textBoxDepartmentMOL.Name = "textBoxDepartmentMOL";
             this.textBoxDepartmentMOL.Size = new System.Drawing.Size(252, 29);
             this.textBoxDepartmentMOL.TabIndex = 15;
@@ -54,7 +54,7 @@
             // 
             this.textBoxlNewMOL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxlNewMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxlNewMOL.Location = new System.Drawing.Point(188, 128);
+            this.textBoxlNewMOL.Location = new System.Drawing.Point(184, 171);
             this.textBoxlNewMOL.Name = "textBoxlNewMOL";
             this.textBoxlNewMOL.Size = new System.Drawing.Size(252, 29);
             this.textBoxlNewMOL.TabIndex = 14;
@@ -119,7 +119,7 @@
             this.labelFullNameMOL.AutoSize = true;
             this.labelFullNameMOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelFullNameMOL.ForeColor = System.Drawing.Color.White;
-            this.labelFullNameMOL.Location = new System.Drawing.Point(57, 128);
+            this.labelFullNameMOL.Location = new System.Drawing.Point(53, 171);
             this.labelFullNameMOL.Name = "labelFullNameMOL";
             this.labelFullNameMOL.Size = new System.Drawing.Size(125, 24);
             this.labelFullNameMOL.TabIndex = 19;
@@ -131,7 +131,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(15, 187);
+            this.label2.Location = new System.Drawing.Point(11, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 24);
             this.label2.TabIndex = 24;
@@ -153,7 +153,7 @@
             this.MinimumSize = new System.Drawing.Size(510, 410);
             this.Name = "FormAddNewMOL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormAddNewMOL";
+            this.Text = "Добавление нового МОЛ\'а";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

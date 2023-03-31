@@ -149,7 +149,7 @@
             // изменитьПарольToolStripMenuItem
             // 
             this.изменитьПарольToolStripMenuItem.Name = "изменитьПарольToolStripMenuItem";
-            this.изменитьПарольToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.изменитьПарольToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изменитьПарольToolStripMenuItem.Text = "Изменить пароль";
             this.изменитьПарольToolStripMenuItem.Click += new System.EventHandler(this.изменитьПарольToolStripMenuItem_Click);
             // 
@@ -173,6 +173,7 @@
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // listViewMain
             // 
@@ -195,9 +196,11 @@
             this.listViewMain.Location = new System.Drawing.Point(9, 134);
             this.listViewMain.Name = "listViewMain";
             this.listViewMain.Size = new System.Drawing.Size(1300, 438);
+            this.listViewMain.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listViewMain.TabIndex = 1;
             this.listViewMain.UseCompatibleStateImageBehavior = false;
             this.listViewMain.View = System.Windows.Forms.View.Details;
+            this.listViewMain.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewMain_ColumnClick);
             this.listViewMain.SelectedIndexChanged += new System.EventHandler(this.listViewMain_SelectedIndexChanged);
             this.listViewMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewMain_MouseDown);
             // 
@@ -484,9 +487,10 @@
             this.Controls.Add(this.buttonIMainAddNew);
             this.Controls.Add(this.listViewMain);
             this.Controls.Add(this.menuStrip1);
+            this.MinimumSize = new System.Drawing.Size(1335, 666);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "MainForm";
+            this.Text = "Отчет по оборудованию";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);

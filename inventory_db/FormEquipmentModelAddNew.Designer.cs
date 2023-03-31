@@ -183,7 +183,7 @@
             this.MinimumSize = new System.Drawing.Size(635, 434);
             this.Name = "FormEquipmentModelAddNew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEquipmentModelAddNew";
+            this.Text = "Добавление новой модели";
             this.Activated += new System.EventHandler(this.FormEquipmentModelAddNew_Activated);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
