@@ -99,7 +99,7 @@
             this.buttonDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonDeleteUser.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteUser.Location = new System.Drawing.Point(450, 433);
+            this.buttonDeleteUser.Location = new System.Drawing.Point(296, 433);
             this.buttonDeleteUser.Name = "buttonDeleteUser";
             this.buttonDeleteUser.Size = new System.Drawing.Size(132, 36);
             this.buttonDeleteUser.TabIndex = 2;
@@ -161,7 +161,7 @@
             // buttonEmptyFilter
             // 
             this.buttonEmptyFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonEmptyFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.buttonEmptyFilter.BackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonEmptyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEmptyFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmptyFilter.ForeColor = System.Drawing.Color.White;
@@ -169,7 +169,7 @@
             this.buttonEmptyFilter.Name = "buttonEmptyFilter";
             this.buttonEmptyFilter.Size = new System.Drawing.Size(208, 36);
             this.buttonEmptyFilter.TabIndex = 16;
-            this.buttonEmptyFilter.Text = "Отчистить фильтр";
+            this.buttonEmptyFilter.Text = "Очистить фильтр";
             this.buttonEmptyFilter.UseVisualStyleBackColor = false;
             this.buttonEmptyFilter.Click += new System.EventHandler(this.buttonEmptyFilter_Click);
             // 
@@ -190,11 +190,11 @@
             this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonCencel.ForeColor = System.Drawing.Color.White;
-            this.buttonCencel.Location = new System.Drawing.Point(312, 433);
+            this.buttonCencel.Location = new System.Drawing.Point(450, 433);
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 18;
-            this.buttonCencel.Text = "Назад";
+            this.buttonCencel.Text = "Закрыть";
             this.buttonCencel.UseVisualStyleBackColor = false;
             this.buttonCencel.Click += new System.EventHandler(this.buttonCencel_Click);
             // 

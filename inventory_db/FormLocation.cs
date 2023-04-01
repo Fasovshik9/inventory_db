@@ -19,7 +19,7 @@ namespace inventory_db
         MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
         
         
-        const string phraseLocation = "Введите Название локации";
+        const string phraseLocation = "Введите название локации";
         private string locationBuffName;
         private string locationMameMouse;
 

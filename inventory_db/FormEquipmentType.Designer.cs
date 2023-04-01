@@ -41,6 +41,7 @@
             this.textBoxChangeEquipment = new System.Windows.Forms.TextBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonDeleteEquipment = new System.Windows.Forms.Button();
+            this.labellAccountManagementFilter = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,7 +107,7 @@
             // buttonEmptyFilter
             // 
             this.buttonEmptyFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonEmptyFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.buttonEmptyFilter.BackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonEmptyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEmptyFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmptyFilter.ForeColor = System.Drawing.Color.White;
@@ -114,7 +115,7 @@
             this.buttonEmptyFilter.Name = "buttonEmptyFilter";
             this.buttonEmptyFilter.Size = new System.Drawing.Size(208, 36);
             this.buttonEmptyFilter.TabIndex = 31;
-            this.buttonEmptyFilter.Text = "Отчистить фильтр";
+            this.buttonEmptyFilter.Text = "Очистить фильтр";
             this.buttonEmptyFilter.UseVisualStyleBackColor = false;
             this.buttonEmptyFilter.Click += new System.EventHandler(this.buttonEmptyFilter_Click);
             // 
@@ -122,7 +123,7 @@
             // 
             this.textBoxFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxFilter.Location = new System.Drawing.Point(446, 81);
+            this.textBoxFilter.Location = new System.Drawing.Point(446, 90);
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(342, 32);
             this.textBoxFilter.TabIndex = 30;
@@ -190,7 +191,7 @@
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(132, 36);
             this.buttonBack.TabIndex = 34;
-            this.buttonBack.Text = "Назад";
+            this.buttonBack.Text = "Закрыть";
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
@@ -209,12 +210,25 @@
             this.buttonDeleteEquipment.UseVisualStyleBackColor = false;
             this.buttonDeleteEquipment.Click += new System.EventHandler(this.buttonDeleteEquipment_Click);
             // 
+            // labellAccountManagementFilter
+            // 
+            this.labellAccountManagementFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labellAccountManagementFilter.AutoSize = true;
+            this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
+            this.labellAccountManagementFilter.Location = new System.Drawing.Point(575, 63);
+            this.labellAccountManagementFilter.Name = "labellAccountManagementFilter";
+            this.labellAccountManagementFilter.Size = new System.Drawing.Size(85, 24);
+            this.labellAccountManagementFilter.TabIndex = 38;
+            this.labellAccountManagementFilter.Text = "Фильтр";
+            // 
             // FormEquipmentType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labellAccountManagementFilter);
             this.Controls.Add(this.listViewEquipment);
             this.Controls.Add(this.buttonAddNewEquipment);
             this.Controls.Add(this.panel1);
@@ -253,5 +267,6 @@
         private System.Windows.Forms.TextBox textBoxChangeEquipment;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonDeleteEquipment;
+        private System.Windows.Forms.Label labellAccountManagementFilter;
     }
 }

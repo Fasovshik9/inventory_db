@@ -41,6 +41,7 @@
             this.textBoxChangeLocation = new System.Windows.Forms.TextBox();
             this.buttonChangeLocation = new System.Windows.Forms.Button();
             this.buttonCensel = new System.Windows.Forms.Button();
+            this.labellAccountManagementFilter = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,7 +99,7 @@
             // 
             this.textBoxFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxFilter.Location = new System.Drawing.Point(446, 75);
+            this.textBoxFilter.Location = new System.Drawing.Point(446, 91);
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(342, 32);
             this.textBoxFilter.TabIndex = 19;
@@ -107,7 +108,7 @@
             // buttonEmptyFilter
             // 
             this.buttonEmptyFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonEmptyFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.buttonEmptyFilter.BackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonEmptyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEmptyFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmptyFilter.ForeColor = System.Drawing.Color.White;
@@ -115,7 +116,7 @@
             this.buttonEmptyFilter.Name = "buttonEmptyFilter";
             this.buttonEmptyFilter.Size = new System.Drawing.Size(208, 36);
             this.buttonEmptyFilter.TabIndex = 20;
-            this.buttonEmptyFilter.Text = "Отчистить фильтр";
+            this.buttonEmptyFilter.Text = "Очистить фильтр";
             this.buttonEmptyFilter.UseVisualStyleBackColor = false;
             this.buttonEmptyFilter.Click += new System.EventHandler(this.buttonEmptyFilter_Click);
             // 
@@ -169,7 +170,7 @@
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 23;
-            this.buttonCencel.Text = "Назад";
+            this.buttonCencel.Text = "Закрыть";
             this.buttonCencel.UseVisualStyleBackColor = false;
             this.buttonCencel.Click += new System.EventHandler(this.buttonCencel_Click);
             // 
@@ -214,6 +215,18 @@
             this.buttonCensel.UseVisualStyleBackColor = false;
             this.buttonCensel.Click += new System.EventHandler(this.buttonCensel_Click);
             // 
+            // labellAccountManagementFilter
+            // 
+            this.labellAccountManagementFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labellAccountManagementFilter.AutoSize = true;
+            this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
+            this.labellAccountManagementFilter.Location = new System.Drawing.Point(568, 63);
+            this.labellAccountManagementFilter.Name = "labellAccountManagementFilter";
+            this.labellAccountManagementFilter.Size = new System.Drawing.Size(85, 24);
+            this.labellAccountManagementFilter.TabIndex = 27;
+            this.labellAccountManagementFilter.Text = "Фильтр";
+            // 
             // FormLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +234,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labellAccountManagementFilter);
             this.Controls.Add(this.buttonCensel);
             this.Controls.Add(this.buttonChangeLocation);
             this.Controls.Add(this.textBoxChangeLocation);
@@ -260,5 +274,6 @@
         private System.Windows.Forms.TextBox textBoxChangeLocation;
         private System.Windows.Forms.Button buttonChangeLocation;
         private System.Windows.Forms.Button buttonCensel;
+        private System.Windows.Forms.Label labellAccountManagementFilter;
     }
 }

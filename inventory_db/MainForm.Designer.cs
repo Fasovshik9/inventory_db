@@ -99,8 +99,8 @@
             // ToolStripMenuItemLocation
             // 
             this.ToolStripMenuItemLocation.Name = "ToolStripMenuItemLocation";
-            this.ToolStripMenuItemLocation.Size = new System.Drawing.Size(241, 22);
-            this.ToolStripMenuItemLocation.Text = "Место расположение";
+            this.ToolStripMenuItemLocation.Size = new System.Drawing.Size(257, 22);
+            this.ToolStripMenuItemLocation.Text = "Территориальное расположение";
             this.ToolStripMenuItemLocation.Click += new System.EventHandler(this.ToolStripMenuItemLocation_Click);
             // 
             // мОЛToolStripMenuItem
@@ -149,7 +149,7 @@
             // изменитьПарольToolStripMenuItem
             // 
             this.изменитьПарольToolStripMenuItem.Name = "изменитьПарольToolStripMenuItem";
-            this.изменитьПарольToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изменитьПарольToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.изменитьПарольToolStripMenuItem.Text = "Изменить пароль";
             this.изменитьПарольToolStripMenuItem.Click += new System.EventHandler(this.изменитьПарольToolStripMenuItem_Click);
             // 
@@ -306,7 +306,7 @@
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(1077, 579);
+            this.buttonExit.Location = new System.Drawing.Point(1177, 579);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(132, 36);
             this.buttonExit.TabIndex = 113;
@@ -353,7 +353,7 @@
             // buttonFilterEmpty
             // 
             this.buttonFilterEmpty.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonFilterEmpty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonFilterEmpty.BackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonFilterEmpty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFilterEmpty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonFilterEmpty.ForeColor = System.Drawing.Color.White;
@@ -361,7 +361,7 @@
             this.buttonFilterEmpty.Name = "buttonFilterEmpty";
             this.buttonFilterEmpty.Size = new System.Drawing.Size(240, 43);
             this.buttonFilterEmpty.TabIndex = 117;
-            this.buttonFilterEmpty.Text = "Отчистить фильтр";
+            this.buttonFilterEmpty.Text = "Очистить фильтр";
             this.buttonFilterEmpty.UseVisualStyleBackColor = false;
             this.buttonFilterEmpty.Click += new System.EventHandler(this.buttonFilterEmpty_Click);
             // 

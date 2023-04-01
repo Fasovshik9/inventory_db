@@ -158,7 +158,7 @@
             this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonCencel.ForeColor = System.Drawing.Color.White;
-            this.buttonCencel.Location = new System.Drawing.Point(407, 389);
+            this.buttonCencel.Location = new System.Drawing.Point(426, 390);
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 67;
@@ -185,7 +185,7 @@
             this.buttonItamNumberChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItamNumberChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonItamNumberChange.ForeColor = System.Drawing.Color.White;
-            this.buttonItamNumberChange.Location = new System.Drawing.Point(247, 389);
+            this.buttonItamNumberChange.Location = new System.Drawing.Point(266, 390);
             this.buttonItamNumberChange.Name = "buttonItamNumberChange";
             this.buttonItamNumberChange.Size = new System.Drawing.Size(132, 36);
             this.buttonItamNumberChange.TabIndex = 75;

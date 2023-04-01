@@ -20,7 +20,7 @@ namespace inventory_db
         MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["inventory"].ConnectionString);
 
 
-        const string phraseEquipmentManufacturer = "Введите производителя оборудования";
+        const string phraseEquipmentManufacturer = "Введите производителя";
         private string EquipmentManufacturerBuffName;
         private string EquipmentManufacturerMameMouse;
 

@@ -107,7 +107,7 @@
             this.buttonChangeEquipmentModel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeEquipmentModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonChangeEquipmentModel.ForeColor = System.Drawing.Color.White;
-            this.buttonChangeEquipmentModel.Location = new System.Drawing.Point(191, 540);
+            this.buttonChangeEquipmentModel.Location = new System.Drawing.Point(266, 540);
             this.buttonChangeEquipmentModel.Name = "buttonChangeEquipmentModel";
             this.buttonChangeEquipmentModel.Size = new System.Drawing.Size(132, 36);
             this.buttonChangeEquipmentModel.TabIndex = 31;
@@ -122,7 +122,7 @@
             this.buttonDeleteEquipmentModel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteEquipmentModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonDeleteEquipmentModel.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteEquipmentModel.Location = new System.Drawing.Point(386, 540);
+            this.buttonDeleteEquipmentModel.Location = new System.Drawing.Point(419, 540);
             this.buttonDeleteEquipmentModel.Name = "buttonDeleteEquipmentModel";
             this.buttonDeleteEquipmentModel.Size = new System.Drawing.Size(132, 36);
             this.buttonDeleteEquipmentModel.TabIndex = 30;
@@ -137,7 +137,7 @@
             this.buttonAddNewEquipmentModel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddNewEquipmentModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonAddNewEquipmentModel.ForeColor = System.Drawing.Color.White;
-            this.buttonAddNewEquipmentModel.Location = new System.Drawing.Point(38, 540);
+            this.buttonAddNewEquipmentModel.Location = new System.Drawing.Point(107, 540);
             this.buttonAddNewEquipmentModel.Name = "buttonAddNewEquipmentModel";
             this.buttonAddNewEquipmentModel.Size = new System.Drawing.Size(132, 36);
             this.buttonAddNewEquipmentModel.TabIndex = 29;
@@ -152,11 +152,11 @@
             this.buttonCencel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCencel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonCencel.ForeColor = System.Drawing.Color.White;
-            this.buttonCencel.Location = new System.Drawing.Point(547, 540);
+            this.buttonCencel.Location = new System.Drawing.Point(605, 540);
             this.buttonCencel.Name = "buttonCencel";
             this.buttonCencel.Size = new System.Drawing.Size(132, 36);
             this.buttonCencel.TabIndex = 36;
-            this.buttonCencel.Text = "Назад";
+            this.buttonCencel.Text = "Закрыть";
             this.buttonCencel.UseVisualStyleBackColor = false;
             this.buttonCencel.Click += new System.EventHandler(this.buttonCencel_Click);
             // 
@@ -164,24 +164,24 @@
             // 
             this.textBoxFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxFilter.Location = new System.Drawing.Point(148, 90);
+            this.textBoxFilter.Location = new System.Drawing.Point(161, 98);
             this.textBoxFilter.Name = "textBoxFilter";
-            this.textBoxFilter.Size = new System.Drawing.Size(265, 32);
+            this.textBoxFilter.Size = new System.Drawing.Size(295, 32);
             this.textBoxFilter.TabIndex = 35;
             this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
             // buttonEmptyFilter
             // 
             this.buttonEmptyFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonEmptyFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.buttonEmptyFilter.BackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonEmptyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEmptyFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmptyFilter.ForeColor = System.Drawing.Color.White;
-            this.buttonEmptyFilter.Location = new System.Drawing.Point(419, 88);
+            this.buttonEmptyFilter.Location = new System.Drawing.Point(471, 94);
             this.buttonEmptyFilter.Name = "buttonEmptyFilter";
             this.buttonEmptyFilter.Size = new System.Drawing.Size(208, 36);
             this.buttonEmptyFilter.TabIndex = 34;
-            this.buttonEmptyFilter.Text = "Отчистить фильтр";
+            this.buttonEmptyFilter.Text = "Очистить фильтр";
             this.buttonEmptyFilter.UseVisualStyleBackColor = false;
             this.buttonEmptyFilter.Click += new System.EventHandler(this.buttonEmptyFilter_Click);
             // 
@@ -191,7 +191,7 @@
             this.labellAccountManagementFilter.AutoSize = true;
             this.labellAccountManagementFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labellAccountManagementFilter.ForeColor = System.Drawing.Color.White;
-            this.labellAccountManagementFilter.Location = new System.Drawing.Point(57, 94);
+            this.labellAccountManagementFilter.Location = new System.Drawing.Point(70, 102);
             this.labellAccountManagementFilter.Name = "labellAccountManagementFilter";
             this.labellAccountManagementFilter.Size = new System.Drawing.Size(85, 24);
             this.labellAccountManagementFilter.TabIndex = 33;

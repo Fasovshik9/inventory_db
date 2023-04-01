@@ -68,7 +68,7 @@
             this.buttonExitProgram.Name = "buttonExitProgram";
             this.buttonExitProgram.Size = new System.Drawing.Size(135, 33);
             this.buttonExitProgram.TabIndex = 23;
-            this.buttonExitProgram.Text = "Отмена";
+            this.buttonExitProgram.Text = "Закрыть";
             this.buttonExitProgram.UseVisualStyleBackColor = false;
             this.buttonExitProgram.Click += new System.EventHandler(this.buttonExitProgram_Click);
             // 

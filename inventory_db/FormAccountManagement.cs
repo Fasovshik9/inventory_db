@@ -84,8 +84,8 @@ namespace inventory_db
         private void FormAccountManagement_Load(object sender, EventArgs e)
         {
             columnHeaderUserLogin.Width = 100;
-            columnHeaderFullName.Width = 345;
-            columnHeaderUserPrivilege.Width = 120;
+            columnHeaderFullName.Width = 300;
+            columnHeaderUserPrivilege.Width = 155;
         }
 
         private void buttonAddNewUser_Click(object sender, EventArgs e)
