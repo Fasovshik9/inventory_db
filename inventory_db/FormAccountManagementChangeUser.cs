@@ -30,7 +30,13 @@ namespace inventory_db
 
         private void buttonUserLogin_Click(object sender, EventArgs e)
         {
-            if (textBoxlAccountManagementUserLogin.Text == phraseLogin || textBoxAccountManagementUserPassword.Text == phrasePass || textBoxAccountManagementUserFullName.Text == phraseFullName)
+            if (textBoxlAccountManagementUserLogin.Text == phraseLogin || textBoxAccountManagementUserFullName.Text == phraseFullName)
+            {
+                MessageBox.Show("Все поля должны быть заполенны !");
+                return;
+                
+            }
+            if (boolAccountManagementUserPassword == true && textBoxAccountManagementUserPassword.Text == phrasePass)
             {
                 MessageBox.Show("Все поля должны быть заполенны !");
                 return;

@@ -75,7 +75,7 @@
             // 
             // columnHeaderUserPrivilege
             // 
-            this.columnHeaderUserPrivilege.Text = "Привилегия";
+            this.columnHeaderUserPrivilege.Text = "Статус";
             // 
             // buttonAddNewUser
             // 
