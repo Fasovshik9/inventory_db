@@ -567,6 +567,7 @@ namespace inventory_db
 
         private void comboBoxFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBoxFilterAll.Visible = false;
             comboBoxFilterAll.DataSource = null;
             if (comboBoxFilter.SelectedIndex == 0)
             {

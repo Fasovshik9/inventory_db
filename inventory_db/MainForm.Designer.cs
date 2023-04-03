@@ -106,35 +106,35 @@
             // мОЛToolStripMenuItem
             // 
             this.мОЛToolStripMenuItem.Name = "мОЛToolStripMenuItem";
-            this.мОЛToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.мОЛToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.мОЛToolStripMenuItem.Text = "МОЛ";
             this.мОЛToolStripMenuItem.Click += new System.EventHandler(this.мОЛToolStripMenuItem_Click);
             // 
             // типыОборудованяToolStripMenuItem
             // 
             this.типыОборудованяToolStripMenuItem.Name = "типыОборудованяToolStripMenuItem";
-            this.типыОборудованяToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.типыОборудованяToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.типыОборудованяToolStripMenuItem.Text = "Типы оборудованя";
             this.типыОборудованяToolStripMenuItem.Click += new System.EventHandler(this.типыОборудованяToolStripMenuItem_Click);
             // 
             // производительОборудованияToolStripMenuItem
             // 
             this.производительОборудованияToolStripMenuItem.Name = "производительОборудованияToolStripMenuItem";
-            this.производительОборудованияToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.производительОборудованияToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.производительОборудованияToolStripMenuItem.Text = "Производитель оборудования";
             this.производительОборудованияToolStripMenuItem.Click += new System.EventHandler(this.производительОборудованияToolStripMenuItem_Click);
             // 
             // оборудованиеToolStripMenuItem
             // 
             this.оборудованиеToolStripMenuItem.Name = "оборудованиеToolStripMenuItem";
-            this.оборудованиеToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.оборудованиеToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.оборудованиеToolStripMenuItem.Text = "Модель";
             this.оборудованиеToolStripMenuItem.Click += new System.EventHandler(this.оборудованиеToolStripMenuItem_Click);
             // 
             // модельОборудованияToolStripMenuItem
             // 
             this.модельОборудованияToolStripMenuItem.Name = "модельОборудованияToolStripMenuItem";
-            this.модельОборудованияToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.модельОборудованияToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.модельОборудованияToolStripMenuItem.Text = "Номенклатурный артикуль";
             this.модельОборудованияToolStripMenuItem.Click += new System.EventHandler(this.модельОборудованияToolStripMenuItem_Click);
             // 
@@ -320,7 +320,7 @@
             this.labelFilter.AutoSize = true;
             this.labelFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.labelFilter.ForeColor = System.Drawing.Color.White;
-            this.labelFilter.Location = new System.Drawing.Point(3, 66);
+            this.labelFilter.Location = new System.Drawing.Point(146, 29);
             this.labelFilter.Name = "labelFilter";
             this.labelFilter.Size = new System.Drawing.Size(96, 26);
             this.labelFilter.TabIndex = 115;
@@ -344,7 +344,7 @@
             "По типу",
             "По сотруднику ИТ",
             "По всем полям"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(386, 59);
+            this.comboBoxFilter.Location = new System.Drawing.Point(49, 58);
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(304, 33);
             this.comboBoxFilter.TabIndex = 116;
@@ -370,10 +370,11 @@
             this.comboBoxFilterAll.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxFilterAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.comboBoxFilterAll.FormattingEnabled = true;
-            this.comboBoxFilterAll.Location = new System.Drawing.Point(105, 59);
+            this.comboBoxFilterAll.Location = new System.Drawing.Point(404, 59);
             this.comboBoxFilterAll.Name = "comboBoxFilterAll";
             this.comboBoxFilterAll.Size = new System.Drawing.Size(275, 33);
             this.comboBoxFilterAll.TabIndex = 118;
+            this.comboBoxFilterAll.Visible = false;
             this.comboBoxFilterAll.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilterAll_SelectedIndexChanged);
             this.comboBoxFilterAll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxFilterAll_KeyPress);
             // 
@@ -381,7 +382,7 @@
             // 
             this.dateTimePickerStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.dateTimePickerStart.Location = new System.Drawing.Point(105, 40);
+            this.dateTimePickerStart.Location = new System.Drawing.Point(404, 40);
             this.dateTimePickerStart.Name = "dateTimePickerStart";
             this.dateTimePickerStart.Size = new System.Drawing.Size(275, 32);
             this.dateTimePickerStart.TabIndex = 119;
@@ -392,7 +393,7 @@
             // 
             this.dateTimePickerFinish.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.dateTimePickerFinish.Location = new System.Drawing.Point(105, 87);
+            this.dateTimePickerFinish.Location = new System.Drawing.Point(404, 87);
             this.dateTimePickerFinish.Name = "dateTimePickerFinish";
             this.dateTimePickerFinish.Size = new System.Drawing.Size(275, 32);
             this.dateTimePickerFinish.TabIndex = 120;
@@ -405,7 +406,7 @@
             this.labelDateStart.AutoSize = true;
             this.labelDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.labelDateStart.ForeColor = System.Drawing.Color.White;
-            this.labelDateStart.Location = new System.Drawing.Point(63, 46);
+            this.labelDateStart.Location = new System.Drawing.Point(362, 46);
             this.labelDateStart.Name = "labelDateStart";
             this.labelDateStart.Size = new System.Drawing.Size(36, 26);
             this.labelDateStart.TabIndex = 121;
@@ -419,7 +420,7 @@
             this.labelDateFinish.AutoSize = true;
             this.labelDateFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.labelDateFinish.ForeColor = System.Drawing.Color.White;
-            this.labelDateFinish.Location = new System.Drawing.Point(60, 87);
+            this.labelDateFinish.Location = new System.Drawing.Point(359, 87);
             this.labelDateFinish.Name = "labelDateFinish";
             this.labelDateFinish.Size = new System.Drawing.Size(39, 26);
             this.labelDateFinish.TabIndex = 122;
@@ -431,7 +432,7 @@
             // 
             this.textBoxFilterAll.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFilterAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxFilterAll.Location = new System.Drawing.Point(105, 59);
+            this.textBoxFilterAll.Location = new System.Drawing.Point(404, 58);
             this.textBoxFilterAll.Name = "textBoxFilterAll";
             this.textBoxFilterAll.Size = new System.Drawing.Size(275, 32);
             this.textBoxFilterAll.TabIndex = 123;
@@ -444,7 +445,7 @@
             this.labelUserLogin.AutoSize = true;
             this.labelUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.labelUserLogin.ForeColor = System.Drawing.Color.White;
-            this.labelUserLogin.Location = new System.Drawing.Point(1158, 40);
+            this.labelUserLogin.Location = new System.Drawing.Point(1136, 58);
             this.labelUserLogin.Name = "labelUserLogin";
             this.labelUserLogin.Size = new System.Drawing.Size(76, 26);
             this.labelUserLogin.TabIndex = 124;
@@ -457,7 +458,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(978, 40);
+            this.label1.Location = new System.Drawing.Point(956, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 26);
             this.label1.TabIndex = 125;
