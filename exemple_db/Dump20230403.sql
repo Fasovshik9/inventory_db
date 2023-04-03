@@ -61,7 +61,7 @@ CREATE TABLE `tb_authorization_staff` (
 
 LOCK TABLES `tb_authorization_staff` WRITE;
 /*!40000 ALTER TABLE `tb_authorization_staff` DISABLE KEYS */;
-INSERT INTO `tb_authorization_staff` VALUES ('1','admin','Администратор','1'),('novikvv','Новик В.В.','Пользователь','26813582'),('petrovaa','Петров А.А.','Пользователь','26813582');
+INSERT INTO `tb_authorization_staff` VALUES ('1','admin','Администратор','1'),('novikvv','Новик В.В.','Администратор','26813582'),('petrovaa','Петров А.А.','Пользователь','26813582');
 /*!40000 ALTER TABLE `tb_authorization_staff` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -353,4 +353,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-31 19:44:00
+-- Dump completed on 2023-04-03  9:33:51
