@@ -283,10 +283,13 @@ namespace inventory_db
 
         private void buttonFilterEmpty_Click(object sender, EventArgs e)
         {
+            
             comboBoxFilterAll.SelectedIndex = -1;
             comboBoxFilter.SelectedIndex = -1;
             FilterForWithoutDate();
             RefreshlistViewMain();
+            textBoxFilterAll.Visible = false;
+            comboBoxFilterAll.Visible = false;
         }
 
         private void Filter(int a)
@@ -812,7 +815,7 @@ namespace inventory_db
                 if (new_sorting_column == SortingColumn)
                 {
                     // Тот же столбец. Переключите порядок сортировки.
-                    if (SortingColumn.Text.StartsWith("> "))
+                    if (SortingColumn.Text.StartsWith("↓ "))
                     {
                         sort_order = SortOrder.Descending;
                     }
@@ -835,11 +838,11 @@ namespace inventory_db
             SortingColumn = new_sorting_column;
             if (sort_order == SortOrder.Ascending)
             {
-                SortingColumn.Text = "> " + SortingColumn.Text;
+                SortingColumn.Text = "↓ " + SortingColumn.Text;
             }
             else
             {
-                SortingColumn.Text = "< " + SortingColumn.Text;
+                SortingColumn.Text = "↑ " + SortingColumn.Text;
             }
 
             // Создаем компаратор.
