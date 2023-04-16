@@ -60,7 +60,7 @@ namespace inventory_db
                 {
                     if (table.Rows.Count > 0)
                     {
-                        if (Convert.ToString(table.Rows[0].ItemArray[2]) == "2")
+                        if (Convert.ToString(table.Rows[0].ItemArray[2]) == "Уволен")
                         {
                             MessageBox.Show("Пользователь уволен!", "Ошибка");
                             zeroFildPass();
